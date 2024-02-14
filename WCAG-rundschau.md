@@ -1,6 +1,6 @@
 ## WCAG 2.2 Rundschau aus LaTeX sicht
 
-Eine informelle Rundschau der [WCAG 2.2 quick reference](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2). Da es keine aktuelles anerkannte Übersetzung von WCAG 2.2 gibt, sind die Auszüge teils auf Englisch und teils aus der (leider) inoffiziellen Übersetzung der [WCAG 2.1](https://outline-rocks.github.io/wcag/translations/WCAG21-de/).
+Eine informelle Rundschau der [WCAG 2.2 quick reference](https://www.w3.org/WAI/WCAG22/quickref/?versions=2.2). Da es keine Übersetzung von WCAG 2.2 gibt, sind die Auszüge teils auf Englisch und teils aus der (leider) inoffiziellen Übersetzung der [WCAG 2.1](https://outline-rocks.github.io/wcag/translations/WCAG21-de/).
 
 Die Rundschau reduziert WCAG 2.2 auf diejenigen Erfolgskriterien (Success Criteria), die für solche Dokumenten relevant sind, welche aus LaTeX-Quellen erzeugt wurden.
 
@@ -30,7 +30,7 @@ Zwei Szenarien werden unterschieden: kurz und lang.
 - Situation A: If a short description can serve the same purpose and present the same information as the non-text content: ...
 - Situation B: If a short description can not serve the same purpose and present the same information as the non-text content (e.g., a chart or diagram): ...
 
-Eine vielzahl Techniken steht für beide bereit.
+Eine vielzahl Techniken stehen für beide bereit.
 
 Aus [Understanding 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html):
 
@@ -48,13 +48,11 @@ Aus [Understanding 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-c
     - e.g., G74 (long description in text near the non-text content, with a reference to the location of the long description in the short description)
     - e.g., G92 (long description for non-text content that serves the same purpose and presents the same information)
 
-TODO:
-
 ###### Einordnung
 
-Die vermutlich größte Hürde, da grundsätzlich neue Denkweisen nötig sind.
+Die vermutlich größte Hürde, da (teils) grundsätzlich neue Denkweisen nötig sind.
 
-Was sind Nicht-Text-Inhalte?
+**Was sind Nicht-Text-Inhalte?**
 
 Definition aus WCAG:
 
@@ -71,7 +69,7 @@ Im Kontext von LaTeX:
   - aber es ist kompliziert
 - erzeugte Grafiken
   - "Zeichen"pakete (tikz, pstricks, xypic etc)
-  - Pakete für Funktionsplots, Datenvisualisierung
+  - Externe Pakete und Tools für Funktionsplots, Datenvisualisierung etc (matplotlib, plotly, sage, jupyter, R, Julia)
   - Quellen können dazu dienen, Alternativen zu erzeugen (e.g., Daten als Tabellen, aurale Präsentation von Graphen, 2-Dim Braille (cf. Sorge/Austin paper))
 - Spezialfälle
   - Grafik mit Formeln
