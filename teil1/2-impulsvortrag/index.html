@@ -1,0 +1,276 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2-IMPULSVORTRAG | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
+    <style>
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,video,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;}a:hover,a:focus,a:active {color: #1b557b;text-decoration-skip-ink: auto;}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-weight: 300;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}video {width: auto;max-height: 33vh}video:focus {max-height: 60vh;}*:not(li)>ul{margin-bottom: 1.3em;}
+    </style>
+    </head>
+    <body>
+    <section>
+<h1 id="barrierefreies-web-und-latex---freund-oder-feind%3F" tabindex="-1"><a class="header-anchor" href="#barrierefreies-web-und-latex---freund-oder-feind%3F">Barrierefreies Web und LaTeX - Freund oder Feind?</a></h1>
+<p>Peter Krautzberger, <a href="https://krautzource.com">krautzource</a></p>
+<p><small>Links/rechts scrollen, um die Slides durchzusehen.</small></p>
+<section>
+<h2 id="die-web-plattform" tabindex="-1"><a class="header-anchor" href="#die-web-plattform">Die Web Plattform</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Separation_of_concerns"><em>Separation of concerns</em></a> (Trennung der Belange) des Web.</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a> für Struktur/Semantik</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> für Präsentation/Layout</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG</a> - Vectorgraphik</li>
+<li>Erweiterbarkeit und Interaktivität (z.B. JavaScript, Canvas, WebGL)</li>
+</ul>
+</section>
+<section>
+<h2 id="aber-was-ist-das-web%2C-wirklich%3F" tabindex="-1"><a class="header-anchor" href="#aber-was-ist-das-web%2C-wirklich%3F">Aber was ist das Web, wirklich?</a></h2>
+<p>Wir wissen es noch nicht. Zum Vergleich, 100 Jahre nach Gutenbergs Druckerpresse:</p>
+<ul>
+<li>Schlechtes Layout im Vergleich Kodizes</li>
+<li>Keine neuen inhaltlichen Formate (z.B. Roman)</li>
+<li>Illegale Kopien</li>
+<li>Einfache Pamphlete</li>
+<li>die Unruhen und Kriege auslösen</li>
+</ul>
+<p>Inspiration: <a href="https://alistapart.com/article/dao/">Dao of Web Design (2000)</a>, <a href="https://alistapart.com/article/responsive-web-design/">Responsive Web Design (2010)</a>, <a href="https://frankchimero.com/blog/2015/the-webs-grain/">The Web’s Grain (2015)</a>, <a href="https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/">F-Shaped Pattern of Reading on the Web (2017)</a></p>
+</section>
+<section>
+<h2 id="grunds%C3%A4tzlich-barrierefrei" tabindex="-1"><a class="header-anchor" href="#grunds%C3%A4tzlich-barrierefrei">Grundsätzlich barrierefrei</a></h2>
+<p><em>Das Web ist grundsätzlich barrierefrei. Wenn Barrieren entstehen, haben wir sie selbst verschuldet.</em></p>
+<p>👁 Visuell: Blindheit, niedrige oder eingeschränkte Sehleistung, eingeschränkte Sicht</p>
+<p>👂 Auditiv: Taubheit, Schwerhörigkeit, Lärm</p>
+<p>🖐 Motorik: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik</p>
+<p>🧠 Kognition: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten</p>
+<p>Inspiration: <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility (MDN)</a>, <a href="http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html">(Talk) Selfish Accessibility, Adrian Roselli</a>, <a href="https://www.confabevents.com/videos/accessibility-is-usability">(Talk) Accessibility is usability (video)</a></p>
+</section>
+<section>
+<h2 id="universelles-design" tabindex="-1"><a class="header-anchor" href="#universelles-design">Universelles Design</a></h2>
+<p>Ein wichtiger Überbegriff ist das <a href="https://de.wikipedia.org/wiki/Universal_Design">Universal Design</a>.</p>
+<blockquote>
+<p>“Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”</p>
+<p>–<a href="https://en.wikipedia.org/wiki/Ronald_Mace">Ron Mace</a></p>
+</blockquote>
+</section>
+<section>
+<h2 id="barrierfrei-definieren" tabindex="-1"><a class="header-anchor" href="#barrierfrei-definieren">Barrierfrei definieren</a></h2>
+<p><strong>Barrierefreiheit ist ein auf Menschen ausgerichteter Prozess</strong>.</p>
+<p>Rechtlich: <a href="https://en.wikipedia.org/wiki/European_Accessibility_Act">European Accessibility Act</a> / <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">EN 301 549</a> / <a href="https://de.wikipedia.org/wiki/Barrierefreie-Informationstechnik-Verordnung">BITV</a>.</p>
+<p>Im Wesentlichen: <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
+<ul>
+<li>~60 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
+<li>A&amp;AA rechtlich gefordert, AAA optional/ideal</li>
+<li>Betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
+<li>Begleitend: <a href="https://www.w3.org/WAI/WCAG22/Understanding/">Understanding WCAG</a>, <a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG Quick Reference</a></li>
+<li>Einstieg: <a href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">W3C Accessibility Principles</a> <a href="https://webaim.org/standards/wcag/checklist">WebAIM WCAG Checklist</a></li>
+</ul>
+<p>Mehr: <a href="https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/vertiefend/european_accessibility_act.html">EAA Umsetzung in Deutschland</a>, <a href="https://outline-rocks.github.io/wcag/translations/WCAG21-de/">WCAG 2.1 auf Deutsch</a>, <a href="https://webaim.org/articles/">WebAIM Artikel (Englisch)</a></p>
+</section>
+<section>
+<h2 id="wcags-pour-prinzipien" tabindex="-1"><a class="header-anchor" href="#wcags-pour-prinzipien">WCAGs POUR Prinzipien</a></h2>
+<p>WCAG Grundpfeiler:</p>
+<p>Alle Inhalte müssen</p>
+<ul>
+<li>Perceivable - Wahrnehmbar</li>
+<li>Operable - Bedienbar</li>
+<li>Understandable - Verständlich</li>
+<li>Robust</li>
+</ul>
+<p>sein für <strong>alle</strong> Nutzer.</p>
+</section>
+<section>
+<h2 id="barrierefreiheit-entwickeln" tabindex="-1"><a class="header-anchor" href="#barrierefreiheit-entwickeln">Barrierefreiheit entwickeln</a></h2>
+<p><strong>Barrierefreiheit ist ein auf Menschen ausgerichteter Prozess</strong>.</p>
+<ul>
+<li>Jeder Schritt ist wertvoll - vor allem der erste.</li>
+<li>Barrierefrei ist kein Endpunkt</li>
+<li>Reifegradmodelle können helfen, die Entwicklung zu bewerten und zu verbessern.</li>
+</ul>
+<p>Mehr: <a href="https://www.netz-barrierefrei.de/wordpress/fortschritt-in-der-digitalen-barrierefreiheit-messen-maturity-model-oder-reifegradmodell/">Fortschritt in der digitalen Barrierefreiheit messen</a>, <a href="https://www.w3.org/TR/maturity-model/">W3C Accessibility Maturity Model</a>, <a href="https://www.tpgi.com/the-accessibility-maturity-lifecycle/">The Digital Accessibility Maturity Lifecycle</a></p>
+</section>
+<section>
+<h2 id="latex" tabindex="-1"><a class="header-anchor" href="#latex">LaTeX</a></h2>
+<blockquote>
+<p>Und was hat das ganze mit LaTeX zu tun?</p>
+</blockquote>
+</section>
+<section>
+<h2 id="reicht-ein-pdf-nicht%3F" tabindex="-1"><a class="header-anchor" href="#reicht-ein-pdf-nicht%3F">Reicht ein PDF nicht?</a></h2>
+<p><strong>Nein.</strong></p>
+<ul>
+<li>PDF ist grundsätzlich nicht barrierefrei</li>
+<li>PDF-UA ist deutlich schlechter nutzbar als Webinhalte (<a href="https://webaim.org/projects/screenreadersurvey8/#pdf">webaim survey, 2019</a>)</li>
+<li>PDF-UA ist schwer herstellbar, prüfbar, korrigierbar
+<ul>
+<li>insbesondere nicht für komplexe akademische Inhalte</li>
+</ul>
+</li>
+<li>LaTeX Projekt zu PDF-UA kommt nicht vom Fleck</li>
+</ul>
+<p>Mehr: <a href="https://www.netz-barrierefrei.de/wordpress/barrierefreies-publizieren/barrierefreie-pdfs/wie-barrierefrei-sind-pdfs/">Wie barrierefrei sind PDFs?</a>, <a href="https://www.latex-project.org/news/">LaTeX Project News</a></p>
+</section>
+<section>
+<h2 id="texs-herz-is-print" tabindex="-1"><a class="header-anchor" href="#texs-herz-is-print">TeXs Herz is Print</a></h2>
+<p>Printtraditionen bergen versteckte Problem. Eine Auswahl:</p>
+<ul>
+<li>rein visuelles Medium</li>
+<li>fixe Dimensionen</li>
+<li>komplexes Textdesign (Schriften, Größen, Orientierung)</li>
+<li>semantischer White Space</li>
+<li>Formeltextsatz</li>
+<li>Bildelemente</li>
+</ul>
+</section>
+<section>
+<h2 id="texs-schw%C3%A4chen" tabindex="-1"><a class="header-anchor" href="#texs-schw%C3%A4chen">TeXs Schwächen</a></h2>
+<ul>
+<li>all of the above</li>
+<li>Makroprogrammiersprache
+<ul>
+<li><a href="https://de.wikipedia.org/wiki/Chomsky-Hierarchie#Die_Hierarchie">Chomsky Typ 1</a></li>
+<li>Kind seiner Zeit (z.B. Layout, Fonts, Optimierungen)</li>
+</ul>
+</li>
+<li>Kulturelle Probleme (z.B. Lernverhalten, Pakete)</li>
+</ul>
+</section>
+<section>
+<h2 id="texs-st%C3%A4rken" tabindex="-1"><a class="header-anchor" href="#texs-st%C3%A4rken">TeXs Stärken</a></h2>
+<ul>
+<li>LaTeX
+<ul>
+<li>standardisiertes Makropaket</li>
+<li>Fokus: Trennung von Inhalt &amp; Präsentation</li>
+</ul>
+</li>
+<li>Programmiersprache
+<ul>
+<li>Stabilität</li>
+<li>text basiert</li>
+</ul>
+</li>
+<li>Kultur
+<ul>
+<li>Lingua Franca in Mathematik, Physik, Informatik etc</li>
+<li>Teils im Schulbereich</li>
+<li>Tradition des <a href="https://de.wikipedia.org/wiki/Literate_Programming">Literate Programming</a></li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="aus-latex-quellen-zum-web" tabindex="-1"><a class="header-anchor" href="#aus-latex-quellen-zum-web">Aus LaTeX Quellen zum Web</a></h2>
+<p>Etliche Programme können LaTeX zu Webinhalten konvertieren. <br>
+Eine Auswahl:</p>
+<ul>
+<li><a href="https://pandoc.org/">pandoc</a> *</li>
+<li><a href="https://tug.org/tex4ht/">tex4ht / make4ht</a> *</li>
+<li><a href="http://plastex.github.io/plastex/">plastex</a></li>
+<li><a href="https://math.nist.gov/~BMiller/LaTeXML/">latexml</a></li>
+<li><a href="https://github.com/AmerMathSoc/texml">AMS texml</a></li>
+</ul>
+</section>
+<section>
+<h2 id="eine-frage-der-balance" tabindex="-1"><a class="header-anchor" href="#eine-frage-der-balance">Eine Frage der Balance</a></h2>
+<p>Separation of concerns.</p>
+<ul>
+<li>Wie nah an TeX (d.h. Print) bleiben?
+<ul>
+<li>zu weit weg vom Web: Printlayout, Barrieren</li>
+</ul>
+</li>
+<li>Wie nah ans Web kommen?
+<ul>
+<li>zu weit weg von TeX: Einschränkungen bei Macros, Paketen etc.</li>
+</ul>
+</li>
+</ul>
+<p>Beispiel: <a href="https://www.peterkrautzberger.org/0217/">Algorithm layout</a></p>
+<p><strong>Werkzeuge retten uns nicht, sie können es aber schlimmer machen.</strong></p>
+</section>
+<section>
+<h2 id="eine-frage-der-balance-2" tabindex="-1"><a class="header-anchor" href="#eine-frage-der-balance-2">Eine Frage der Balance 2</a></h2>
+<p>Benutzbarkeit gegenüber Mächtigkeit.</p>
+<p>Up-conversion: Chance und Risiko</p>
+<p>Nische in der Nische.</p>
+</section>
+<section>
+<h2 id="st%C3%A4rken%3A-best-practices-sind-zentral" tabindex="-1"><a class="header-anchor" href="#st%C3%A4rken%3A-best-practices-sind-zentral">Stärken: Best Practices sind zentral</a></h2>
+<p>LaTeX hat gute Best Practices. <br>
+Eine Auswahl:</p>
+<ul>
+<li>Gliederung</li>
+<li>Listen, Abbildungen, Tabellen, Zitate, Quellcode</li>
+<li>Theorem-Umgebungen (Definitionen, Theoreme, Lemmata etc)</li>
+<li>Querverweise (Gliederung, Formeln, Theorem, Bibliographien, Fußnoten)</li>
+<li>Indizes, Glossare</li>
+<li>erzeugte Graphiken (Diagramme etc)</li>
+<li>Metadaten</li>
+</ul>
+<p><strong>Menschen lernen LaTeX einmal und nur einmal.</strong></p>
+</section>
+<section>
+<h2 id="st%C3%A4rken" tabindex="-1"><a class="header-anchor" href="#st%C3%A4rken">Stärken</a></h2>
+<p>Use the Source!</p>
+<ul>
+<li>TeX ist lesbar, weiterverwendbar</li>
+<li>erzeugte Graphiken (tikz, pstricks)</li>
+<li>externer Code (matplotlib, Sage, R, Julia)</li>
+<li>Formeltextsatz (<code>\begin{matrix}</code>)
+<ul>
+<li>Vor allem in Deutschland</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="formeltextsatz" tabindex="-1"><a class="header-anchor" href="#formeltextsatz">Formeltextsatz</a></h2>
+<p>Formeltextsatz ist grundsätzlich problematisch.</p>
+<p>Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formeltextsatz im Web.</p>
+</section>
+<section>
+<h2 id="problemgebiete" tabindex="-1"><a class="header-anchor" href="#problemgebiete">Problemgebiete</a></h2>
+<ul>
+<li>Graphiken
+<ul>
+<li>Textalternativen</li>
+<li>Visuelles Design (out of scope)</li>
+</ul>
+</li>
+<li>visuelle Kommunikation
+<ul>
+<li>Farben</li>
+<li>Sensorische Kommunikation</li>
+<li>Bad Practices</li>
+</ul>
+</li>
+</ul>
+<p>Mehr dazu morgen!</p>
+</section>
+<section>
+<h2 id="nach-der-pause%E2%80%A6" tabindex="-1"><a class="header-anchor" href="#nach-der-pause%E2%80%A6">Nach der Pause…</a></h2>
+<ul>
+<li>Kurze Einführung in pandoc und tex4ht</li>
+<li>Beispieldokumente Konvertieren
+<ul>
+<li>Konversionsprobleme lösen</li>
+</ul>
+</li>
+<li>Eigene Dokumente konvertieren</li>
+</ul>
+</section>
+</section>
+
+    <script>
+    const sl = document.querySelector('section');
+    sl.classList.add('slider');
+    // wrap first pieces in wrapper as subsection
+    const s = document.createElement('section');
+    document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
+    sl.insertAdjacentElement('afterbegin', s);
+    </script>
+    </body>
+    </html>
+    
