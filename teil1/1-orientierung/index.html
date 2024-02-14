@@ -1,0 +1,97 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>1-ORIENTIERUNG | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
+    <style>
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,video,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;}a:hover,a:focus,a:active {color: #1b557b;text-decoration-skip-ink: auto;}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-weight: 300;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}video {width: auto;max-height: 33vh}video:focus {max-height: 60vh;}*:not(li)>ul{margin-bottom: 1.3em;}
+    </style>
+    </head>
+    <body>
+    <section>
+<h1 id="erstellung-und-aufbereitung-von-barrierefreien-lehrinhalten-aus-latex-f%C3%BCr-das-web" tabindex="-1"><a class="header-anchor" href="#erstellung-und-aufbereitung-von-barrierefreien-lehrinhalten-aus-latex-f%C3%BCr-das-web">Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</a></h1>
+<p><strong>Virtuelles Seminar, Universität Augsburg, 2024</strong></p>
+<p>Peter Krautzberger, <a href="https://krautzource.com">krautzource</a></p>
+<p><small>Links/rechts scrollen, um die Slides durchzusehen.</small></p>
+<section>
+<h2 id="hallo!" tabindex="-1"><a class="header-anchor" href="#hallo!">Hallo!</a></h2>
+<p>Über mich</p>
+<ul>
+<li>Ehemeliger <a href="https://genealogy.math.ndsu.nodak.edu/id.php?id=140155">Mathematiker</a></li>
+<li>Ehemaliger Manager des <a href="https://www.mathjax.org">MathJax Consortium</a></li>
+<li>Unabhängiger Berater&amp;Entwickler <a href="https://krautzource.com/">krautzource</a>
+<ul>
+<li>primär im MINT-Verlagswesen, z.B. <a href="https://www.ams.org/publications/journals/journalsframework/AMSMathViewer">AMS MathViewer</a></li>
+</ul>
+</li>
+<li><a href="https://www.w3.org/participate/invited-experts/">“Invited Expert” im W3C</a>,
+Co-editor der <a href="https://w3c.github.io/aria/">ARIA Specification</a></li>
+</ul>
+</section>
+<section>
+<h2 id="%C3%BCbersicht-%2F-tagesplan" tabindex="-1"><a class="header-anchor" href="#%C3%BCbersicht-%2F-tagesplan">Übersicht / Tagesplan</a></h2>
+<p>Tag 1</p>
+<ul>
+<li>Orientierung (Sie sind hier!)</li>
+<li>Impulsvortrag</li>
+<li>Erste Schritte</li>
+<li>Offene Arbeit</li>
+<li>Ergebnisse</li>
+</ul>
+</section>
+<section>
+<h2 id="pre-flight-check%3A" tabindex="-1"><a class="header-anchor" href="#pre-flight-check%3A">Pre-flight Check:</a></h2>
+<p>Ein paar erhoffte Voraussetzungen:</p>
+<ul>
+<li>LaTeX Grundkenntnisse
+<ul>
+<li>insbesondere Benutzung eines Texteditors und der Kommandozeile.</li>
+</ul>
+</li>
+<li>Eine aktuelle texlive Installation
+<ul>
+<li>insbesondere auch tex4ht</li>
+</ul>
+</li>
+<li>Eine aktuelle Installation von pandoc
+<ul>
+<li>alternativ: plastex, latexml</li>
+</ul>
+</li>
+<li>Einen aktuellen Webbrowser (z.B. Chrome, Safari, Firefox, Edge)</li>
+</ul>
+</section>
+<section>
+<h2 id="vorstellungsrunde" tabindex="-1"><a class="header-anchor" href="#vorstellungsrunde">Vorstellungsrunde</a></h2>
+<ul>
+<li>one (desk) object + one place</li>
+<li>Diversity welcome, <a href="https://www.sessionlab.com/methods/diversity-welcome">https://www.sessionlab.com/methods/diversity-welcome</a>
+<ul>
+<li>Wenn ihr Hunde liebt,</li>
+<li>Wenn ihr Katzen liebt</li>
+<li>Wenn ihr Naturwissenschaften macht</li>
+<li>Wenn ihr Geisteswissenschaften macht</li>
+<li>Wenn ihr in den 20ern, 30ern, 40ern, 50ern, 60ern seid</li>
+<li>Wenn ihr von hier geboren seid</li>
+<li>Wenn ihr von woanders geboren seid</li>
+<li>=&gt; ihr seid hier herzliche willkommen!</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+    <script>
+    const sl = document.querySelector('section');
+    sl.classList.add('slider');
+    // wrap first pieces in wrapper as subsection
+    const s = document.createElement('section');
+    document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
+    sl.insertAdjacentElement('afterbegin', s);
+    </script>
+    </body>
+    </html>
+    
