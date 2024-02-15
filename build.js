@@ -14,7 +14,13 @@ md.use(require('markdown-it-header-sections'), {
     permalink: anchor.permalink.headerLink()
 });
 const fs = require('fs');
-const filenames = ['./teil1/1-orientierung', './teil1/2-impulsvortrag']
+const filenames = [
+    './teil1/1-orientierung', 
+    './teil1/2-impulsvortrag', 
+    './teil1/3-ersteSchritte',
+    './teil1/4-offeneArbeit',
+    './teil1/5-ergebnisse',
+]
 filenames.forEach(filename => {
     const slides = md.render(fs.readFileSync(`${filename}/slides.md`).toString())
 
