@@ -1,0 +1,33 @@
+\documentclass[a4paper]{amsart}
+
+\usepackage{amsmath}
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{corollary}{Korollar}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{hyperref}
+
+
+\begin{document}
+
+\section{Theorem Umgebungen}
+\begin{theorem}
+    Sei \(f\) eine Funktion, \dots.
+\end{theorem}
+
+\begin{theorem}[Pythagorean]
+\label{pythagorean}
+Vereinfacht:
+\[ x^2 + y^2 = z^2 \]
+\end{theorem}
+    
+Aus \ref{pythagorean} folgt    
+
+\begin{corollary}
+    Kein rechtwinkliges Dreieck hat Seitenlängen 3cm, 4cm, und 6cm.
+\end{corollary}
+    
+
+\begin{lemma}
+Lemmata sind oft bedeutsamer als Sätze.
+\end{lemma}
+\end{document}

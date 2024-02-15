@@ -1,0 +1,38 @@
+\documentclass[a4paper]{amsart}
+
+\begin{document}
+
+\section{Tabellen}
+
+\begin{table}[h]
+    \caption{Einfache Tabelle}
+    \begin{tabular}{@{}|cc}
+    A & B
+    \end{tabular}
+\end{table}
+    
+\begin{table}[h]
+    \caption{Tabelle mit alignment}
+    \begin{tabular}{||c|c||}
+    A & B
+    \end{tabular}
+\end{table}
+    
+
+\begin{table}[h]
+    \caption{Tabelle mit hfill}
+    \begin{tabular*}{5in}{l}
+        XXXXXXXXXXX\\
+        X\\
+        \hfill X\\
+    \end{tabular*}
+\end{table}
+    
+\begin{table}[h]
+    \caption{Tabelle mit komplexem Alignment}
+    \begin{tabular}{ll@{\extracolsep{10pt}}llllllll}
+        1&2&3&4&5&6
+    \end{tabular}
+\end{table}
+            
+\end{document}
