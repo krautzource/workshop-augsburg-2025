@@ -10,7 +10,7 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) für Struktur/Semantik
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) für Präsentation/Layout
-- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) - Vectorgraphik
+- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) - Vektorgraphik
 - Erweiterbarkeit und Interaktivität (z.B. JavaScript, Canvas, WebGL)
 
 ## Aber was ist das Web, wirklich?
@@ -44,9 +44,12 @@ Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozi
 Ein wichtiger Überbegriff ist das [Universal Design](https://de.wikipedia.org/wiki/Universal_Design).
 
 > “Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”
-> 
+>
 > –[Ron Mace](https://en.wikipedia.org/wiki/Ronald_Mace)
 
+<a href="https://commons.wikimedia.org/wiki/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg#/media/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Curb_cut_for_wheelchair_ramp_%28DSC_3616%29.jpg" alt="Curb cut for wheelchair ramp (DSC 3616).jpg" height="2000" width="3000" style="height:20vw;width:30vw; display:block; margin-inline:auto" ></a>
+<small><a href="//commons.wikimedia.org/wiki/User:Nick-philly" class="mw-redirect" title="User:Nick-philly">Nick-philly</a> , [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0")
+</small>
 
 ## Barrierfrei definieren
 
@@ -155,17 +158,21 @@ Separation of concerns.
 - Wie nah ans Web kommen?
   - zu weit weg von TeX: Einschränkungen bei Macros, Paketen etc.
 
+**Werkzeuge retten uns nicht, sie können es aber schlimmer machen.**
+
 Beispiel: [Algorithm layout](https://www.peterkrautzberger.org/0217/)
 
-**Werkzeuge retten uns nicht, sie können es aber schlimmer machen.**
+<img src="https://www.peterkrautzberger.org/assets/2020/euclid.png" alt="Euclid's Algorithmus als Textsatz mit dem algorithmicx Paket" style="margin-inline:auto">
 
 ## Eine Frage der Balance 2
 
 Benutzbarkeit gegenüber Mächtigkeit.
 
-Up-conversion: Chance und Risiko
+Up-conversion als Chance und Risiko.
 
 Nische in der Nische.
+
+**Wir sind der Qualität der Tools ausgeliefert.**
 
 ## Stärken: Best Practices sind zentral
 
@@ -189,26 +196,27 @@ Use the Source!
 - TeX ist lesbar, weiterverwendbar
 - erzeugte Graphiken (tikz, pstricks)
 - externer Code (matplotlib, Sage, R, Julia)
-- Formeltextsatz (`\begin{matrix}`)
+- Formeltextsatz (`\frac`, `\begin{matrix}`)
   - Vor allem in Deutschland
 
+Keep the Source!
 
-## Formeltextsatz
+## Problemgebiet: Formeltextsatz
 
 Formeltextsatz ist grundsätzlich problematisch.
 
+> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.
+
 Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formeltextsatz im Web.
 
-
-## Problemgebiete
+## Problemgebiete: Visuelle Kommunikation
 
 - Graphiken
   - Textalternativen
   - Visuelles Design (out of scope)
-- visuelle Kommunikation
-  - Farben
-  - Sensorische Kommunikation
-  - Bad Practices
+- Farben
+- Sensorische Kommunikation
+- Bad Practices
 
 Mehr dazu morgen!
 
@@ -217,8 +225,4 @@ Mehr dazu morgen!
 - Kurze Einführung in pandoc und tex4ht
 - Beispieldokumente Konvertieren
   - Konversionsprobleme lösen
-- Eigene Dokumente konvertieren
- 
-
-
-
+- Offene Arbeit
