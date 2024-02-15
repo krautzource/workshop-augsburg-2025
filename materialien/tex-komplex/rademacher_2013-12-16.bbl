@@ -1,0 +1,73 @@
+\begin{thebibliography}{10}
+
+\bibitem{An07}
+{\sc G.~E. Andrews}, {\em Partitions: at the interface of {$q$}-series and
+  modular forms}, Ramanujan J., 7 (2003), pp.~385--400.
+\newblock Rankin memorial issues.
+
+\bibitem{Co75}
+{\sc G.~E. Collins}, {\em Quantifier elimination for the elementary theory of
+  real closed fields by cylindrical algebraic decomposition}, Lecture Notes in
+  Computer Science, 33 (1975), pp.~134--183.
+
+\bibitem{deBr58}
+{\sc N.~G. de~Bruijn}, {\em Asymptotic methods in analysis}, Bibliotheca
+  Mathematica. Vol. 4, North-Holland Publishing Co., Amsterdam, 1958.
+
+\bibitem{Eh93}
+{\sc L.~Ehrenpreis}, {\em Function theory for {R}ogers-{R}amanujan-like
+  partition identities}, in A tribute to {E}mil {G}rosswald: number theory and
+  related analysis, vol.~143 of Contemp. Math., Amer. Math. Soc., Providence,
+  RI, 1993, pp.~259--320.
+
+\bibitem{FlGoDu95}
+{\sc P.~Flajolet, X.~Gourdon, and P.~Dumas}, {\em Mellin transforms and
+  asymptotics: harmonic sums}, Theoret. Comput. Sci., 144 (1995), pp.~3--58.
+\newblock Special volume on mathematical analysis of algorithms.
+
+\bibitem{Ge10a}
+{\sc S.~Gerhold}, {\em Asymptotic estimates for some number-theoretic power
+  series}, Acta Arith., 142 (2010), pp.~187--196.
+
+\bibitem{Ha93}
+{\sc M.~Hata}, {\em Rational approximations to the dilogarithm}, Trans. Amer.
+  Math. Soc., 336 (1993), pp.~363--387.
+
+\bibitem{Jo89}
+{\sc A.~Jonqui{\`e}re}, {\em Note sur la s\'erie {$\sum_{n=1}^{\infty}
+  \frac{x^n}{n^s}$}}, Bull. Soc. Math. France, 17 (1889), pp.~142--152.
+
+\bibitem{Mu08}
+{\sc A.~O. Munagi}, {\em The {R}ademacher conjecture and {$q$}-partial
+  fractions}, Ramanujan J., 15 (2008), pp.~339--347.
+
+\bibitem{oS12}
+{\sc C.~O'Sullivan}, {\em On the partial fraction decomposition of the
+  restricted partition generating function}.
+\newblock To appear in Forum Mathematicum, 2012.
+
+\bibitem{Pi68}
+{\sc W.~F. Pickard}, {\em On polylogarithms}, Publ. Math. Debrecen, 15 (1968),
+  pp.~33--43.
+
+\bibitem{Ra73}
+{\sc H.~Rademacher}, {\em Topics in analytic number theory}, Springer-Verlag,
+  New York, 1973.
+\newblock Edited by E. Grosswald, J. Lehner and M. Newman, Die Grundlehren der
+  mathematischen Wissenschaften, Band 169.
+
+\bibitem{Ri59}
+{\sc B.~Riemann}, {\em {\"U}ber die {A}nzahl der {P}rimzahlen unter einer
+  gegebenen {G}r{\"o}{\ss}e}, Monatsber. Berlin. Akad.,  (1859), pp.~671--680.
+
+\bibitem{SiZe13}
+{\sc A.~V. Sills and D.~Zeilberger}, {\em Rademacher's infinite partial
+  fraction conjecture is (almost certainly) false}, Journal of Difference
+  Equations and Applications, 19 (2013), pp.~680--689.
+
+\bibitem{Ti86}
+{\sc E.~C. Titchmarsh}, {\em The theory of the {R}iemann zeta-function}, The
+  Clarendon Press Oxford University Press, New York, second~ed., 1986.
+\newblock Edited and with a preface by D. R. Heath-Brown.
+
+\end{thebibliography}
