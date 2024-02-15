@@ -306,3 +306,7 @@ TSWLatexianTemp*
 *.dlog
 *.tmp
 node_modules
+
+
+notes.md
+demo
