@@ -1,0 +1,116 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3-ERSTESCHRITTE | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
+    <style>
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,video,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;}a:hover,a:focus,a:active {color: #1b557b;text-decoration-skip-ink: auto;}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-weight: 300;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}video {width: auto;max-height: 33vh}video:focus {max-height: 60vh;}*:not(li)>ul{margin-bottom: 1.3em;}
+    </style>
+    </head>
+    <body>
+    <section>
+<h1 id="erste-schritte-von-latex-quellen-zum-web" tabindex="-1"><a class="header-anchor" href="#erste-schritte-von-latex-quellen-zum-web">Erste Schritte von LaTeX Quellen zum Web</a></h1>
+<p>Peter Krautzberger, <a href="https://krautzource.com">krautzource</a></p>
+<p><small>Links/rechts scrollen, um die Slides durchzusehen.</small></p>
+<section>
+<h2 id="ziele" tabindex="-1"><a class="header-anchor" href="#ziele">Ziele</a></h2>
+<ul>
+<li>Werkzeuge ausprobieren (mitmachen!)</li>
+<li>Beispiele konvertieren</li>
+<li>Einfache Probleme identifizieren und evtl. lösen</li>
+<li>Eigene Versuche starten</li>
+</ul>
+</section>
+<section>
+<h2 id="werkzeuge" tabindex="-1"><a class="header-anchor" href="#werkzeuge">Werkzeuge</a></h2>
+<p>Wir konzentrieren uns auf</p>
+<ul>
+<li><a href="https://pandoc.org/">pandoc</a></li>
+<li><a href="https://tug.org/tex4ht/">tex4ht / make4ht</a></li>
+</ul>
+<p>Das <strong>Batteries included</strong> Prinzip</p>
+</section>
+<section>
+<h2 id="pandoc" tabindex="-1"><a class="header-anchor" href="#pandoc">pandoc</a></h2>
+<p><a href="https://pandoc.org/">pandoc</a> - Balance: mehr Web als TeX</p>
+<ul>
+<li>Weitläufige Dokument-zu-Dokument Konversion</li>
+<li>einfache Benutzung</li>
+<li>große Community</li>
+<li>LaTeX Unterstützung als Input eher beschränkt
+<ul>
+<li>Erweiterungen ebenso</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="tex4ht-%2F-make4ht" tabindex="-1"><a class="header-anchor" href="#tex4ht-%2F-make4ht">tex4ht / make4ht</a></h2>
+<p><a href="https://tug.org/tex4ht/">tex4ht / make4ht</a> - Balance: mehr TeX als Web</p>
+<ul>
+<li>Fokus auf TeX-zu-HTML (und XML)</li>
+<li>nutzt TeX intern</li>
+<li>kleine Community</li>
+<li>LaTeX-artige Erweiterbarkeit</li>
+</ul>
+</section>
+<section>
+<h2 id="beschw%C3%B6rungsformeln" tabindex="-1"><a class="header-anchor" href="#beschw%C3%B6rungsformeln">Beschwörungsformeln</a></h2>
+<p>Minimal Beispiele:</p>
+<p><code>$ pandoc input.tex -o output.html -s</code></p>
+<p><code>$ make4ht input.tex</code></p>
+</section>
+<section>
+<h2 id="einfache-beispiele" tabindex="-1"><a class="header-anchor" href="#einfache-beispiele">Einfache Beispiele</a></h2>
+<p>Die Beispiele befinden sich in <a href="../../materialien/tex-einfach/">/materialien/tex-einfach/</a></p>
+<ul>
+<li>Basisdokument <code>einfach.tex</code></li>
+<li>Strukturelement
+<ul>
+<li><code>lists.tex</code></li>
+<li><code>graphics.tex</code></li>
+<li><code>tables.tex</code></li>
+<li><code>mathmode.tex</code></li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="formeltextsatz-mit-mathjax" tabindex="-1"><a class="header-anchor" href="#formeltextsatz-mit-mathjax">Formeltextsatz mit MathJax</a></h2>
+<p><code>$ pandoc input.tex -o output.html -s --mathjax</code></p>
+<p><code>$ make4ht input.tex &quot;mathjax&quot;</code></p>
+</section>
+<section>
+<h2 id="weitef%C3%BChrende-beispiele" tabindex="-1"><a class="header-anchor" href="#weitef%C3%BChrende-beispiele">Weiteführende Beispiele</a></h2>
+<ul>
+<li>Bibliographie mit BibTeX <code>bibtex.tex</code>
+<ul>
+<li><code>$ pandoc ../bibtex.tex --bibliography=../bibtex.bib -o bibtex.html -s --citeproc -M link-citations=true</code></li>
+</ul>
+</li>
+<li>Beamer Paket <code>beamer.tex</code></li>
+</ul>
+</section>
+<section>
+<h2 id="ganze-dokumente" tabindex="-1"><a class="header-anchor" href="#ganze-dokumente">Ganze Dokumente</a></h2>
+<ul>
+<li><a href="https://arxiv.org/abs/1312.4289">arxiv:1312.4289</a> <code>rademacher.tex</code></li>
+<li><a href="https://arxiv.org/abs/2207.01335">arxiv:2207.01335</a> <code>costoyaEtAl.tex</code></li>
+</ul>
+</section>
+</section>
+
+    <script>
+    const sl = document.querySelector('section');
+    sl.classList.add('slider');
+    // wrap first pieces in wrapper as subsection
+    const s = document.createElement('section');
+    document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
+    sl.insertAdjacentElement('afterbegin', s);
+    </script>
+    </body>
+    </html>
+    
