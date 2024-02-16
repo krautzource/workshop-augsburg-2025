@@ -1,6 +1,7 @@
 \documentclass[a4paper]{amsart}
 
 \usepackage{amsmath}
+\usepackage{hyperref}
 
 \begin{document}
 Aus der \textit{amsmath} Dokumentation.
@@ -35,9 +36,15 @@ Aus der \textit{amsmath} Dokumentation.
 
 \begin{flalign}
     x&=y & X&=Y\\
-    x’&=y’ & X’&=Y’\\
-    x+x’&=y+y’ & X+X’&=Y+Y’
+    x'&=y' & X''&=Y'\\
+    x+x'&=y+y' & X+X'&=Y+Y'
 \end{flalign}
 
+
+\begin{equation}
+    f(x) = x^3 + 2x^2 + x \tag{*}\label{theFunction}
+\end{equation}
+
+In Formel \ref{theFunction} sehen wir
 
 \end{document}
