@@ -1,6 +1,7 @@
 \documentclass[a4paper]{amsart}
 
 \usepackage{amsmath}
+\usepackage{hyperref}
 
 \begin{document}
 
@@ -18,14 +19,17 @@ Geordnete Liste
 \begin{enumerate}
     \item Listen
     \item Sind
-    \item Einfach
+    \item \label{item} Einfach 
     \begin{enumerate}
         \item Und
         \item verschachtelt
     \end{enumerate}
 \end{enumerate}
 
-Gehackte Liste
+Wie steht es mit Referenzen, z.B, \ref{item}?
+
+Gehackte Liste:
+
 \begin{itemize}
     \item Listen
     \item Sind
