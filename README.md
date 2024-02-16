@@ -9,7 +9,7 @@ Tag 1 ([Quellen](https://github.com/krautzource/workshop-augsburg-2024/teil1/))
 - [Tag 1 Orientierung](https://krautzource.github.io/workshop-augsburg-2024/teil1/1-orientierung/)
 - [Tag 1 Impulsvortrag](https://krautzource.github.io/workshop-augsburg-2024/teil1/2-impulsvortrag/)
 - [Tag 1 Erste Schritte](https://krautzource.github.io/workshop-augsburg-2024/teil1/3-ersteSchritte/)
-- [Tag 1 Offene Arbeite](https://krautzource.github.io/workshop-augsburg-2024/teil1/-offeneArbeit/)
+- [Tag 1 Offene Arbeite](https://krautzource.github.io/workshop-augsburg-2024/teil1/4-offeneArbeit/)
 - [Tag 1 Ergebnisse](https://krautzource.github.io/workshop-augsburg-2024/teil1/5-ergebenisse/)
 
 Tag 2 ([Quellen](https://github.com/krautzource/workshop-augsburg-2024/teil2/))
