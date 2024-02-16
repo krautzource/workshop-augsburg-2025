@@ -51,9 +51,8 @@ filenames.forEach(filename => {
     const slides = md.render(fs.readFileSync(`${filename}/slides.md`).toString());
     const html = `
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="de">
     <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${filename.split('/').pop().toUpperCase()} | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
