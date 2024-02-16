@@ -1,2 +1,20 @@
-# Workshop Materialien Uni Augsburg 2024
+# Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web
 
+Materialien zum Virtuellen Seminar, Universität Augsburg, 2024
+
+## Slides
+
+Tag 1 ([Quellen](./teil1/))
+
+- [Tag 1 Orientierung](https://krautzource.github.io/workshop-augsburg-2024/teil1/1-orientierung/)
+- [Tag 1 Impulsvortrag](https://krautzource.github.io/workshop-augsburg-2024/teil1/2-impulsvortrag/)
+- [Tag 1 Erste Schritte](https://krautzource.github.io/workshop-augsburg-2024/teil1/3-ersteSchritte/)
+- [Tag 1 Offene Arbeite](https://krautzource.github.io/workshop-augsburg-2024/teil1/-offeneArbeit/)
+- [Tag 1 Ergebnisse](https://krautzource.github.io/workshop-augsburg-2024/teil1/5-ergebenisse/)
+
+Tag 2 ([Quellen](./teil2/))
+
+- [Tag 2 Orientierung](https://krautzource.github.io/workshop-augsburg-2024/teil2/1-orientierung/)
+- [Tag 2 Impulsvortrag](https://krautzource.github.io/workshop-augsburg-2024/teil2/2-impulsvortrag/)
+- [Tag 2 Offene Arbeite](https://krautzource.github.io/workshop-augsburg-2024/teil2/3-offeneArbeit/)
+- [Tag 2 Ergebnisse](https://krautzource.github.io/workshop-augsburg-2024/teil2/4-ergebenisse/)
