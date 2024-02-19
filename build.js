@@ -44,8 +44,9 @@ const filenames = [
     './teil1/5-ergebnisse',
     './teil2/1-orientierung',
     './teil2/2-impulsvortrag',
-    './teil2/3-offeneArbeit',
-    './teil2/4-ergebnisse',
+    './teil2/3-ersteSchritte',
+    './teil2/4-offeneArbeit',
+    './teil2/5-ergebnisse',
 ]
 filenames.forEach(filename => {
     const slides = md.render(fs.readFileSync(`${filename}/slides.md`).toString());
