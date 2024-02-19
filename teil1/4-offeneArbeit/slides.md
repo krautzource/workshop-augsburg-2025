@@ -10,4 +10,4 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 - Konvertierung eigener Dateien
 - Sammlung für Ergebnisrunde
   - Erfolgreiche Ergebnisse
-  - MWEs für Probleme
+  - MWEs (Minimal Working Example) für Probleme
