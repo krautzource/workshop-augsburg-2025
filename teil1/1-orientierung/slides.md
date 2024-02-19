@@ -21,13 +21,13 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 
 Tag 1
 
-- Orientierung (Sie sind hier!)
-- Impulsvortrag
+- Orientierung **(Sie sind hier!)**
+- Impulsvortrag <q>Barrierefreies Web und LaTeX - Freund oder Feind?</q>
 - Erste Schritte
 - Offene Arbeit
 - Ergebnisse
 
-## Pre-flight Check: 
+## Pre-flight Check:
 
 Ein paar erhoffte Voraussetzungen:
 
@@ -37,14 +37,17 @@ Ein paar erhoffte Voraussetzungen:
   - insbesondere auch [tex4ht/make4ht](https://tug.org/tex4ht/)
 - Eine aktuelle Installation von [pandoc](https://pandoc.org/)
 - Einen aktuellen Webbrowser (z.B. Chrome, Safari, Firefox, Edge)
-- Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2024](https://krautzource.github.io/workshop-augsburg-2024) (siehe auch Online System der Uni Augsburg)
+  - evtl. Grundkentnisse HTML, CSS etc (z.B. [selfHTML](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg))
+
+Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2024](https://krautzource.github.io/workshop-augsburg-2024) (siehe auch Online System der Uni Augsburg)
+
+**Umfrage:** Wer hat schon einmal aus LaTeX Quellen Webinhalte erzeugt?
+
 
 ## Vorstellungsrunde
 
-Ein paar Worte
+Neben ein paar Worten zur eigenen Person, hier ein paar Ideen:
 
-Ein Objekt (im Raum)
-
-Ein Ort 
-
-Ein Willkommen: Wenn ihr ____ seid, dann seid ihr herzlich willkommen!
+- Ein Objekt
+- Ein Ort
+- Ein Willkommen: Wenn ihr \_\_\_\_ seid, dann seid ihr herzlich willkommen!
