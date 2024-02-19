@@ -55,6 +55,8 @@ Weitere Helfer:  [SkipTo Landmarks&Headings](https://github.com/skipto-landmarks
 
 ## Für Fortgeschrittene: Screenreader
 
+Assistive Technologien bilden ein komplexes Feld an Software und Hardware. Eine zentrale Kategorie bilden [Screenreader](https://de.wikipedia.org/wiki/Screenreader), z.B.
+
 - Windows: [NVDA](https://www.nvaccess.org/), [JAWS](https://www.freedomscientific.com/products/software/jaws/), [Microsoft Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started)
 - Mac/iOS: [VoiceOver](https://www.apple.com/accessibility/)
 - Android: [Talkback](https://support.google.com/accessibility/android/answer/6283677?hl=de)
