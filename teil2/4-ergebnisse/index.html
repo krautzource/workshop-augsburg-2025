@@ -1,0 +1,55 @@
+
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4-ERGEBNISSE | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
+    <style>
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}*:focus{outline: double #1b557b}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;text-decoration-skip-ink: auto}a:hover,a:focus,a:active {color: #1b557b}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}*:not(li)>ul{margin-bottom: 1.3em;}
+    </style>
+    </head>
+    <body>
+    <section>
+<h1 id="ergebnisse-(tag-2)" tabindex="-1"><a class="header-anchor" href="#ergebnisse-(tag-2)">Ergebnisse (Tag 2)</a></h1>
+<p>Peter Krautzberger, <a href="https://krautzource.com">krautzource</a></p>
+<p><small>Links/rechts scrollen, um die Slides durchzusehen.</small></p>
+<section>
+<h2 id="ergebnissammlung" tabindex="-1"><a class="header-anchor" href="#ergebnissammlung">Ergebnissammlung</a></h2>
+<ul>
+<li>…</li>
+</ul>
+</section>
+<section>
+<h2 id="probleme-und-mwes" tabindex="-1"><a class="header-anchor" href="#probleme-und-mwes">Probleme und MWEs</a></h2>
+<ul>
+<li>…</li>
+</ul>
+</section>
+<section>
+<h2 id="ideen-zur-vertiefung" tabindex="-1"><a class="header-anchor" href="#ideen-zur-vertiefung">Ideen zur Vertiefung</a></h2>
+<ul>
+<li>Aktiv Menschen suchen</li>
+<li>weitere Werkzeuge erlernen
+<ul>
+<li>mehr TeX Konverter ausprobieren</li>
+<li>Bonus: 1 Screenreader lernen!</li>
+</ul>
+</li>
+<li>üben, üben, üben</li>
+</ul>
+<p>Oder einfach gleich HTML und CSS schreiben 😉</p>
+</section>
+</section>
+
+    <script>
+    const sl = document.querySelector('section');
+    sl.classList.add('slider');
+    // wrap first pieces in wrapper as subsection
+    const s = document.createElement('section');
+    document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
+    sl.insertAdjacentElement('afterbegin', s);
+    </script>
+    </body>
+    </html>
+    
