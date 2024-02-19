@@ -1,4 +1,4 @@
-# Offene Arbeit: Barrieren finden und auflösen
+# Erste Schritte: Barrieren finden und auflösen
 
 Peter Krautzberger, [krautzource](https://krautzource.com)
 
