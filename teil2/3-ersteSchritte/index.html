@@ -1,0 +1,108 @@
+
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3-ERSTESCHRITTE | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
+    <style>
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}*:focus{outline: double #1b557b}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;text-decoration-skip-ink: auto}a:hover,a:focus,a:active {color: #1b557b}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}*:not(li)>ul{margin-bottom: 1.3em;}
+    </style>
+    </head>
+    <body>
+    <section>
+<h1 id="offene-arbeit%3A-barrieren-finden-und-aufl%C3%B6sen" tabindex="-1"><a class="header-anchor" href="#offene-arbeit%3A-barrieren-finden-und-aufl%C3%B6sen">Offene Arbeit: Barrieren finden und auflösen</a></h1>
+<p>Peter Krautzberger, <a href="https://krautzource.com">krautzource</a></p>
+<p><small>Links/rechts scrollen, um die Slides durchzusehen.</small></p>
+<section>
+<h2 id="ziele" tabindex="-1"><a class="header-anchor" href="#ziele">Ziele</a></h2>
+<ul>
+<li>Beispiele testen
+<ul>
+<li>automatisiert</li>
+<li>manuell</li>
+</ul>
+</li>
+<li>Problem identifizieren
+<ul>
+<li>evtl. Lösungen erarbeiten</li>
+<li>MWEs</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="automatisiertes-testen" tabindex="-1"><a class="header-anchor" href="#automatisiertes-testen">Automatisiertes Testen</a></h2>
+<p>Browser-Erweiterungen</p>
+<ul>
+<li><a href="https://www.deque.com/axe/devtools/">Deque axe DevTools</a></li>
+<li><a href="https://accessibilityinsights.io/downloads/">Microsoft Accessibility Insights</a></li>
+</ul>
+</section>
+<section>
+<h2 id="manuelles-testen" tabindex="-1"><a class="header-anchor" href="#manuelles-testen">Manuelles Testen</a></h2>
+<ul>
+<li>Inhaltlich Arbeiten (POUR Prinzipien, WCAG Kriterien)</li>
+<li>HTML Quellcode evaluieren</li>
+<li><a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern">Browser Entwicklertools</a> (<a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">kulturbanause.de Artikel</a>)</li>
+</ul>
+</section>
+<section>
+<h2 id="textalternativen-in-latex" tabindex="-1"><a class="header-anchor" href="#textalternativen-in-latex">Textalternativen in LaTeX</a></h2>
+<ul>
+<li>LaTeX <code>\includegraphics[alt={}]{}</code>
+<ul>
+<li>Bei langer Alternative, damit Hinweise geben.</li>
+</ul>
+</li>
+<li>üben üben üben</li>
+<li>Bring your own content</li>
+</ul>
+</section>
+<section>
+<h2 id="farben-testen" tabindex="-1"><a class="header-anchor" href="#farben-testen">Farben testen</a></h2>
+<ul>
+<li>
+<p><a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern">Browser Entwicklertools</a> (<a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">kulturbanause.de Artikel</a>)</p>
+</li>
+<li>
+<p><a href="https://www.leserlich.info/werkzeuge/kontrastrechner/">leserlich Kontrastchecker</a></p>
+</li>
+<li>
+<p>Und korrigieren</p>
+<ul>
+<li>LaTeX Stärken nutzen (z.B. Makros, in generierte Grafiken)</li>
+</ul>
+</li>
+</ul>
+<p>Mehr: Artikel von <a href="https://www.mindscreen.de/farbkontraste">mindescreen.de</a>, <a href="https://barrierefreies.design/barrierefreiheit-interaktiv-testen/farben-und-kontraste-pruefen">barrierefreies.design</a></p>
+</section>
+<section>
+<h2 id="farbschw%C3%A4che-simulieren" tabindex="-1"><a class="header-anchor" href="#farbschw%C3%A4che-simulieren">Farbschwäche simulieren</a></h2>
+<p>Eine einfache Technik, um grobe Fehler zu identifizieren:</p>
+<ul>
+<li>Via Browser Entwickertools</li>
+<li>Via Betriebssystem (<a href="https://support.microsoft.com/de-de/windows/verwenden-von-farbfiltern-in-windows-43893e44-b8b3-2e27-1a29-b0c15ef0e5ce">Windows</a>, <a href="https://support.apple.com/de-de/guide/mac-help/unac089/14.0/mac/14.0">MacOS</a>)</li>
+</ul>
+</section>
+<section>
+<h2 id="l%C3%B6sungen-f%C3%BCr-inhalte-aus-latex-quellen" tabindex="-1"><a class="header-anchor" href="#l%C3%B6sungen-f%C3%BCr-inhalte-aus-latex-quellen">Lösungen für Inhalte aus LaTeX Quellen</a></h2>
+<ul>
+<li>wenige automatische Mittel</li>
+<li>manuelle Nachbearbeitung (d.h. im HTML) manchmal notwendig</li>
+<li><em>KISS</em> Vereinfachung hilft oftmals</li>
+</ul>
+</section>
+</section>
+
+    <script>
+    const sl = document.querySelector('section');
+    sl.classList.add('slider');
+    // wrap first pieces in wrapper as subsection
+    const s = document.createElement('section');
+    document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
+    sl.insertAdjacentElement('afterbegin', s);
+    </script>
+    </body>
+    </html>
+    
