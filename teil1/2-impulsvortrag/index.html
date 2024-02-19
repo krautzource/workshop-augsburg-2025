@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2-IMPULSVORTRAG | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
     <style>
-    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,video,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;}a:hover,a:focus,a:active {color: #1b557b;text-decoration-skip-ink: auto;}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;font-weight: 300;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}video {width: auto;max-height: 33vh}video:focus {max-height: 60vh;}*:not(li)>ul{margin-bottom: 1.3em;}
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}*:focus{outline: double #1b557b}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;text-decoration-skip-ink: auto}a:hover,a:focus,a:active {color: #1b557b}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}*:not(li)>ul{margin-bottom: 1.3em;}
     </style>
     </head>
     <body>
@@ -39,18 +39,18 @@
 <section>
 <h2 id="grunds%C3%A4tzlich-barrierefrei" tabindex="-1"><a class="header-anchor" href="#grunds%C3%A4tzlich-barrierefrei">Grundsätzlich barrierefrei</a></h2>
 <p><em>Das Web ist grundsätzlich barrierefrei. Wenn Barrieren entstehen, haben wir sie selbst verschuldet.</em></p>
-<p>👁 Visuell: Blindheit, niedrige oder eingeschränkte Sehleistung, eingeschränkte Sicht</p>
-<p>👂 Auditiv: Taubheit, Schwerhörigkeit, Lärm</p>
-<p>🖐 Motorik: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik</p>
-<p>🧠 Kognition: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten</p>
+<p>Barrieren enstehen z.B. in den folgenden Bereichen:</p>
+<p>👁 <strong>Visuell</strong>: Blindheit, niedrige oder eingeschränkte Sehleistung, eingeschränkte Sicht<br>
+👂 <strong>Auditiv</strong>: Taubheit, Schwerhörigkeit, Lärm<br>
+🖐 <strong>Motorik</strong>: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik<br>
+🧠 <strong>Kognition</strong>: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten</p>
 <p>Inspiration: <a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML">HTML: A good basis for accessibility (MDN)</a>, <a href="http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html">(Talk) Selfish Accessibility, Adrian Roselli</a>, <a href="https://www.confabevents.com/videos/accessibility-is-usability">(Talk) Accessibility is usability (video)</a></p>
 </section>
 <section>
 <h2 id="universelles-design" tabindex="-1"><a class="header-anchor" href="#universelles-design">Universelles Design</a></h2>
 <p>Ein wichtiger Überbegriff ist das <a href="https://de.wikipedia.org/wiki/Universal_Design">Universal Design</a>.</p>
 <blockquote>
-<p>“Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”</p>
-<p>–<a href="https://en.wikipedia.org/wiki/Ronald_Mace">Ron Mace</a></p>
+<p>“Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”–<a href="https://en.wikipedia.org/wiki/Ronald_Mace">Ron Mace</a></p>
 </blockquote>
 <p><a href="https://commons.wikimedia.org/wiki/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg#/media/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Curb_cut_for_wheelchair_ramp_%28DSC_3616%29.jpg" alt="Curb cut for wheelchair ramp (DSC 3616).jpg" height="2000" width="3000" style="height:20vw;width:30vw; display:block; margin-inline:auto" ></a>
 <small><a href="//commons.wikimedia.org/wiki/User:Nick-philly" class="mw-redirect" title="User:Nick-philly">Nick-philly</a> , <a href="https://creativecommons.org/licenses/by-sa/4.0" title="Creative Commons Attribution-Share Alike 4.0">CC BY-SA 4.0</a>
@@ -62,7 +62,7 @@
 <p>Rechtlich: <a href="https://en.wikipedia.org/wiki/European_Accessibility_Act">European Accessibility Act</a> / <a href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf">EN 301 549</a> / <a href="https://de.wikipedia.org/wiki/Barrierefreie-Informationstechnik-Verordnung">BITV</a>.</p>
 <p>Im Wesentlichen: <a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
 <ul>
-<li>~60 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
+<li>~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
 <li>A&amp;AA rechtlich gefordert, AAA optional/ideal</li>
 <li>Betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
 <li>Begleitend: <a href="https://www.w3.org/WAI/WCAG22/Understanding/">Understanding WCAG</a>, <a href="https://www.w3.org/WAI/WCAG22/quickref/">WCAG Quick Reference</a></li>
@@ -72,8 +72,7 @@
 </section>
 <section>
 <h2 id="wcags-pour-prinzipien" tabindex="-1"><a class="header-anchor" href="#wcags-pour-prinzipien">WCAGs POUR Prinzipien</a></h2>
-<p>WCAG Grundpfeiler:</p>
-<p>Alle Inhalte müssen</p>
+<p>WCAG Grundpfeiler: Alle Inhalte müssen</p>
 <ul>
 <li>Perceivable - Wahrnehmbar</li>
 <li>Operable - Bedienbar</li>
@@ -99,7 +98,7 @@
 </blockquote>
 </section>
 <section>
-<h2 id="reicht-ein-pdf-nicht%3F" tabindex="-1"><a class="header-anchor" href="#reicht-ein-pdf-nicht%3F">Reicht ein PDF nicht?</a></h2>
+<h2 id="reicht-ein-pdf%3F" tabindex="-1"><a class="header-anchor" href="#reicht-ein-pdf%3F">Reicht ein PDF?</a></h2>
 <p><strong>Nein.</strong></p>
 <ul>
 <li>PDF ist grundsätzlich nicht barrierefrei</li>
@@ -121,7 +120,7 @@
 <li>fixe Dimensionen</li>
 <li>komplexes Textdesign (Schriften, Größen, Orientierung)</li>
 <li>semantischer White Space</li>
-<li>Formeltextsatz</li>
+<li>Formelsatz</li>
 <li>Bildelemente</li>
 </ul>
 </section>
@@ -222,7 +221,7 @@ Eine Auswahl:</p>
 <li>TeX ist lesbar, weiterverwendbar</li>
 <li>erzeugte Graphiken (tikz, pstricks)</li>
 <li>externer Code (matplotlib, Sage, R, Julia)</li>
-<li>Formeltextsatz (<code>\frac</code>, <code>\begin{matrix}</code>)
+<li>Formelsatz (<code>\frac</code>, <code>\begin{matrix}</code>)
 <ul>
 <li>Vor allem in Deutschland</li>
 </ul>
@@ -231,12 +230,13 @@ Eine Auswahl:</p>
 <p>Keep the Source!</p>
 </section>
 <section>
-<h2 id="problemgebiet%3A-formeltextsatz" tabindex="-1"><a class="header-anchor" href="#problemgebiet%3A-formeltextsatz">Problemgebiet: Formeltextsatz</a></h2>
-<p>Formeltextsatz ist grundsätzlich problematisch.</p>
+<h2 id="problemgebiet%3A-formelsatz" tabindex="-1"><a class="header-anchor" href="#problemgebiet%3A-formelsatz">Problemgebiet: Formelsatz</a></h2>
+<p>Formelsatz ist grundsätzlich problematisch.</p>
 <blockquote>
-<p>an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.</p>
+<p>an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.–<a href="https://www.peterkrautzberger.org/0218/">Krautzberger</a></p>
 </blockquote>
-<p>Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formeltextsatz im Web.</p>
+<p>Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formelsatz im Web.</p>
+<p><a href="https://www.mathjax.org/">MathJax</a> hilft.</p>
 </section>
 <section>
 <h2 id="problemgebiete%3A-visuelle-kommunikation" tabindex="-1"><a class="header-anchor" href="#problemgebiete%3A-visuelle-kommunikation">Problemgebiete: Visuelle Kommunikation</a></h2>

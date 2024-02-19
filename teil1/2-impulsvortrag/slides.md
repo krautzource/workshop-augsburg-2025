@@ -29,13 +29,12 @@ Inspiration: [Dao of Web Design (2000)](https://alistapart.com/article/dao/), [R
 
 _Das Web ist grundsätzlich barrierefrei. Wenn Barrieren entstehen, haben wir sie selbst verschuldet._
 
-👁 Visuell: Blindheit, niedrige oder eingeschränkte Sehleistung, eingeschränkte Sicht
+Barrieren enstehen z.B. in den folgenden Bereichen:
 
-👂 Auditiv: Taubheit, Schwerhörigkeit, Lärm
-
-🖐 Motorik: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik
-
-🧠 Kognition: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten
+👁 **Visuell**: Blindheit, niedrige oder eingeschränkte Sehleistung, eingeschränkte Sicht\
+👂 **Auditiv**: Taubheit, Schwerhörigkeit, Lärm\
+🖐 **Motorik**: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik\
+🧠 **Kognition**: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten
 
 Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML), [(Talk) Selfish Accessibility, Adrian Roselli](http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html), [(Talk) Accessibility is usability (video)](https://www.confabevents.com/videos/accessibility-is-usability)
 
@@ -43,9 +42,7 @@ Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozi
 
 Ein wichtiger Überbegriff ist das [Universal Design](https://de.wikipedia.org/wiki/Universal_Design).
 
-> “Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”
->
-> –[Ron Mace](https://en.wikipedia.org/wiki/Ronald_Mace)
+> “Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”–[Ron Mace](https://en.wikipedia.org/wiki/Ronald_Mace)
 
 <a href="https://commons.wikimedia.org/wiki/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg#/media/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Curb_cut_for_wheelchair_ramp_%28DSC_3616%29.jpg" alt="Curb cut for wheelchair ramp (DSC 3616).jpg" height="2000" width="3000" style="height:20vw;width:30vw; display:block; margin-inline:auto" ></a>
 <small><a href="//commons.wikimedia.org/wiki/User:Nick-philly" class="mw-redirect" title="User:Nick-philly">Nick-philly</a> , [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0")
@@ -59,7 +56,7 @@ Rechtlich: [European Accessibility Act](https://en.wikipedia.org/wiki/European_A
 
 Im Wesentlichen: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
 
-- ~60 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA
+- ~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA
 - A&AA rechtlich gefordert, AAA optional/ideal
 - Betreffen größtenteils Interaktion, weniger "statische" Inhalte
 - Begleitend: [Understanding WCAG](https://www.w3.org/WAI/WCAG22/Understanding/), [WCAG Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/)
@@ -69,9 +66,7 @@ Mehr: [EAA Umsetzung in Deutschland](https://www.bitvtest.de/bitv_test/das_testv
 
 ## WCAGs POUR Prinzipien
 
-WCAG Grundpfeiler:
-
-Alle Inhalte müssen
+WCAG Grundpfeiler: Alle Inhalte müssen
 
 - Perceivable - Wahrnehmbar
 - Operable - Bedienbar
@@ -94,7 +89,7 @@ Mehr: [Fortschritt in der digitalen Barrierefreiheit messen](https://www.netz-ba
 
 > Und was hat das ganze mit LaTeX zu tun?
 
-## Reicht ein PDF nicht?
+## Reicht ein PDF?
 
 **Nein.**
 
@@ -114,7 +109,7 @@ Printtraditionen bergen versteckte Problem. Eine Auswahl:
 - fixe Dimensionen
 - komplexes Textdesign (Schriften, Größen, Orientierung)
 - semantischer White Space
-- Formeltextsatz
+- Formelsatz
 - Bildelemente
 
 ## TeXs Schwächen
@@ -196,18 +191,21 @@ Use the Source!
 - TeX ist lesbar, weiterverwendbar
 - erzeugte Graphiken (tikz, pstricks)
 - externer Code (matplotlib, Sage, R, Julia)
-- Formeltextsatz (`\frac`, `\begin{matrix}`)
+- Formelsatz (`\frac`, `\begin{matrix}`)
   - Vor allem in Deutschland
 
 Keep the Source!
 
-## Problemgebiet: Formeltextsatz
+## Problemgebiet: Formelsatz
 
-Formeltextsatz ist grundsätzlich problematisch.
+Formelsatz ist grundsätzlich problematisch.
 
-> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.
+> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.–[Krautzberger](https://www.peterkrautzberger.org/0218/)
 
-Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formeltextsatz im Web.
+
+Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formelsatz im Web. 
+
+[MathJax](https://www.mathjax.org/) hilft.
 
 ## Problemgebiete: Visuelle Kommunikation
 
