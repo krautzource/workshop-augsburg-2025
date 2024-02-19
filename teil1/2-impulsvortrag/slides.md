@@ -200,7 +200,7 @@ Keep the Source!
 
 Formelsatz ist grundsätzlich problematisch.
 
-> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.–[Krautzberger](https://www.peterkrautzberger.org/0218/)
+> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.
 
 
 Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formelsatz im Web. 
