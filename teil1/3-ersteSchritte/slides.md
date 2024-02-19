@@ -59,7 +59,7 @@ Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex
   - `tables.tex`
   - `mathmode.tex`
 
-## Formeltextsatz mit MathJax 
+## Formelsatz mit MathJax 
 
 `$ pandoc input.tex -o output.html -s --mathjax`
 
