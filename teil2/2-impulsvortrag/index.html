@@ -1,0 +1,337 @@
+
+    <!DOCTYPE html>
+    <html lang="de">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2-IMPULSVORTRAG | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
+    <style>
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}*:focus{outline: double #1b557b}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;text-decoration-skip-ink: auto}a:hover,a:focus,a:active {color: #1b557b}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}*:not(li)>ul{margin-bottom: 1.3em;}
+    </style>
+    </head>
+    <body>
+    <section>
+<h1 id="barrierefreiheit-testen-und-probleml%C3%B6sungen-entwickeln" tabindex="-1"><a class="header-anchor" href="#barrierefreiheit-testen-und-probleml%C3%B6sungen-entwickeln">Barrierefreiheit testen und Problemlösungen entwickeln</a></h1>
+<p>Peter Krautzberger, <a href="https://krautzource.com">krautzource</a></p>
+<p><small>Links/rechts scrollen, um die Slides durchzusehen.</small></p>
+<section>
+<h2 id="%C3%BCbersicht" tabindex="-1"><a class="header-anchor" href="#%C3%BCbersicht">Übersicht</a></h2>
+<p>Drei verwickelte Fragen:</p>
+<ul>
+<li>Auf welche Barrieren hin testen wir?</li>
+<li>Wie testen wir darauf?</li>
+<li>Wie vermeiden wir Barrieren?</li>
+</ul>
+</section>
+<section>
+<h2 id="was-wir-testen%3A-wcag" tabindex="-1"><a class="header-anchor" href="#was-wir-testen%3A-wcag">Was wir testen: WCAG</a></h2>
+<p><a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
+<ul>
+<li>~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
+<li>A&amp;AA rechtlich gefordert, AAA optional/ideal</li>
+<li>Betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
+</ul>
+<p>Zur Erinnerung: WCAG ist lediglich das <strong>Minimum</strong>!</p>
+</section>
+<section>
+<h2 id="wie-testen-wir" tabindex="-1"><a class="header-anchor" href="#wie-testen-wir">Wie testen wir</a></h2>
+<ul>
+<li>Automatisiert</li>
+<li>Manuell</li>
+</ul>
+</section>
+<section>
+<h2 id="automatisiertes-testen" tabindex="-1"><a class="header-anchor" href="#automatisiertes-testen">Automatisiertes Testen</a></h2>
+<p>Ein grobes Bild in Zahlen:</p>
+<ul>
+<li>Einerseits: nur geschätzt 20-30% der Kriterien können durch automatisierte Werkzeuge geprüft werden (siehe z.B. <a href="https://bik-fuer-alle.de/automatisierte-tests.html">bik-fuer-alle</a>, <a href="https://www.levelaccess.com/blog/automated-accessibility-testing-tools-how-much-do-scans-catch/">level access</a>, <a href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/">gov.uk</a>)</li>
+<li>Andererseits: 57% der Fehler können entdeckt werden <a href="https://www.deque.com/automated-accessibility-testing-coverage/">Deque</a></li>
+</ul>
+<p>[Nebenbemerkung: <a href="https://overlayfactsheet.com/">Accessibility Overlays</a> sind sehr problematisch.]</p>
+</section>
+<section>
+<h2 id="werkzeuge-zum-automatisierten-testen" tabindex="-1"><a class="header-anchor" href="#werkzeuge-zum-automatisierten-testen">Werkzeuge zum automatisierten Testen</a></h2>
+<p>Browser-Erweiterungen</p>
+<ul>
+<li><a href="https://www.deque.com/axe/devtools/">Deque axe DevTools</a> (*)</li>
+<li><a href="https://accessibilityinsights.io/downloads/">Microsoft Accessibility Insights</a> (*)</li>
+<li><a href="https://www.ibm.com/able/toolkit/tools/">IBM Equal Access Toolkit</a></li>
+<li><a href="https://wave.webaim.org/extension/">WebAIM WAVE</a></li>
+</ul>
+<p>Weitere Helfer:  <a href="https://github.com/skipto-landmarks-headings/browser-extension">SkipTo Landmarks&amp;Headings</a>, <a href="http://matatk.agrip.org.uk/landmarks/">Landmarks</a>, Browser <em>Reader Mode</em>, <a href="https://chromewebstore.google.com/category/extensions/make_chrome_yours/accessibility">und viele weitere Erweiterungen</a></p>
+</section>
+<section>
+<h2 id="werkzeuge-zum-manuellen-testen" tabindex="-1"><a class="header-anchor" href="#werkzeuge-zum-manuellen-testen">Werkzeuge zum manuellen Testen</a></h2>
+<ul>
+<li>Gesunder Menschenverstand (POUR etc)</li>
+<li>HTML Quellcode</li>
+<li><a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern">Browser Entwicklertools</a> (<a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">kulturbanause.de Artikel</a>)</li>
+</ul>
+</section>
+<section>
+<h2 id="f%C3%BCr-fortgeschrittene%3A-screenreader" tabindex="-1"><a class="header-anchor" href="#f%C3%BCr-fortgeschrittene%3A-screenreader">Für Fortgeschrittene: Screenreader</a></h2>
+<ul>
+<li>Windows: <a href="https://www.nvaccess.org/">NVDA</a>, <a href="https://www.freedomscientific.com/products/software/jaws/">JAWS</a>, <a href="https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started">Microsoft Narrator</a></li>
+<li>Mac/iOS: <a href="https://www.apple.com/accessibility/">VoiceOver</a></li>
+<li>Android: <a href="https://support.google.com/accessibility/android/answer/6283677?hl=de">Talkback</a></li>
+<li>Linux: <a href="https://wiki.gnome.org/Projects/Orca">Gnome ORCA</a> (ChromeOS: <a href="http://www.chromevox.com/">ChromeVox</a>)</li>
+</ul>
+<p>Demos: <a href="https://pkra.github.io/2022-athen-stem-conf/">ATHEN STEM conference, 2022</a></p>
+<p><em>Kleine</em> Screenreader: <a href="https://www.texthelp.com/">Texthelp</a>, <a href="https://speechify.com/">Speechify</a> (oft als browser Erweiterungen); <em>Reader Mode</em></p>
+</section>
+<section>
+<h2 id="was-wir-testen%3A-wcag-reloaded" tabindex="-1"><a class="header-anchor" href="#was-wir-testen%3A-wcag-reloaded">Was wir testen: WCAG Reloaded</a></h2>
+<p><a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
+<ul>
+<li>~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
+<li>A&amp;AA rechtlich gefordert, AAA optional/ideal</li>
+<li>Betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
+</ul>
+<p>Zur Erinnerung: WCAG ist lediglich das <strong>Minimum</strong>!</p>
+<p>⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriteren.</p>
+</section>
+<section>
+<h2 id="wcag-1.1.1-nicht-text-inhalt" tabindex="-1"><a class="header-anchor" href="#wcag-1.1.1-nicht-text-inhalt">WCAG 1.1.1 Nicht-Text-Inhalt</a></h2>
+<blockquote>
+<p>Alle Nicht-Text-Inhalte, die dem Benutzer präsentiert werden, haben eine Textalternative, die einem äquivalenten Zweck dient, mit Ausnahme der unten aufgelisteten Situationen. […]</p>
+</blockquote>
+<p>NB: Dekorativausnahme.</p>
+<p><strong>Was sind Nicht-Text-Inhalte?</strong></p>
+<blockquote>
+<p>Jeglicher Inhalt, der keine Buchstabenfolge ist und der durch Software bestimmt werden kann oder bei dem die Abfolge etwas nicht in menschlicher Sprache ausdrückt.<br>
+Hinweis: Dies beinhaltet ASCII Art (ein Muster von Buchstaben), Emoticons, Leetspeak (Ersetzung von Buchstaben durch Ziffern oder Sonderzeichen) und Bilder, die Text repräsentieren.</p>
+</blockquote>
+</section>
+<section>
+<h2 id="einordung%3A-wcag-1.1.1" tabindex="-1"><a class="header-anchor" href="#einordung%3A-wcag-1.1.1">Einordung: WCAG 1.1.1</a></h2>
+<ul>
+<li>Kurze vs Lange Alternativen</li>
+<li>Viele Techniken (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">Understanding 1.1.1</a>), aber mit LaTeX Quellen oft schwierig:
+<ul>
+<li><em>kurz</em> via <code>\includegraphics</code>; <em>lang</em> via <em>kurz</em> möglich</li>
+<li>Unterschiede bei <q>fixen</q> und erzeugten Grafiken (tikz etc // R, matplotlib etc)</li>
+<li>Immer (LaTeX) Quellen behalten! Evtl. Alternativen erzeugen (z.B. Daten als Tabellen, notfalls als Rohtext)</li>
+</ul>
+</li>
+<li>Formelsatz → <a href="https://www.mathjax.org/">MathJax</a> hilft</li>
+<li>SVG &gt; Raster (SVG+Raster!)</li>
+</ul>
+<p>Mehr: <a href="https://www.tu-chemnitz.de/urz/www/bf/alt.html">TU Chemnitz</a>, <a href="https://www.rrze.fau.de/2022/08/der-perfekte-alt-text-interview-mit-blinden-und-sehbehinderten-menschen/">FAU Artikel “perfekter” Alttext</a>, <a href="https://barrierefreies.design/blog/gute-alternativtexte-fur-bilder-formulieren">barrierefreies.design</a>, <a href="https://bik-fuer-alle.de/alternativtexte-fuer-grafiken.html">BIK</a>, <a href="https://accessibility.huit.harvard.edu/describe-content-images">Harvard</a><br>
+Inspiration: <a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html">Sorge&amp;Austin@ w4a2023</a>, <a href="https://krautzource.github.io/aria-tree-walker/">@krautzource/aria-tree-walker</a></p>
+</section>
+<section>
+<h2 id="wcag-1.3.1-info-und-beziehungen" tabindex="-1"><a class="header-anchor" href="#wcag-1.3.1-info-und-beziehungen">WCAG 1.3.1 Info und Beziehungen</a></h2>
+<blockquote>
+<p>Informationen, Struktur und Beziehungen, die über die Darstellung vermittelt werden, können durch Software bestimmt werden oder stehen in Textform zur Verfügung.</p>
+</blockquote>
+<p><strong>Einordung</strong>:</p>
+<ul>
+<li>viele Fälle und Techniken (<a href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html">Understanding 1.3.1</a>)</li>
+<li>Die Best Practices zu Dokumentstruktur (und mehr) helfen
+<ul>
+<li>aber auch: pragmatische Möglichkeiten (z.B. hervorgehobenes List item ⇒ “neu” dazu schreiben)</li>
+</ul>
+</li>
+<li>Gleichheitsgrundsatz nicht missbrauchen</li>
+<li>Mein LaTeX Litmustest: Tabellenkopf, Theorem-Umgebungen</li>
+</ul>
+</section>
+<section>
+<h2 id="wcag-1.3.2-bedeutungstragende-reihenfolge" tabindex="-1"><a class="header-anchor" href="#wcag-1.3.2-bedeutungstragende-reihenfolge">WCAG 1.3.2 Bedeutungstragende Reihenfolge</a></h2>
+<blockquote>
+<p>Wenn die Reihenfolge, in der Inhalte präsentiert werden, sich auf deren Bedeutung auswirkt, kann die korrekte Leseabfolge durch Software bestimmt werden.</p>
+</blockquote>
+<p>Meistens leicht lösbar. Typische Risikobereiche:</p>
+<ul>
+<li>Floats</li>
+<li>Abbildungen mit mehreren Grafiken
+<ul>
+<li>Whitespace Hacking zur Positionierung</li>
+</ul>
+</li>
+<li>Wrapfig Paket</li>
+</ul>
+</section>
+<section>
+<h2 id="wcag-1.3.3-sensorische-eigenschaften" tabindex="-1"><a class="header-anchor" href="#wcag-1.3.3-sensorische-eigenschaften">WCAG 1.3.3 Sensorische Eigenschaften</a></h2>
+<blockquote>
+<p>Anweisungen, die für das Verständnis und die Bedienung von Inhalt bereitgestellt werden, stützen sich nicht nur auf sensorische Eigenschaften von Komponenten wie Form, Farbe, Größe, visuelle Position, Ausrichtung oder Ton.</p>
+</blockquote>
+<p>Typische Risikobereiche:</p>
+<ul>
+<li>Querverweise ohne Links (<q>Bild rechts</q>, <q>Seite XX</q>)</li>
+<li>Textfarben referenzieren</li>
+<li>Abbildungen mit mehreren Grafiken (1x4 →  2x2  →  4x1)</li>
+<li>Inline-Grafiken (z.B. Glyph-artiges)</li>
+<li>Wrapfig Paket</li>
+</ul>
+</section>
+<section>
+<h2 id="wcag-1.4.1-benutzung-von-farbe" tabindex="-1"><a class="header-anchor" href="#wcag-1.4.1-benutzung-von-farbe">WCAG 1.4.1 Benutzung von Farbe</a></h2>
+<blockquote>
+<p>Farbe wird nicht als einziges visuelles Mittel benutzt, um Informationen zu vermitteln, eine Handlung zu kennzeichnen, eine Reaktion zu veranlassen oder ein visuelles Element zu unterscheiden.</p>
+</blockquote>
+<p>Typische Risikobereiche:</p>
+<ul>
+<li>Fast immer bei Nutzung von Textfarben, d.h. Vorder- und Hintergrundfarben.
+<ul>
+<li>oft korrigierbar durch Muster (Rand, Schraffierung) und Markup (Links)</li>
+</ul>
+</li>
+<li>Betrifft ebenso nicht-text (1.1.1), vor allem auch generierten oder textlastigen Nicht-Text
+<ul>
+<li>insbesondere Legenden, Bildunterschriften, Textalternativen</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="wcag-1.4.3-kontrast-(minimum)" tabindex="-1"><a class="header-anchor" href="#wcag-1.4.3-kontrast-(minimum)">WCAG 1.4.3 Kontrast (Minimum)</a></h2>
+<blockquote>
+<p>Die visuelle Darstellung von Text und Bildern von Text hat ein Kontrastverhältnis von mindestens 4,5:1 mit folgenden Ausnahmen:<br>
+<strong>Großer Text</strong> […] <strong>Nebensächlich</strong> […] <strong>Wortbildmarken</strong></p>
+</blockquote>
+<p>Typische Risikobereiche:</p>
+<ul>
+<li>Alles aus 1.4.1</li>
+<li>Nur Vordergrund/Hintergrund spezifiziert</li>
+<li>Text auf Bild</li>
+</ul>
+</section>
+<section>
+<h2 id="wcag-1.4.5-bilder-eines-textes" tabindex="-1"><a class="header-anchor" href="#wcag-1.4.5-bilder-eines-textes">WCAG 1.4.5 Bilder eines Textes</a></h2>
+<blockquote>
+<p>Wenn die benutzten Techniken die visuelle Präsentation bewirken können, dann wird Text statt Bilder eines Textes dazu benutzt, Informationen zu vermitteln [mit Ausnahmen]</p>
+</blockquote>
+<p>Natürlich guter Stil - nicht Textlayout als Bild, nicht Layout hacken (Größe, Abstände).</p>
+<p>Aber: bei LaTeX Paketen oft die einzige Notlösung.</p>
+</section>
+<section>
+<h2 id="wcag-1.4.10-umfluss-(reflow)" tabindex="-1"><a class="header-anchor" href="#wcag-1.4.10-umfluss-(reflow)">WCAG 1.4.10 Umfluss (Reflow)</a></h2>
+<blockquote>
+<p>Inhalte können ohne Informations- oder Funktionsverlust dargestellt werden, ohne dass dafür ein Scrollen in zwei Dimensionen erforderlich ist.</p>
+</blockquote>
+<ul>
+<li>320 x 256 CSS-Pixel</li>
+<li>Ausnahme: Verwendung oder Bedeutung erfordern zweidimensionales Layout
+<ul>
+<li>Beispiele: Bilder, Karten, Diagramme, Videos, Spiele, Präsentationen, Datentabellen</li>
+</ul>
+</li>
+</ul>
+<p><strong>Einordnung</strong>: (Block-)Formeln sind meistens Ausnahmen. Probleme enstehen oft bei Layout-intensiven Inhalten (z.B. Verse, Algorithm Paket)</p>
+<!-- ## WCAG 1.4.11 Nicht-Text-Kontrast
+
+> Ein Kontrastverhältnis von mindestens 3:1 zu benachbarten Farben gilt für die visuelle Präsentation von:\
+> **Bestandteilen der Benutzerschnittstelle** [...] **Grafische Objekte**
+
+**Einordnung**: Links sind vermutlich die einzigen Beispiele für den ersten Teil. Betrifft sehr häufig inhaltlich wichtige Graphiken vor allem auch Text in/auf Grafik.
+ -->
+</section>
+<section>
+<h2 id="wcag-2.4.2-seite-mit-titel-versehen" tabindex="-1"><a class="header-anchor" href="#wcag-2.4.2-seite-mit-titel-versehen">WCAG 2.4.2 Seite mit Titel versehen</a></h2>
+<blockquote>
+<p>Webseiten haben einen Titel, der Thema oder Zweck beschreibt.</p>
+</blockquote>
+<p><strong>Einordnung</strong>: Inhaltlich einfach (Werkzeuge sollten automatisch <code>\title</code> als <code>&lt;title&gt;</code> setzen).</p>
+<p>Probleme gibt es evtl. bei Einpflege in LMS/CMS etc.</p>
+</section>
+<section>
+<h2 id="wcag-2.4.4-linkzweck-(im-kontext)" tabindex="-1"><a class="header-anchor" href="#wcag-2.4.4-linkzweck-(im-kontext)">WCAG 2.4.4 Linkzweck (im Kontext)</a></h2>
+<blockquote>
+<p>Der Zweck jedes Links kann durch den Linktext allein oder durch den Linktext zusammen mit seinem durch Software bestimmten Link-Kontext bestimmt werden außer in Fällen, in denen der Zweck des Links mehrdeutig für Benutzer im Allgemeinen wäre.</p>
+</blockquote>
+<p><strong>Einordnung</strong>: Sehr warscheinlich fast immer erfüllbar durch die Ausnahmen “Kontext”, “allgemeine Ambiguität” (z.B. <code>\cite{Augs2024}</code> erzeugt <code>[1]</code>).</p>
+<p>Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten (vgl. 2.4.9).</p>
+<!-- ## WCAG 2.4.5 Verschiedene Methoden
+
+> Es gibt mehr als eine Methode, um eine Webseite innerhalb eines Satzes von Webseiten zu finden, außer die Webseite ist das Ergebnis oder ein Schritt innerhalb eines Prozesses.
+
+**Einordnung**: Eher relevant für CMS/LMS. Ggf. Relevant, wenn ein Dokument mehrere Seiten erzeugt (z.B. pro Kapitel); siehe 1.3.1. Einfache Best practices wie ein Inhaltsverzeichnis können helfen. -->
+</section>
+<section>
+<h2 id="wcag-2.4.6-%C3%BCberschriften-und-beschriftungen-(labels)" tabindex="-1"><a class="header-anchor" href="#wcag-2.4.6-%C3%BCberschriften-und-beschriftungen-(labels)">WCAG 2.4.6 Überschriften und Beschriftungen (Labels)</a></h2>
+<blockquote>
+<p>Überschriften und Labels beschreiben ein Thema oder einen Zweck.</p>
+</blockquote>
+<p><strong>Einordnung</strong>: Sehr wichtig. Meist von selbst gegeben.</p>
+<p>Grenzfälle: repetitive oder gewollt vage Überschriften, Abbildungen ohne <code>\caption</code>.</p>
+<!-- ## WCAG 2.4.7 Fokus sichtbar
+
+> Jede durch Tastatur bedienbare Benutzerschnittstelle hat einen Bedienmodus, bei dem der Tastaturfokus sichtbar ist.
+
+**Einordnung**: Konvertierungswerkzeuge sind manchmal nicht gut bei solchen elementaren Designstandards. -->
+</section>
+<section>
+<h2 id="wcag-2.4.9-linkzweck-(reiner-link)" tabindex="-1"><a class="header-anchor" href="#wcag-2.4.9-linkzweck-(reiner-link)">WCAG 2.4.9 Linkzweck (reiner Link)</a></h2>
+<p>AAA</p>
+<blockquote>
+<p>Es gibt einen Mechanismus, um den Zweck jedes Links durch den Linktext allein zu erkennen, außer der Linkzweck wäre mehrdeutig für Benutzer im Allgemeinen.</p>
+</blockquote>
+<p><strong>Einordnung</strong>: Wie 2.4.4 mit weniger Ausnahmen. Gute Motivation, um cleverref etc. zu bevorzugen.</p>
+</section>
+<section>
+<h2 id="wcag-2.4.10-abschnitts%C3%BCberschriften" tabindex="-1"><a class="header-anchor" href="#wcag-2.4.10-abschnitts%C3%BCberschriften">WCAG 2.4.10 Abschnittsüberschriften</a></h2>
+<p>AAA</p>
+<blockquote>
+<p>Abschnittsüberschriften werden genutzt, um den Inhalt zu gliedern.</p>
+</blockquote>
+<blockquote>
+<p>Hinweis: „Überschrift“ wird in seiner allgemeinen Bedeutung benutzt und beinhaltet Titel und andere Methoden, um verschiedenen Arten von Inhalt eine Überschrift hinzuzufügen.</p>
+</blockquote>
+<p><strong>Einordnung</strong>: Best Practices zeigen, was sie können. Abbildungen, Theorem-Umgebungen etc.</p>
+<p>NB: Schwierig, das Ende eines Abschnitt zu beschreiben.</p>
+<!-- ## WCAG 2.5.3 Beschriftung (Label) im Namen
+
+> Bei Bestandteilen der Benutzerschnittstelle mit Beschriftungen (Labels), die Text oder Bilder eines Textes enthalten, enthält der Name den Text, der visuell angezeigt wird.
+
+**Einordnung**: Betrifft Links! -->
+</section>
+<section>
+<h2 id="wcag-2.5.8-target-size-(minimum)" tabindex="-1"><a class="header-anchor" href="#wcag-2.5.8-target-size-(minimum)">WCAG 2.5.8 Target Size (Minimum)</a></h2>
+<p>Neu in WCAG 2.2, daher nur auf Englisch:</p>
+<blockquote>
+<p>The size of the target for pointer inputs is at least 24 by 24 CSS pixels, except where:<br>
+<em>Spacing</em> […] <em>Equivalent</em> […] <em>Inline</em> […] <em>User agent control</em> […] <em>Essential</em></p>
+</blockquote>
+<p>Sonst werden sehr kurze Links unbrauchbar - <q>Kapitel <a href="...">1</a></q>, <q>siehe <a href="...">[Kr]</a></q>.</p>
+<p><strong>Einordnung</strong> Eigentlich schwerwiegendes Problem, aber die Ausnahmen gelten meistens.</p>
+<p>Wiederum: cleverref etc. helfen, es gut zu machen.</p>
+</section>
+<section>
+<h2 id="wcag-3.1.1-sprache-der-seite" tabindex="-1"><a class="header-anchor" href="#wcag-3.1.1-sprache-der-seite">WCAG 3.1.1 Sprache der Seite</a></h2>
+<blockquote>
+<p>Die voreingestellte menschliche Sprache jeder Webseite kann durch Software bestimmt werden.</p>
+</blockquote>
+<p><strong>Einordnung</strong> Inhaltlich trivial (<code>&lt;html lang=&quot;...&quot;&gt;</code>) aber Werkzeuge scheitern überraschend oft.</p>
+</section>
+<section>
+<h2 id="wcag-3.1.2-sprache-von-teilen" tabindex="-1"><a class="header-anchor" href="#wcag-3.1.2-sprache-von-teilen">WCAG 3.1.2 Sprache von Teilen</a></h2>
+<blockquote>
+<p>Die menschliche Sprache jedes Abschnitts oder jedes Satzes im Inhalt kann durch Software bestimmt werden außer bei Eigennamen, technischen Fachbegriffen, Wörtern einer unklaren Sprache und Wörtern oder Wendungen, die Teil des Jargons des direkt umliegenden Textes geworden sind.</p>
+</blockquote>
+<p><strong>Einordnung</strong>: Eigentlich einfach (via <code>\foreignlanguage</code> und <code>lang</code>) aber Werkzeuge scheitern manchmal.</p>
+</section>
+<section>
+<h2 id="wcag-3.1---einige-aaas" tabindex="-1"><a class="header-anchor" href="#wcag-3.1---einige-aaas">WCAG 3.1 - einige AAAs</a></h2>
+<p>Hochgradig relevant aber schwer umsetzbar.</p>
+<ul>
+<li><strong>3.1.3 Ungewöhnliche Wörter</strong> <q>Es gibt einen Mechanismus, um spezielle Definitionen von Wörtern oder Wendungen zu erkennen, die auf ungewöhnliche oder eingeschränkte Weise benutzt werden, Idiome und Jargon eingeschlossen.</q></li>
+<li><strong>3.1.4 Abkürzungen</strong> <q>Es gibt einen Mechanismus, um die ausgeschriebene Form oder Bedeutung von Abkürzungen zu erkennen.</q></li>
+<li><strong>3.1.5 Leseniveau</strong> <q> Wenn der Text nach der Entfernung von Eigennamen und Titeln Lesefähigkeiten voraussetzt, die über das Niveau der niedrigen, sekundären Schulbildung hinausgehen, dann gibt es ergänzenden Inhalt oder eine Version, die keine über die niedrige, sekundäre Schulbildung hinausgehenden Lesefähigkeiten verlangt.</q></li>
+<li><strong>3.1.6 Aussprache</strong> <q>Es gibt einen Mechanismus, um die bestimmte Aussprache von Wörtern zu erkennen, wenn die Bedeutung der Wörter – im Zusammenhang – mehrdeutig ist, wenn man die Aussprache nicht kennt.</q></li>
+</ul>
+</section>
+</section>
+
+    <script>
+    const sl = document.querySelector('section');
+    sl.classList.add('slider');
+    // wrap first pieces in wrapper as subsection
+    const s = document.createElement('section');
+    document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
+    sl.insertAdjacentElement('afterbegin', s);
+    </script>
+    </body>
+    </html>
+    
