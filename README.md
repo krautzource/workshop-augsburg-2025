@@ -21,6 +21,6 @@ Tag 2 ([Quellen](https://github.com/krautzource/workshop-augsburg-2024/teil2/))
 - [Tag 2 Ergebnisse](https://krautzource.github.io/workshop-augsburg-2024/teil2/5-ergebnisse/)
 
 
-[Quellen auf GitHub](https://github.com/krautzource/workshop-augsburg-2024)
+[Quellen auf GitHub](https://github.com/krautzource/workshop-augsburg-2024), [zip Download davon](https://github.com/krautzource/workshop-augsburg-2024/archive/refs/heads/main.zip)
 
 © [krautzource](https://krautzource.com)
