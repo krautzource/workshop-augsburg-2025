@@ -4,16 +4,7 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 
 <small>Links/rechts scrollen, um die Slides durchzusehen.</small>
 
-## Die Web Plattform
-
-[_Separation of concerns_](https://en.wikipedia.org/wiki/Separation_of_concerns) (Trennung der Belange) des Web.
-
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) für Struktur/Semantik
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) für Präsentation/Layout
-- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) - Vektorgraphik
-- Erweiterbarkeit und Interaktivität (z.B. JavaScript, Canvas, WebGL)
-
-## Aber was ist das Web, wirklich?
+## Was ist das Web, wirklich?
 
 Wir wissen es noch nicht. Zum Vergleich, 100 Jahre nach Gutenbergs Druckerpresse:
 
@@ -24,6 +15,15 @@ Wir wissen es noch nicht. Zum Vergleich, 100 Jahre nach Gutenbergs Druckerpresse
 - die Unruhen und Kriege auslösen
 
 Inspiration: [Dao of Web Design (2000)](https://alistapart.com/article/dao/), [Responsive Web Design (2010)](https://alistapart.com/article/responsive-web-design/), [The Web's Grain (2015)](https://frankchimero.com/blog/2015/the-webs-grain/), [F-Shaped Pattern of Reading on the Web (2017)](https://www.nngroup.com/articles/f-shaped-pattern-reading-web-content/)
+
+## Die Web Plattform
+
+[_Separation of concerns_](https://en.wikipedia.org/wiki/Separation_of_concerns) (Trennung der Belange) des Web.
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) für Struktur/Semantik
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) für Präsentation/Layout
+- [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) - Vektorgraphik
+- Erweiterbarkeit und Interaktivität (z.B. JavaScript, Canvas, WebGL)
 
 ## Grundsätzlich barrierefrei
 
