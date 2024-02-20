@@ -191,8 +191,7 @@ Use the Source!
 - TeX ist lesbar, weiterverwendbar
 - erzeugte Graphiken (tikz, pstricks)
 - externer Code (matplotlib, Sage, R, Julia)
-- Formelsatz (`\frac`, `\begin{matrix}`)
-  - Vor allem in Deutschland
+- Formelsatz
 
 Keep the Source!
 
@@ -203,7 +202,7 @@ Formelsatz ist grundsätzlich problematisch.
 > an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought.
 
 
-Gute LaTeX-Quellen sind das beste Format für barrierefreie Darstellung von Formelsatz im Web. 
+Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung von Formelsatz im Web. Vor allem in Deutschland.
 
 [MathJax](https://www.mathjax.org/) hilft.
 
