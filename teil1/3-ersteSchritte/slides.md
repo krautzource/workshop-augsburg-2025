@@ -90,5 +90,5 @@ Typische Probleme: Unbekannte (mathmode) Umgebungen, `\ref` auf mathmode Inhalte
 
 `$ make4ht -c configuration.cfg input.tex "mathjax"`
 
-Typische Probleme: Unbekannte (mathmode) Umgebungen, `\ref` auf mathmode Inhalte
+Beispiele befinden sich in [/materialien/tex-spezial/](../../materialien/tex-spezial/)
 
