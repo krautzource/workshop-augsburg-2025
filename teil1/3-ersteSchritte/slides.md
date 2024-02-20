@@ -53,7 +53,7 @@ Minimal Beispiele:
 Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex-einfach/)
 
 - Basisdokument `einfach.tex`
-- Strukturelement
+- Strukturelemente, z.B>
   - `lists.tex`
   - `graphics.tex`
   - `tables.tex`
