@@ -11,10 +11,12 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 
 Tag 2
 
-- Orientierung & Rückschau (**Sie sind hier!**)
-- Impulsvortrag: <q>Barrierefreiheit testen und Problemlösungen entwickeln</q>
-- Offene Arbeit
-- Ergebnisse
+- Orientierung & Rückschau (**Sie sind hier!**) (15min)
+- Impulsvortrag: <q>Barrierefreiheit testen und Problemlösungen entwickeln</q> (40min)
+- Pause (15min)
+- Erste Schritte: Barrieren finden und auflösen (20min)
+- Offene Arbeit (90min)
+- Ergebnisse (30min)
 
 ## Pre-flight Check: 
 
@@ -26,7 +28,7 @@ Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2024](https:
 
 ## Retrospektive Tag 1
 
-- Erkentnisse
+- Erkenntnisse
   - TBD
 - Herausforderungen
   - TBD
