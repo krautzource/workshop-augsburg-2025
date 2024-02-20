@@ -102,6 +102,14 @@
 <li><a href="https://arxiv.org/abs/2207.01335">arxiv:2207.01335</a> <code>costoyaEtAl.tex</code></li>
 </ul>
 </section>
+<section>
+<h2 id="erweiterungen" tabindex="-1"><a class="header-anchor" href="#erweiterungen">Erweiterungen</a></h2>
+<p><a href="https://pandoc.org/filters.html">Pandoc Filters</a></p>
+<p><code>$ pandoc --from latex+raw_tex --lua-filter pandoc-filter.lua -s input.tex -o output.html  --standalone --mathjax</code></p>
+<p><a href="https://www.kodymirus.cz/tex4ht-doc/Configurations.html">make4ht Configurations</a></p>
+<p><code>$ make4ht -c configuration.cfg input.tex &quot;mathjax&quot;</code></p>
+<p>Typische Probleme: Unbekannte (mathmode) Umgebungen, <code>\ref</code> auf mathmode Inhalte</p>
+</section>
 </section>
 
     <script>

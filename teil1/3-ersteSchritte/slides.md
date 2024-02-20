@@ -80,3 +80,15 @@ Typische Probleme: Unbekannte (mathmode) Umgebungen, `\ref` auf mathmode Inhalte
 - [arxiv:1312.4289](https://arxiv.org/abs/1312.4289) `rademacher.tex`
 - [arxiv:2207.01335](https://arxiv.org/abs/2207.01335) `costoyaEtAl.tex`
 
+## Erweiterungen
+
+[Pandoc Filters](https://pandoc.org/filters.html)
+
+`$ pandoc --from latex+raw_tex --lua-filter pandoc-filter.lua -s input.tex -o output.html  --standalone --mathjax`
+
+[make4ht Configurations](https://www.kodymirus.cz/tex4ht-doc/Configurations.html)
+
+`$ make4ht -c configuration.cfg input.tex "mathjax"`
+
+Typische Probleme: Unbekannte (mathmode) Umgebungen, `\ref` auf mathmode Inhalte
+
