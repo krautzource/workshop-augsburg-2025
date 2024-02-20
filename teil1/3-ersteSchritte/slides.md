@@ -26,7 +26,7 @@ Das **Batteries included** Prinzip
 
 - Weitläufige Dokument-zu-Dokument Konversion
 - einfache Benutzung
-- große Community
+- [große Community](https://pandoc.org/help.html)
 - LaTeX Unterstützung als Input eher beschränkt
   - Erweiterungen ebenso
 
@@ -37,7 +37,7 @@ Das **Batteries included** Prinzip
 
 - Fokus auf TeX-zu-HTML (und XML)
 - nutzt TeX intern
-- kleine Community
+- [kleine Community](https://tug.org/tex4ht/#docs)
 - LaTeX-artige Erweiterbarkeit
 
 ## Beschwörungsformeln
@@ -59,13 +59,17 @@ Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex
   - `tables.tex`
   - `mathmode.tex`
 
-## Formelsatz mit MathJax 
+## Formelsatz mit MathJax
+
+[MathJax](https://www.mathjax.org/) ist die führende Lösung für Formelsatz im Web.
 
 `$ pandoc input.tex -o output.html -s --mathjax`
 
 `$ make4ht input.tex "mathjax"`
 
-## Weiteführende Beispiele
+Typische Probleme: Unbekannte (mathmode) Umgebungen, `\ref` auf mathmode Inhalte
+
+## Weiterführende Beispiele
 
 - Bibliographie mit BibTeX `bibtex.tex`
   - `$ pandoc ../bibtex.tex --bibliography=../bibtex.bib -o bibtex.html -s --citeproc -M link-citations=true`
