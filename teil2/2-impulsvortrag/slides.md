@@ -177,7 +177,7 @@ Aber: bei LaTeX Paketen oft die einzige Notlösung.
 - Ausnahme: Verwendung oder Bedeutung erfordern zweidimensionales Layout
   - Beispiele: Bilder, Karten, Diagramme, Videos, Spiele, Präsentationen, Datentabellen
 
-**Einordnung**: (Block-)Formeln sind meistens Ausnahmen. Probleme enstehen oft bei Layout-intensiven Inhalten (z.B. Verse, Algorithm Paket)
+**Einordnung**: (Block-)Formeln sind meistens Ausnahmen. Probleme entstehen oft bei Layout-intensiven Inhalten (z.B. Verse, Algorithm Paket)
 
 <!-- ## WCAG 1.4.11 Nicht-Text-Kontrast
 
@@ -198,7 +198,7 @@ Probleme gibt es evtl. bei Einpflege in LMS/CMS etc.
 
 > Der Zweck jedes Links kann durch den Linktext allein oder durch den Linktext zusammen mit seinem durch Software bestimmten Link-Kontext bestimmt werden außer in Fällen, in denen der Zweck des Links mehrdeutig für Benutzer im Allgemeinen wäre.
 
-**Einordnung**: Sehr warscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2024}` erzeugt `[1]`).
+**Einordnung**: Sehr wahrscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2024}` erzeugt `[1]`).
 
 Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten (vgl. 2.4.9).
 
