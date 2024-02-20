@@ -78,8 +78,7 @@ Demos: [ATHEN STEM conference, 2022](https://pkra.github.io/2022-athen-stem-conf
 
 Zur Erinnerung: WCAG ist lediglich das **Minimum**!
 
-⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien.
-
+⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien. Mehr unter [/materialien/WCAG-rundschau.md](../../materialien/WCAG-rundschau.md)
 ## WCAG 1.1.1 Nicht-Text-Inhalt
 
 > Alle Nicht-Text-Inhalte, die dem Benutzer präsentiert werden, haben eine Textalternative, die einem äquivalenten Zweck dient, mit Ausnahme der unten aufgelisteten Situationen. [...]
