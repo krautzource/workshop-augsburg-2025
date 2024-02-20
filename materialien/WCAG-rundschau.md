@@ -4,7 +4,7 @@ Eine informelle Rundschau der [WCAG 2.2 quick reference](https://www.w3.org/WAI/
 
 Die Rundschau reduziert WCAG 2.2 auf diejenigen Erfolgskriterien (Success Criteria), die für solche Dokumenten relevant sind, welche aus LaTeX-Quellen erzeugt wurden.
 
-Darüberhinaus enthält die Rundschau Kommentare zu LaTeX-spezifischen Problemen und Anwendungsfällen.
+Darüber hinaus enthält die Rundschau Kommentare zu LaTeX-spezifischen Problemen und Anwendungsfällen.
 
 ### 1. Wahrnehmbar - Perceivable
 
@@ -64,7 +64,7 @@ Im Kontext von LaTeX:
 - externe Grafik
   - Rasterformate (png, jpg etc)
   - SVG inhalte (s.u.)
-- Formeltextsatz
+- Formelsatz
   - MathJax hilft bei allen üblichen Fällen
   - aber es ist kompliziert
 - erzeugte Grafiken
@@ -132,9 +132,14 @@ Situation B: The technology in use does NOT provide the semantic structure to ma
 - Making information and relationships conveyed through presentation programmatically determinable or available in text using the following techniques:
   - [pkra: what follows here in WCAG is for plain text but might serve to inform preformatted & pseudo-code content]
 
+Viele Fälle und Techniken ([Understanding 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html))
+
 ###### Einordnung
 
-TODO: alle guten LaTeX Tips zu Dokumentenstruktur
+- Die Best Practices zu Dokumentstruktur (und mehr) helfen
+  - aber auch: pragmatische Möglichkeiten (z.B. hervorgehobenes List item ⇒ "neu" dazu schreiben)
+- Gleichheitsgrundsatz nicht missbrauchen
+- Mein LaTeX Litmustest: Tabellenkopf, Theorem-Umgebungen
 
 ##### 1.3.2 Bedeutungstragende Reihenfolge
 
@@ -151,10 +156,12 @@ TODO: alle guten LaTeX Tips zu Dokumentenstruktur
 
 ###### Einordnung
 
-- wrapfig package
-- single figure caption for multi-img figure "aligned" using whitespace
-- packages that created layout by whitespace (e.g., other tools for algorithm packages)
-- certain types of white space misuse fit here
+Meistens leicht lösbar. Typische Risikobereiche:
+
+- Floats
+- Abbildungen mit mehreren Grafiken
+  - Whitespace Hacking zur Positionierung
+- Wrapfig Paket
 
 ##### 1.3.3 Sensorische Eigenschaften
 
@@ -167,10 +174,12 @@ TODO: alle guten LaTeX Tips zu Dokumentenstruktur
 
 ###### Einordnung
 
-- figures/figcaptions, in particular mulit-img figures
-- virtually all uses of inline graphics (e.g., glyph-likes)
-- text references
-- wrapfig
+Meistens leicht lösbar. Typische Risikobereiche:
+
+- Floats
+- Abbildungen mit mehreren Grafiken
+  - Whitespace Hacking zur Positionierung
+- Wrapfig Paket
 
 ##### 1.3.4 Bildschirmausrichtung
 
@@ -189,8 +198,6 @@ N/A
 AAA
 
 > In Inhalten, die mit Auszeichnungssprachen implementiert sind, kann der Zweck von Bestandteilen der Benutzerschnittstelle, Symbolen und Regionen durch Software bestimmt werden.
-
-TODO: AAA und ein schöner Anlass über eigentlich einfach "mach alles besser" zu reden. Speziell regions/landmarks/etc
 
 #### 1.4 Unterscheidbar
 
@@ -215,9 +222,12 @@ TODO: AAA und ein schöner Anlass über eigentlich einfach "mach alles besser" z
 
 ###### Einordnung
 
-Betrifft alle Nutzung von Textfarben, d.h. Vorder- und Hintergrundfarben.
+Typische Risikobereiche:
 
-Betrifft ebenso nicht-text (1.1.1), vor allem auch generierten oder textlastigen Nicht-Text.
+- Fast immer bei Nutzung von Textfarben, d.h. Vorder- und Hintergrundfarben.
+  - oft korrigierbar durch Muster (Rand, Schraffierung) und Markup (Links)
+- Betrifft ebenso nicht-text (1.1.1), vor allem auch generierten oder textlastigen Nicht-Text
+  - insbesondere Legenden, Bildunterschriften, Textalternativen
 
 ##### 1.4.2 Audio-Steuerelement
 
@@ -246,7 +256,11 @@ N/A
 
 ###### Einordnung
 
-So wie 1.4.1
+Typische Risikobereiche:
+
+- Alles aus 1.4.1
+- Nur Vordergrund/Hintergrund spezifiziert
+- Text auf Bild
 
 ##### 1.4.4 Textgröße ändern
 
@@ -254,7 +268,7 @@ So wie 1.4.1
 
 ###### Einordnung
 
-Sollte nie wirklich ein Problem sein. Außenahmen bestehen für manche zweidimensionale Konstrukte (z.B. Tabellen).
+Sollte nie wirklich ein Problem sein. Ausnahmen bestehen für manche zweidimensionale Konstrukte (z.B. Tabellen).
 
 ##### 1.4.5 Bilder eines Textes
 
@@ -278,7 +292,9 @@ Aus Techniken:
 
 ###### Einordnung
 
-Im Wesentlichen guter Stil - nicht Textlayout als Bild, nicht Layout hacken (Größe, Abstände)
+Natürlich guter Stil - nicht Textlayout als Bild, nicht Layout hacken (Größe, Abstände).
+
+Aber: bei LaTeX Paketen oft die einzige Notlösung.
 
 ##### 1.4.6 Kontrast (erhöht)
 
@@ -298,7 +314,7 @@ AAA
 
 ###### Einordnung
 
-Eher außerhalb der der Inhalte.
+Eher außerhalb der Inhalte.
 
 Z.B. EPUB Lesesystem haben solche Feature.
 
@@ -337,6 +353,10 @@ Weniger Ausnahmen als 1.4.5.
 - Failures
   - content disappearing and not being available when content has reflowed
 
+##### Einordnung
+
+(Block-)Formeln sind meistens Ausnahmen. Probleme entstehen oft bei Layout-intensiven Inhalten (z.B. Verse, Algorithm Paket)
+
 ##### 1.4.11 Nicht-Text-Kontrast
 
 > Ein Kontrastverhältnis von mindestens 3:1 zu benachbarten Farben gilt für die visuelle Präsentation von:
@@ -357,9 +377,7 @@ Weniger Ausnahmen als 1.4.5.
 
 ###### Einordnung
 
-Betrifft sehr häufig inhaltlich wichtiged Graphiken.
-
-TODO: add example
+Links sind vermutlich die einzigen Beispiele für den ersten Teil. Betrifft sehr häufig inhaltlich wichtige Graphiken vor allem auch Text in/auf Grafik.
 
 ##### 1.4.12 Textabstand
 
@@ -374,7 +392,7 @@ TODO: add example
 
 ###### Einordnung
 
-N/A?
+Meistens N/A. Interessante Frage bei Formelsatz.
 
 ##### 1.4.13 Inhalt bei Überfahren mit dem Zeiger oder Tastaturfokus („Hover“ oder „Focus“)
 
@@ -388,7 +406,7 @@ N/A?
 
 ###### Einordnung
 
-TODO: N/A?
+Meistens N/A
 
 ### 2. Bedienbar
 
@@ -405,7 +423,7 @@ AAA 2.1.3 Keyboard (No Exception)\
 
 ###### Einordnung
 
-N/A?
+N/A
 
 #### 2.2 Ausreichend Zeit
 
@@ -420,9 +438,9 @@ AAA 2.2.6 Timeouts\
 
 ###### Einordnung
 
-N/A?
+N/A
 
-TODO: Aufgaben/Klausuren/Testsysteme fallen hier hinein
+[Evtl. fallen Aufgaben/Klausuren/Testsysteme hierunter.]
 
 #### 2.3 Anfälle und physische Reaktionen
 
@@ -434,9 +452,9 @@ AAA 2.3.3 Animation durch Interaktionen\
 
 ###### Einordnung
 
-N/A?
+N/A
 
-(animated content, video etc is affected by this.)
+Animierte Inhalte, Video etc kann hierunter fallen.
 
 #### 2.4 Navigierbar
 
@@ -448,9 +466,9 @@ N/A?
 
 ###### Einordnung
 
-N/A?
+N/A
 
-Mehr fokussiert auf UI. Inhalte werden eher in 1.3.1 verhandelt (headings, regions etc)
+Mehr fokussiert auf User Interface. Inhalte werden eher in 1.3.1 verhandelt (headings, regions etc)
 
 ##### 2.4.2 Seite mit Titel versehen
 
@@ -458,7 +476,7 @@ Mehr fokussiert auf UI. Inhalte werden eher in 1.3.1 verhandelt (headings, regio
 
 ###### Einordnung
 
-Inhaltich einfach und Werkzeuge sollten es automatisch machen, aber evtl. schwierig in LMS/CMS etc einzupflegen.
+Inhaltlich einfach und Werkzeuge sollten es automatisch machen, aber evtl. schwierig in LMS/CMS etc einzupflegen.
 
 ##### 2.4.3 Fokus-Reihenfolge
 
@@ -466,7 +484,7 @@ Inhaltich einfach und Werkzeuge sollten es automatisch machen, aber evtl. schwie
 
 ###### Einordnung
 
-Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um darauf Einfluß zu nehmen.
+Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um darauf Einfluss zu nehmen.
 
 ##### 2.4.4 Linkzweck (im Kontext)
 
@@ -499,9 +517,9 @@ Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um darauf Ein
 
 ###### Einordnung
 
-Sehr warscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite` macht "[1]").
+Sehr wahrscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2024}` erzeugt `[1]`).
 
-Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten.
+Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten (vgl. 2.4.9).
 
 ##### 2.4.5 Verschiedene Methoden
 
@@ -520,7 +538,7 @@ Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten.
 
 Größtenteils N/A.
 
-Normalerweise nicht relevant für Inhalte.
+Normalerweise nicht relevant für Inhalte sondern CMS/LMS.
 
 Evtl. für Bücher, aber Kurzform ist eher eine einzelne Seite.
 
@@ -534,9 +552,9 @@ Siehe auch: Best practices (TOC etc)
 
 ###### Einordnung
 
-Sehr relevant. Aber meist automatisch ok
+Sehr wichtig. Meist von selbst gegeben. 
 
-Obacht: Grenzfälle - repetitiv, gewollt vage Überschriften
+Grenzfälle: repetitive oder gewollt vage Überschriften, Abbildungen ohne `\caption`.
 
 ##### 2.4.7 Fokus sichtbar
 
@@ -546,7 +564,7 @@ Obacht: Grenzfälle - repetitiv, gewollt vage Überschriften
 
 Wichtig.
 
-Konvertierungswerkzeuge sind manchmal nicht gut bei solchen elementaren Designstandards.
+Konvertierungswerkzeuge sollten dies aber gut handhaben.
 
 ##### 2.4.8 Position
 
@@ -619,7 +637,7 @@ Stärkere Variante von 2.4.7.
 
 Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um hier Probleme zu erzeugen.
 
-Ausnahme: 2.5.8
+Ausnahme: 2.5.3, 2.5.8
 
 2.5.1 Zeigergesten\
 2.5.2 Zeigeraufhebung\
@@ -628,6 +646,14 @@ Ausnahme: 2.5.8
 AAA 2.5.5 Zielgröße\
 AAA 2.5.6 Gleichzeitig verfügbare Eingabemechanismen\
 2.5.7 Dragging Movements [neu in WCAG 2.2]
+
+##### 2.5.3 Beschriftung (Label) im Namen
+
+> Bei Bestandteilen der Benutzerschnittstelle mit Beschriftungen (Labels), die Text oder Bilder eines Textes enthalten, enthält der Name den Text, der visuell angezeigt wird.
+
+###### Einordnung
+
+Betrifft Links.
 
 ##### 2.5.8 Target Size (Minimum)
 
@@ -647,12 +673,11 @@ AAA 2.5.6 Gleichzeitig verfügbare Eingabemechanismen\
 
 ###### Einordnung
 
-Ein schwerwiegendes Problem.
-Die Ausnahme für "inline text" gilt eher nur für Höhe.
-Die Ausnahme für User Agents könnte man evtl. allgemeiner auslegen.
+Sonst werden sehr kurze Links etc. unbrauchbar - <q>Kapitel [1](...)</q>, <q>siehe [[Kr]](...)</q>.
 
-Insgesamt wieder ein Argument für cleverref etc.
-Sonst werden sehr kurze Links unbrauchbar, e.g "Section [1](...)", "see [[JonKrau]](...)".
+Eigentlich schwerwiegendes Problem, aber die Ausnahmen gelten meistens.
+
+Wiederum: cleverref etc. helfen, es gut zu machen.
 
 ### 3. Verständlich
 
@@ -671,9 +696,7 @@ Sonst werden sehr kurze Links unbrauchbar, e.g "Section [1](...)", "see [[JonKra
 
 ###### Einordnung
 
-Inhaltlich trivial aber Werkzeuge scheitern meistens.
-
-TODO: test
+Inhaltlich trivial (`<html lang="...">`) aber Werkzeuge scheitern manchmal.
 
 ##### 3.1.2 Sprache von Teilen
 
@@ -683,9 +706,7 @@ TODO: test
 
 ###### Einordnung
 
-TODO: test Babel foreignlanguage etc
-
-https://www.overleaf.com/project/65b8c3676af421dd53ac3563
+Eigentlich einfach (via `\foreignlanguage` und `lang`) aber Werkzeuge scheitern manchmal.
 
 ##### 3.1.3 Ungewöhnliche Wörter
 
@@ -750,9 +771,7 @@ AAA 3.2.5 Änderung auf Anfrage\
 
 ###### Einordnung
 
-Largely N/A.
-
-Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um hier Probleme zu erzeugen. Betrifft evtl. Examina.
+Gesamte Sektion eher N/A. Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um hier Probleme zu erzeugen. Betrifft evtl. Examina.
 
 3.3.1 Fehlererkennung\
 3.3.2 Beschriftungen (Labels) oder Anweisungen\
