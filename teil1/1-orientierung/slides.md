@@ -22,10 +22,11 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 Tag 1
 
 - Orientierung **(Sie sind hier!)**
-- Impulsvortrag <q>Barrierefreies Web und LaTeX - Freund oder Feind?</q>
-- Erste Schritte
-- Offene Arbeit
-- Ergebnisse
+- Impulsvortrag <q>Barrierefreies Web und LaTeX - Freund oder Feind?</q> (45min)
+- Pause (15min)
+- Erste Schritte: von LaTeX Quellen zum Web (30min)
+- Offene Arbeit (90min)
+- Ergebnisse (30min)
 
 ## Pre-flight Check:
 
