@@ -56,3 +56,4 @@ Eine einfache Technik, um Fehler zu identifizieren:
 
 - [_KISS_](https://de.wikipedia.org/wiki/KISS-Prinzip) Vereinfachung hilft oftmals
 - manuelle Nachbearbeitung (d.h. im HTML) sind manchmal notwendig
+- make4ht: Fallback Bilder erzeugen
