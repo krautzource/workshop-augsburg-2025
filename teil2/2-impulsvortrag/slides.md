@@ -78,7 +78,7 @@ Demos: [ATHEN STEM conference, 2022](https://pkra.github.io/2022-athen-stem-conf
 
 Zur Erinnerung: WCAG ist lediglich das **Minimum**!
 
-⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriteren.
+⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien.
 
 ## WCAG 1.1.1 Nicht-Text-Inhalt
 
@@ -91,7 +91,7 @@ NB: Dekorativausnahme.
 > Jeglicher Inhalt, der keine Buchstabenfolge ist und der durch Software bestimmt werden kann oder bei dem die Abfolge etwas nicht in menschlicher Sprache ausdrückt.\
 > Hinweis: Dies beinhaltet ASCII Art (ein Muster von Buchstaben), Emoticons, Leetspeak (Ersetzung von Buchstaben durch Ziffern oder Sonderzeichen) und Bilder, die Text repräsentieren.
 
-## Einordung: WCAG 1.1.1
+## Einordnung: WCAG 1.1.1
 
 - Kurze vs Lange Alternativen
 - Viele Techniken ([Understanding 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)), aber mit LaTeX Quellen oft schwierig:
