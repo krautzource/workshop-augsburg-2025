@@ -30,14 +30,14 @@ Browser-Erweiterungen
 
 ## Textalternativen in LaTeX (WCAG 1.1.1)
 
-- Neues LaTeX Feature: `\includegraphics[alt={}]{}`
+- Technisch: Neues LaTeX Feature: `\includegraphics[alt={}]{}`
   - Bei langer Alternative, damit Hinweise geben.
-- Üben, üben, üben
-  - am Besten mit Eigenem
+- Inhaltlich: Üben, üben, üben
+  - am Besten mit Eigenem Material
 
 ## Farben testen
 
-- [Browser Entwicklertools](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) ([kulturbanause.de Artikel](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/))
+- Color-Picker in [Browser Entwicklertools](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) ([kulturbanause.de Artikel](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/))
 - [leserlich.info Kontrastrechner](https://www.leserlich.info/werkzeuge/kontrastrechner/)
 
 - Und korrigieren
@@ -52,8 +52,14 @@ Eine einfache Technik, um Fehler zu identifizieren:
 - Via Browser Entwicklertools
 - Via Betriebssystem ([Windows](https://support.microsoft.com/de-de/windows/verwenden-von-farbfiltern-in-windows-43893e44-b8b3-2e27-1a29-b0c15ef0e5ce), [MacOS](https://support.apple.com/de-de/guide/mac-help/unac089/14.0/mac/14.0))
 
+Weitere Artikel: [farbschwaeche.de](https://www.farbsehschwaeche.de/materialien), [distriko.de](https://distriko.de/blog/barrierefreie-farbkontraste/),  [smashing magazine](https://www.smashingmagazine.com/2024/02/designing-for-colorblindness/)
+
 ## (Not)lösungen für Inhalte aus LaTeX Quellen
 
 - [_KISS_](https://de.wikipedia.org/wiki/KISS-Prinzip) Vereinfachung hilft oftmals
 - manuelle Nachbearbeitung (d.h. im HTML) sind manchmal notwendig
 - make4ht: Fallback Bilder erzeugen
+
+## Lesematerial
+
+* [Professional Web Accessibility Auditing Made Easy](https://pressbooks.library.torontomu.ca/pwaa/) (OA Buch, Toronto Metro University)
