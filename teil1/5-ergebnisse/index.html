@@ -17,13 +17,75 @@
 <section>
 <h2 id="ergebnissammlung" tabindex="-1"><a class="header-anchor" href="#ergebnissammlung">Ergebnissammlung</a></h2>
 <ul>
-<li>…</li>
-</ul>
-</section>
-<section>
-<h2 id="probleme-und-mwes" tabindex="-1"><a class="header-anchor" href="#probleme-und-mwes">Probleme und MWEs</a></h2>
+<li>einfach.tex
 <ul>
-<li>…</li>
+<li>pandoc: keine Sektion Numerierung
+<ul>
+<li><code>--number-section</code> hilft</li>
+</ul>
+</li>
+<li>make4ht: ok</li>
+</ul>
+</li>
+<li>mathmode.tex
+<ul>
+<li>MathJax optionen notwendig</li>
+<li>in math mode bringen z.B. <code>$\ref{...}$</code></li>
+<li>pandoc: <code>flalign</code> problem</li>
+<li>KISS - einfache Umgebungen meist besser unterstützt</li>
+<li>Letztlich: MathJax checken</li>
+</ul>
+</li>
+<li>tikz
+<ul>
+<li>Beispiele in <code>tex-spezial</code></li>
+<li>alles kompliziert, nichts prickelnd gut</li>
+<li>andere tools sind evtl besser</li>
+</ul>
+</li>
+<li>toc
+<ul>
+<li>make4ht: ging gut</li>
+<li>pandoc: braucht <code>--toc</code>, dann gut.</li>
+</ul>
+</li>
+<li>macros
+<ul>
+<li>einfache macros
+<ul>
+<li>pandoc: ok</li>
+<li>make4ht: cfg datie</li>
+<li>oder Hack im Dokument an MathJax übergeben</li>
+</ul>
+</li>
+<li>Bsp tensor: komplexe Pakete brauchen dann doch MathJax Hilfe</li>
+</ul>
+</li>
+<li>Abbildungen
+<ul>
+<li>includegraphics klappt an sich
+<ul>
+<li>SVGs am Besten</li>
+</ul>
+</li>
+<li>floats sind “gefährlich”, wenn sie an der falschen Position enden</li>
+<li>Nummerierungen gehen nicht gut (beiden)</li>
+<li>evtl Nacharbeiten. Yikes.</li>
+</ul>
+</li>
+<li>theorem.tex
+<ul>
+<li>beide machen es gut</li>
+<li>Nummerierung variiert</li>
+</ul>
+</li>
+<li>lists.tex
+<ul>
+<li>beide verlieren <code>\item[]</code> Konstruktion</li>
+<li>pandoc: link Inhalt inkorrekt aber link ok; keine description lists</li>
+<li>Nummerierungen variieren</li>
+</ul>
+</li>
 </ul>
 </section>
 <section>
