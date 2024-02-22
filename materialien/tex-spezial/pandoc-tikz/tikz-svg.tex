@@ -1,0 +1,39 @@
+\documentclass{amsart}
+
+% With https://pandoc.org/lua-filters.html#building-images-with-tikz
+% $ pandoc --from latex+raw_tex --lua-filter pandoc-svg.lua -s tikz-test.tex -o tikz.html  --standalone --mathjax
+
+\newenvironment{svg}{}{}
+
+\usepackage{tikz}\usetikzlibrary{positioning,decorations.fractals,decorations.pathmorphing}
+\usepackage[all]{xy}
+
+\begin{document}
+
+hello, world
+
+\begin{svg}
+\begin{equation} \label{tikzPic}
+    x = \vcenter{\begin{tikzpicture}
+    \draw (-2,0) -- (2,0);
+    \filldraw [gray] (0,0) circle (2pt);
+    \draw (-2,-2) .. controls (0,0) .. (2,-2);
+    \draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);
+    \end{tikzpicture}}
+\end{equation}
+
+\end{svg}
+
+And standalone
+
+\begin{svg}
+    \begin{tikzpicture}
+    \draw (-2,0) -- (2,0);
+    \filldraw [gray] (0,0) circle (2pt);
+    \draw (-2,-2) .. controls (0,0) .. (2,-2);
+    \draw (-2,2) .. controls (-1,0) and (1,0) .. (2,2);
+    \end{tikzpicture}
+\end{svg}
+    
+
+\end{document}
