@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>5-ERGEBNISSE | Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web</title>
     <style>
-    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}*:focus{outline: double #1b557b}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;text-decoration-skip-ink: auto}a:hover,a:focus,a:active {color: #1b557b}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}*:not(li)>ul{margin-bottom: 1.3em;}
+    *,*::before,*::after {box-sizing: border-box;}* {margin: 0;}*:focus{outline: double #1b557b}html,body {height: 100%;max-width: 100%;min-height: 100dvh;line-height: 1.5;-webkit-font-smoothing: antialiased;}img,svg {display: block;max-width: 100%;}p,h1,h2,h3,h4,h5,h6 {overflow-wrap: break-word;}/* end "reset" */a,a:visited {color: #3498db;text-decoration-skip-ink: auto}a:hover,a:focus,a:active {color: #1b557b}html {font-size: calc(1rem + 1vw);}p {font-size: 1em;margin-bottom: 1.3em;font-weight: 450;}h1,h2,h3,h4 {margin-bottom: 0.5em;font-weight: 500;line-height: 1.42;}h1 {font-size: calc(1rem + 1vw);}h2 {font-size: calc(1.45rem + 1.29vw);} body {color: #444;font-family: Helvetica Neue,Helvetica,Arial,sans-serif;}h1,h2,h3 {margin-top: 1em;border-bottom: 2px solid lightgray;padding-bottom: 0.5em;text-align: right;}blockquote {border-left: 8px solid lightblue;padding-left: 1em;}.slider {-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;display: -webkit-box;display: flex;overflow-x: scroll;}.slider>section {min-width: 100vw;min-height: 100vh;padding-inline: 10vw;scroll-snap-align: start;position: relative;height: 100%;border: 2px solid #3498db;}*:not(li)>ul{margin-bottom: 1.3em;} .counter{position: absolute;top: 0;left:0;background:white;border:1px solid lightblue;border-radius:50%;padding:3px;margin:1px;font-size:.6rem;font-family:monospace;}
     </style>
     </head>
     <body>
@@ -106,6 +106,8 @@
     const s = document.createElement('section');
     document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
     sl.insertAdjacentElement('afterbegin', s);
+    // slide counter
+    document.querySelectorAll('.slider > section').forEach( (slide, index, list) => slide.insertAdjacentHTML('afterbegin', '<span class="counter">'+index+'/'+list.length+'</span>'));
     </script>
     </body>
     </html>
