@@ -28,7 +28,7 @@ Tag 1
 - Offene Arbeit (90min)
 - Ergebnisse (20min)
 
-## Pre-flight Check:
+## Pre-flight Check
 
 Ein paar erhoffte Voraussetzungen:
 
