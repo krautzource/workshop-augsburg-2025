@@ -36,7 +36,7 @@ Barrieren enstehen z.B. in den folgenden Bereichen:
 🖐 **Motorik**: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik\
 🧠 **Kognition**: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten
 
-Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML), [(Talk) Selfish Accessibility, Adrian Roselli](http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html), [(Talk) Accessibility is usability (video)](https://www.confabevents.com/videos/accessibility-is-usability)
+Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML), [Selfish Accessibility, Adrian Roselli](http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html), [Accessibility is usability, Sarah Richards](https://vimeo.com/336394764)
 
 ## Universelles Design
 
@@ -80,7 +80,7 @@ sein für **alle** Nutzer.
 **Barrierefreiheit ist ein auf Menschen ausgerichteter Prozess**.
 
 - Jeder Schritt ist wertvoll - vor allem der erste.
-- Barrierefrei ist kein Endpunkt
+- Barrierefrei ist kein Endpunkt.
 - Reifegradmodelle können helfen, die Entwicklung zu bewerten und zu verbessern.
 
 Mehr: [Fortschritt in der digitalen Barrierefreiheit messen](https://www.netz-barrierefrei.de/wordpress/fortschritt-in-der-digitalen-barrierefreiheit-messen-maturity-model-oder-reifegradmodell/), [W3C Accessibility Maturity Model](https://www.w3.org/TR/maturity-model/), [The Digital Accessibility Maturity Lifecycle](https://www.tpgi.com/the-accessibility-maturity-lifecycle/)
