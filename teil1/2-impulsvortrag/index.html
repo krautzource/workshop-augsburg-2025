@@ -271,7 +271,7 @@ Eine Auswahl:</p>
     document.querySelectorAll('.slider > *:not(section)').forEach(n => s.appendChild(n));
     sl.insertAdjacentElement('afterbegin', s);
     // slide counter
-    document.querySelectorAll('.slider > section').forEach( (slide, index, list) => slide.insertAdjacentHTML('afterbegin', '<span class="counter">'+index+'/'+list.length+'</span>'));
+    document.querySelectorAll('.slider > section').forEach( (slide, index, list) => slide.insertAdjacentHTML('afterbegin', '<span class="counter">'+(index+1)+'/'+list.length+'</span>'));
     </script>
     </body>
     </html>
