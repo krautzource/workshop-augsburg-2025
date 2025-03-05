@@ -1,6 +1,6 @@
 # Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web - Tag 2
 
-**Virtuelles Seminar, Universität Augsburg, 2024**
+**Virtuelles Seminar, Universität Augsburg, 2025**
 
 Peter Krautzberger, [krautzource](https://krautzource.com)
 
@@ -24,14 +24,14 @@ Tag 2
   - [Deque axe DevTools](https://www.deque.com/axe/devtools/)
   - [Microsoft Accessibility Insights](https://accessibilityinsights.io/downloads/)
 
-Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2024](https://krautzource.github.io/workshop-augsburg-2024) (siehe auch Online System der Uni Augsburg)
+Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2025](https://krautzource.github.io/workshop-augsburg-2025) (siehe auch Online System der Uni Augsburg)
 
 ## Retrospektive Tag 1
 
 - Erkenntnisse
   - Sowohl pandoc als make4ht handhaben LaTeX Grundstruktur adäquat
     - sie weichen oft in visuellen Details bei "echtem" LaTeX Output ab
-  - pandoc lässt eher Inhalte weg, make4ht kann of näher am TeX bleiben
+  - pandoc lässt eher Inhalte weg, make4ht kann oft näher am TeX bleiben
   - make4ht ist durch LaTeX-nähe manches Mal besser - aber crashed auch öfter
   - pandoc versteckt einiges hinter flags (Nummerierungen, Inhaltsverzeichnis)
   - ...

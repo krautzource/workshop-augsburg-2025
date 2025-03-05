@@ -517,7 +517,7 @@ Aus LaTeX-Quellen erzeugte Inhalte sind normalerweise zu statisch, um darauf Ein
 
 ###### Einordnung
 
-Sehr wahrscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2024}` erzeugt `[1]`).
+Sehr wahrscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2025}` erzeugt `[1]`).
 
 Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten (vgl. 2.4.9).
 

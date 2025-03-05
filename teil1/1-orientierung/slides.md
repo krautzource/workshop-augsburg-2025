@@ -1,6 +1,6 @@
 # Erstellung und Aufbereitung von barrierefreien Lehrinhalten aus LaTeX für das Web
 
-**Virtuelles Seminar, Universität Augsburg, 2024**
+**Virtuelles Seminar, Universität Augsburg, 2025**
 
 Peter Krautzberger, [krautzource](https://krautzource.com)
 
@@ -40,7 +40,7 @@ Ein paar erhoffte Voraussetzungen:
 - Einen aktuellen Webbrowser (z.B. Chrome, Safari, Firefox, Edge)
   - evtl. Grundkentnisse HTML, CSS etc (z.B. [selfHTML](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg))
 
-Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2024](https://krautzource.github.io/workshop-augsburg-2024) (siehe auch Online System der Uni Augsburg)
+Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2025](https://krautzource.github.io/workshop-augsburg-2025) (siehe auch Online System der Uni Augsburg)
 
 **Umfrage:** Wer hat schon einmal aus LaTeX Quellen Webinhalte erzeugt?
 

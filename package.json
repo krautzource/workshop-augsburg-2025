@@ -1,5 +1,5 @@
 {
-    "name": "2024-augsburg",
+    "name": "2025-augsburg",
     "scripts": {
         "dev": "chokidar \"**/*.md\" -c \"node build.js\"",
         "build": "node build.js"

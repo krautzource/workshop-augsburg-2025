@@ -197,7 +197,7 @@ Probleme gibt es evtl. bei Einpflege in LMS/CMS etc.
 
 > Der Zweck jedes Links kann durch den Linktext allein oder durch den Linktext zusammen mit seinem durch Software bestimmten Link-Kontext bestimmt werden außer in Fällen, in denen der Zweck des Links mehrdeutig für Benutzer im Allgemeinen wäre.
 
-**Einordnung**: Sehr wahrscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2024}` erzeugt `[1]`).
+**Einordnung**: Sehr wahrscheinlich fast immer erfüllbar durch die Ausnahmen "Kontext", "allgemeine Ambiguität" (z.B. `\cite{Augs2025}` erzeugt `[1]`).
 
 Trotzdem können Pakete wie cleverref deutlichen Mehrwert bieten (vgl. 2.4.9).
 
