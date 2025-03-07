@@ -39,6 +39,7 @@ Ein paar erhoffte Voraussetzungen:
 - Eine aktuelle Installation von [pandoc](https://pandoc.org/)
 - Einen aktuellen Webbrowser (z.B. Chrome, Safari, Firefox, Edge)
   - evtl. Grundkentnisse HTML, CSS etc (z.B. [selfHTML](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg))
+- Für Mutige: ein Installation von [AmerMathSoc/texml](https://github.com/AmerMathSoc/texml)
 
 Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2025](https://krautzource.github.io/workshop-augsburg-2025) (siehe auch Online System der Uni Augsburg)
 
