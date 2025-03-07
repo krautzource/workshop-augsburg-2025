@@ -44,17 +44,15 @@ Ein wichtiger Überbegriff ist das [Universal Design](https://de.wikipedia.org/w
 
 > “Universal design is design that’s usable by all people, to the greatest extent possible, without the need for adaptation or specialized design.”–[Ron Mace](https://en.wikipedia.org/wiki/Ronald_Mace)
 
-<a href="https://commons.wikimedia.org/wiki/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg#/media/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Curb_cut_for_wheelchair_ramp_%28DSC_3616%29.jpg" alt="Curb cut for wheelchair ramp (DSC 3616).jpg" height="2000" width="3000" style="height:20vw;width:30vw; display:block; margin-inline:auto" ></a>
+<a href="https://commons.wikimedia.org/wiki/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg#/media/File:Curb_cut_for_wheelchair_ramp_(DSC_3616).jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Curb_cut_for_wheelchair_ramp_%28DSC_3616%29.jpg" alt="Foto eines abgesängten Bordsteins" height="2000" width="3000" style="height:20vw;width:30vw; display:block; margin-inline:auto" ></a>
 <small><a href="//commons.wikimedia.org/wiki/User:Nick-philly" class="mw-redirect" title="User:Nick-philly">Nick-philly</a> , [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0 "Creative Commons Attribution-Share Alike 4.0")
 </small>
 
 ## Barrierfrei definieren
 
-**Barrierefreiheit ist ein auf Menschen ausgerichteter Prozess**.
+Rechtlich: [European Accessibility Act](https://en.wikipedia.org/wiki/European_Accessibility_Act) / [Barrierefreiheits­stärkungs­gesetz](https://www.barrierefreiheit-dienstekonsolidierung.bund.de/Webs/PB/DE/gesetze-und-richtlinien/barrierefreiheitsstaerkungsgesetz/barrierefreiheitsstaerkungsgesetz-node.html)
 
-Rechtlich: [European Accessibility Act](https://en.wikipedia.org/wiki/European_Accessibility_Act) / [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) / [BITV](https://de.wikipedia.org/wiki/Barrierefreie-Informationstechnik-Verordnung).
-
-Im Wesentlichen: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
+Im Wesentlichen: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/) ([EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf) / [BITV](https://de.wikipedia.org/wiki/Barrierefreie-Informationstechnik-Verordnung))
 
 - ~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA
 - A&AA rechtlich gefordert, AAA optional/ideal
@@ -63,6 +61,8 @@ Im Wesentlichen: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w
 - Einstieg: [W3C Accessibility Principles](https://www.w3.org/WAI/fundamentals/accessibility-principles/) [WebAIM WCAG Checklist](https://webaim.org/standards/wcag/checklist)
 
 Mehr: [EAA Umsetzung in Deutschland](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/vertiefend/european_accessibility_act.html), [WCAG 2.1 auf Deutsch](https://outline-rocks.github.io/wcag/translations/WCAG21-de/), [WebAIM Artikel (Englisch)](https://webaim.org/articles/)
+
+**Barrierefreiheit ist ein auf Menschen ausgerichteter Prozess**.
 
 ## WCAGs POUR Prinzipien
 
@@ -94,14 +94,14 @@ Mehr: [Fortschritt in der digitalen Barrierefreiheit messen](https://www.netz-ba
 **Nein.**
 
 - PDF ist grundsätzlich nicht barrierefrei
-- PDF-UA ist deutlich schlechter nutzbar als Webinhalte ([webaim survey, 2019](https://webaim.org/projects/screenreadersurvey8/#pdf))
+- PDF-UA ist deutlich schlechter nutzbar als Webinhalte ([webaim survey, 2021](https://webaim.org/projects/screenreadersurvey9/#docaccessibility))
 - PDF-UA ist schwer herstellbar, prüfbar, korrigierbar
   - insbesondere nicht für komplexe akademische Inhalte
-- LaTeX Projekt zu PDF-UA kommt nicht vom Fleck
+- LaTeX Projekt zu PDF-UA kommt nur sehr langsam voran
 
 Mehr: [Wie barrierefrei sind PDFs?](https://www.netz-barrierefrei.de/wordpress/barrierefreies-publizieren/barrierefreie-pdfs/wie-barrierefrei-sind-pdfs/), [LaTeX Project News](https://www.latex-project.org/news/)
 
-## TeXs Herz is Print
+## Printprobleme
 
 Printtraditionen bergen versteckte Problem. Eine Auswahl:
 
@@ -114,7 +114,7 @@ Printtraditionen bergen versteckte Problem. Eine Auswahl:
 
 ## TeXs Schwächen
 
-- all of the above
+- "siehe oben" - TeXs Herz ist Print
 - Makroprogrammiersprache
   - [Chomsky Typ 1](https://de.wikipedia.org/wiki/Chomsky-Hierarchie#Die_Hierarchie)
   - Kind seiner Zeit (z.B. Layout, Fonts, Optimierungen)
@@ -138,11 +138,11 @@ Printtraditionen bergen versteckte Problem. Eine Auswahl:
 Etliche Programme können LaTeX zu Webinhalten konvertieren. \
 Eine Auswahl:
 
-- [pandoc](https://pandoc.org/) \*
-- [tex4ht / make4ht](https://tug.org/tex4ht/) \*
+- [pandoc](https://pandoc.org/) \* (~v3.6)
+- [tex4ht / make4ht](https://tug.org/tex4ht/) \* (~v0.4)
 - [plastex](http://plastex.github.io/plastex/)
 - [latexml](https://math.nist.gov/~BMiller/LaTeXML/)
-- [AMS texml](https://github.com/AmerMathSoc/texml)
+- [texml](https://github.com/AmerMathSoc/texml)\*\*
 
 ## Eine Frage der Balance
 
@@ -153,7 +153,7 @@ Separation of concerns.
 - Wie nah ans Web kommen?
   - zu weit weg von TeX: Einschränkungen bei Macros, Paketen etc.
 
-**Werkzeuge retten uns nicht, sie können es aber schlimmer machen.**
+**Werkzeuge helfen, retten uns aber nicht. Und sie können es schlimmer machen.**
 
 Beispiel: [Algorithm layout](https://www.peterkrautzberger.org/0217/)
 
@@ -182,7 +182,7 @@ Eine Auswahl:
 - erzeugte Graphiken (Diagramme etc)
 - Metadaten
 
-**Menschen lernen LaTeX einmal und nur einmal.**
+**Caveat: Menschen lernen LaTeX einmal und nur einmal.**
 
 ## Stärken
 
@@ -202,7 +202,7 @@ Formelsatz ist grundsätzlich problematisch.
 > an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought. [[Krautzberger](https://www.peterkrautzberger.org/0218/)]
 
 
-Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung von Formelsatz im Web. Vor allem in Deutschland.
+Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung von Formelsatz im Web. Gerade auch in Deutschland.
 
 [MathJax](https://www.mathjax.org/) hilft.
 
@@ -210,12 +210,23 @@ Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung v
 
 - Graphiken
   - Textalternativen
-  - Visuelles Design (out of scope)
+  - Farbgebung
 - Farben
 - Sensorische Kommunikation
 - Bad Practices
 
 Mehr dazu morgen!
+
+## Rückschau
+
+- Barrierefreiheit ist ein Menschenrecht
+  - ist ein Prozess
+  - hat rechtliche&technische Grundlagen (WCAG)
+- Das Web ist das erste grundsätzlich barrierefreie Medium
+- LaTeX kann ein gutes Quellformat für das Web sein
+  - Print & andere Traditionen erschweren es
+  - Best Practices erleichtern es
+  - Viele Werkzeuge, mit unterschiedlicher Balance
 
 ## Nach der Pause...
 
