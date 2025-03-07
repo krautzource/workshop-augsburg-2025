@@ -18,11 +18,11 @@ Wir konzentrieren uns auf
 - [pandoc](https://pandoc.org/)
 - [tex4ht / make4ht](https://tug.org/tex4ht/)
 
-Das **Batteries included** Prinzip
+Sie unterscheiden sich in der Balance TeX vs Web.
 
 ## pandoc
 
-[pandoc](https://pandoc.org/) - Balance: mehr Web als TeX
+[pandoc](https://pandoc.org/) - Balance: eher Web als TeX
 
 - Weitläufige Dokument-zu-Dokument Konversion
 - einfache Benutzung
@@ -33,7 +33,7 @@ Das **Batteries included** Prinzip
 
 ## tex4ht / make4ht
 
-[tex4ht / make4ht](https://tug.org/tex4ht/) - Balance: mehr TeX als Web
+[tex4ht / make4ht](https://tug.org/tex4ht/) - Balance: eher TeX als Web
 
 - Fokus auf TeX-zu-HTML (und XML)
 - nutzt TeX intern
@@ -53,7 +53,7 @@ Minimal Beispiele:
 Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex-einfach/)
 
 - Basisdokument `einfach.tex`
-- Strukturelemente, z.B>
+- Strukturelemente, z.B.
   - `lists.tex`
   - `graphics.tex`
   - `tables.tex`
@@ -67,11 +67,14 @@ Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex
 
 `$ make4ht input.tex "mathjax"`
 
-Typische Probleme: Unbekannte (mathmode) Umgebungen, `\ref` auf mathmode Inhalte
+Typische Probleme:
+- von MathJax nicht unterstützte (mathmode) Umgebungen
+- `\ref` auf mathmode Inhalte
 
 ## Weiterführende Beispiele
 
 - Bibliographie mit BibTeX `bibtex.tex`
+  - make4ht unterstützt Bibliographien direkt
   - `$ pandoc ../bibtex.tex --bibliography=../bibtex.bib -o bibtex.html -s --citeproc -M link-citations=true`
 - Beamer Paket `beamer.tex`
 
