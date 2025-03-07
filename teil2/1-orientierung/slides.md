@@ -29,17 +29,5 @@ Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2025](https:
 ## Retrospektive Tag 1
 
 - Erkenntnisse
-  - Sowohl pandoc als make4ht handhaben LaTeX Grundstruktur adäquat
-    - sie weichen oft in visuellen Details bei "echtem" LaTeX Output ab
-  - pandoc lässt eher Inhalte weg, make4ht kann oft näher am TeX bleiben
-  - make4ht ist durch LaTeX-nähe manches Mal besser - aber crashed auch öfter
-  - pandoc versteckt einiges hinter flags (Nummerierungen, Inhaltsverzeichnis)
-  - ...
 -  Herausforderungen
-  - math mode geht mit MathJax Hilfe ordentlich, aber kleine und große Schwierigkeiten bleiben (`\ref`, User Makros, komplexe Umgebungen, KISS)
-  - Inkompatibilitäten bei Listen
-  - Abbildungen hinterlassen einen gemischten Eindruck
-  - tikz ist sehr umständlich und fehleranfällig bei beiden
-  - ...
 - Vertiefung
-  - Kurzes Review der beiden Beispiel Artikel
