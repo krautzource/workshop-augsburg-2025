@@ -24,30 +24,27 @@
 </ul>
 </section>
 <section>
-<h2 id="was-wir-testen%3A-wcag" tabindex="-1"><a class="header-anchor" href="#was-wir-testen%3A-wcag">Was wir testen: WCAG</a></h2>
+<h2 id="welche-barrieren-wir-testen%3A-wcag" tabindex="-1"><a class="header-anchor" href="#welche-barrieren-wir-testen%3A-wcag">Welche Barrieren wir testen: WCAG</a></h2>
 <p><a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
 <ul>
-<li>~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
-<li>A&amp;AA rechtlich gefordert, AAA optional/ideal</li>
-<li>Betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
+<li>~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA (optional)</li>
+<li>Kriterien betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
 </ul>
-<p>Zur Erinnerung: WCAG ist lediglich das <strong>Minimum</strong>!</p>
+<p>Bevor wir tiefer einsteigen…</p>
 </section>
 <section>
-<h2 id="wie-testen-wir" tabindex="-1"><a class="header-anchor" href="#wie-testen-wir">Wie testen wir</a></h2>
-<ul>
-<li>Automatisiert</li>
-<li>Manuell</li>
-</ul>
+<h2 id="wie-wir-testen" tabindex="-1"><a class="header-anchor" href="#wie-wir-testen">Wie wir testen</a></h2>
+<p>Automatisiert &amp; Manuell</p>
 </section>
 <section>
 <h2 id="automatisiertes-testen" tabindex="-1"><a class="header-anchor" href="#automatisiertes-testen">Automatisiertes Testen</a></h2>
+<p>Automatisierung ist einfach aber nie vollständig.</p>
 <p>Ein grobes Bild in Zahlen:</p>
 <ul>
 <li>Einerseits: nur geschätzt 20-30% der Kriterien können durch automatisierte Werkzeuge geprüft werden (siehe z.B. <a href="https://bik-fuer-alle.de/automatisierte-tests.html">bik-fuer-alle</a>, <a href="https://www.levelaccess.com/blog/automated-accessibility-testing-tools-how-much-do-scans-catch/">level access</a>, <a href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/">gov.uk</a>)</li>
 <li>Andererseits: 57% der Fehler können entdeckt werden <a href="https://www.deque.com/automated-accessibility-testing-coverage/">Deque</a></li>
 </ul>
-<p>[Nebenbemerkung: <a href="https://overlayfactsheet.com/">Accessibility Overlays</a> sind sehr problematisch.]</p>
+<p>[Sollte man wissen: <a href="https://overlayfactsheet.com/">Accessibility Overlays</a> sind sehr problematisch.]</p>
 </section>
 <section>
 <h2 id="werkzeuge-zum-automatisierten-testen" tabindex="-1"><a class="header-anchor" href="#werkzeuge-zum-automatisierten-testen">Werkzeuge zum automatisierten Testen</a></h2>
@@ -61,11 +58,18 @@
 <p>Weitere Helfer:  <a href="https://github.com/skipto-landmarks-headings/browser-extension">SkipTo Landmarks&amp;Headings</a>, <a href="http://matatk.agrip.org.uk/landmarks/">Landmarks</a>, Browser <em>Reader Mode</em>, <a href="https://chromewebstore.google.com/category/extensions/make_chrome_yours/accessibility">und viele weitere Erweiterungen</a></p>
 </section>
 <section>
+<h2 id="manuelles-testen" tabindex="-1"><a class="header-anchor" href="#manuelles-testen">Manuelles Testen</a></h2>
+<p>Unersetzlich! Die meisten WCAG Kritieren sind kontextabhängig.</p>
+<p>“Hat der Knopf eine Beschriftung?” vs “Ist die Beschriftung des Knopfs richtig/verständlich?”</p>
+</section>
+<section>
 <h2 id="werkzeuge-zum-manuellen-testen" tabindex="-1"><a class="header-anchor" href="#werkzeuge-zum-manuellen-testen">Werkzeuge zum manuellen Testen</a></h2>
 <ul>
-<li>Gesunder Menschenverstand (POUR etc)</li>
-<li>HTML Quellcode</li>
-<li><a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern">Browser Entwicklertools</a> (<a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">kulturbanause.de Artikel</a>)</li>
+<li>Gesunder Menschenverstand (POUR!)</li>
+<li>grundlegende Tests sind erlernbar (<a href="https://www.a11y-collective.com/blog/how-to-check-web-accessibility/#h-3-perform-manual-testing-for-thorough-evaluation">a11y collective Artikel</a>)</li>
+<li>Checklisten helfen (<a href="https://www.webaccessibilitychecklist.com/">Beispiel 1</a>, <a href="https://www.a11y-collective.com/blog/accessibility-checklist/">Beispiel 2</a>)</li>
+<li>HTML Quellcode hilft</li>
+<li><a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern">Browser Entwicklertools</a> helfen (<a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">kulturbanause.de Artikel</a>)</li>
 </ul>
 </section>
 <section>
@@ -81,15 +85,15 @@
 <p><em>Kleine</em> Screenreader: <a href="https://www.texthelp.com/">Texthelp</a>, <a href="https://speechify.com/">Speechify</a> (oft als browser Erweiterungen); <em>Reader Mode</em></p>
 </section>
 <section>
-<h2 id="was-wir-testen%3A-wcag-reloaded" tabindex="-1"><a class="header-anchor" href="#was-wir-testen%3A-wcag-reloaded">Was wir testen: WCAG Reloaded</a></h2>
+<h2 id="jetzt-aber%3A-welche-barrieren-wir-testen" tabindex="-1"><a class="header-anchor" href="#jetzt-aber%3A-welche-barrieren-wir-testen">Jetzt aber: Welche Barrieren wir testen</a></h2>
 <p><a href="https://www.w3.org/TR/WCAG22/">Web Content Accessibility Guidelines (WCAG) 2.2</a></p>
 <ul>
 <li>~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA</li>
-<li>A&amp;AA rechtlich gefordert, AAA optional/ideal</li>
-<li>Betreffen größtenteils Interaktion, weniger “statische” Inhalte</li>
+<li>A&amp;AA rechtlich gefordert, AAA optional/ideal, mehr Interaktion, weniger “statische” Inhalte</li>
 </ul>
 <p>Zur Erinnerung: WCAG ist lediglich das <strong>Minimum</strong>!</p>
-<p>⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien. Mehr unter <a href="../../materialien/WCAG-rundschau.md">/materialien/WCAG-rundschau.md</a></p>
+<p>⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien.</p>
+<p>Schnelldurchlauf unter <a href="../../materialien/WCAG-rundschau.md">/materialien/WCAG-rundschau.md</a></p>
 </section>
 <section>
 <h2 id="wcag-1.1.1-nicht-text-inhalt" tabindex="-1"><a class="header-anchor" href="#wcag-1.1.1-nicht-text-inhalt">WCAG 1.1.1 Nicht-Text-Inhalt</a></h2>
@@ -106,19 +110,17 @@ Hinweis: Dies beinhaltet ASCII Art (ein Muster von Buchstaben), Emoticons, Leets
 <section>
 <h2 id="einordnung%3A-wcag-1.1.1" tabindex="-1"><a class="header-anchor" href="#einordnung%3A-wcag-1.1.1">Einordnung: WCAG 1.1.1</a></h2>
 <ul>
-<li>Kurze vs Lange Alternativen</li>
-<li>Viele Techniken (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">Understanding 1.1.1</a>), aber mit LaTeX Quellen oft schwierig:
+<li>Viele Techniken (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">Understanding 1.1.1</a>)</li>
+<li>Kurze und Lange Alternativen sind unterschiedlich</li>
+<li>Komplexe Alternativen sind möglich (z.B. Daten als Tabellen)</li>
+<li><strong>aber</strong> mit LaTeX oft schwierig:
 <ul>
-<li><em>kurz</em> via <code>\includegraphics</code>; <em>lang</em> via <em>kurz</em> möglich</li>
-<li>Unterschiede bei <q>fixen</q> und erzeugten Grafiken (tikz etc // R, matplotlib etc)</li>
-<li>Immer (LaTeX) Quellen behalten! Evtl. Alternativen erzeugen (z.B. Daten als Tabellen, notfalls als Rohtext)</li>
+<li>nur <code>\includegraphics[alt=&quot;&quot;]</code></li>
+<li>erzeugte Grafiken außen vor (tikz etc // R, matplotlib etc) eher nicht</li>
 </ul>
 </li>
-<li>Formelsatz → <a href="https://www.mathjax.org/">MathJax</a> hilft</li>
-<li>SVG &gt; Raster (SVG+Raster!)</li>
 </ul>
-<p>Mehr: <a href="https://www.tu-chemnitz.de/urz/www/bf/alt.html">TU Chemnitz</a>, <a href="https://www.rrze.fau.de/2022/08/der-perfekte-alt-text-interview-mit-blinden-und-sehbehinderten-menschen/">FAU Artikel “perfekter” Alttext</a>, <a href="https://barrierefreies.design/blog/gute-alternativtexte-fur-bilder-formulieren">barrierefreies.design</a>, <a href="https://bik-fuer-alle.de/alternativtexte-fuer-grafiken.html">BIK</a>, <a href="https://accessibility.huit.harvard.edu/describe-content-images">Harvard</a><br>
-Inspiration: <a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html">Sorge&amp;Austin@ w4a2023</a>, <a href="https://krautzource.github.io/aria-tree-walker/">@krautzource/aria-tree-walker</a></p>
+<p>Mehr dazu in Teil 3.</p>
 </section>
 <section>
 <h2 id="wcag-1.3.1-info-und-beziehungen" tabindex="-1"><a class="header-anchor" href="#wcag-1.3.1-info-und-beziehungen">WCAG 1.3.1 Info und Beziehungen</a></h2>
@@ -133,9 +135,9 @@ Inspiration: <a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/front
 <li>aber auch: pragmatische Möglichkeiten (z.B. hervorgehobenes List item ⇒ “neu” dazu schreiben)</li>
 </ul>
 </li>
-<li>Gleichheitsgrundsatz nicht missbrauchen</li>
 <li>Mein LaTeX Litmustest: Tabellenkopf, Theorem-Umgebungen</li>
 </ul>
+<p>Gleichheitsgrundsatz nicht missbrauchen!</p>
 </section>
 <section>
 <h2 id="wcag-1.3.2-bedeutungstragende-reihenfolge" tabindex="-1"><a class="header-anchor" href="#wcag-1.3.2-bedeutungstragende-reihenfolge">WCAG 1.3.2 Bedeutungstragende Reihenfolge</a></h2>

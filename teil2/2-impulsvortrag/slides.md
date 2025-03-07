@@ -12,29 +12,29 @@ Drei verwickelte Fragen:
 - Wie testen wir darauf?
 - Wie vermeiden wir Barrieren?
 
-## Was wir testen: WCAG
+## Welche Barrieren wir testen: WCAG
 
 [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
 
-- ~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA
-- A&AA rechtlich gefordert, AAA optional/ideal
-- Betreffen größtenteils Interaktion, weniger "statische" Inhalte
+- ~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA (optional)
+- Kriterien betreffen größtenteils Interaktion, weniger "statische" Inhalte
 
-Zur Erinnerung: WCAG ist lediglich das **Minimum**!
+Bevor wir tiefer einsteigen...
 
-## Wie testen wir
+## Wie wir testen
 
-- Automatisiert
-- Manuell
+Automatisiert & Manuell
 
 ## Automatisiertes Testen
+
+Automatisierung ist einfach aber nie vollständig.
 
 Ein grobes Bild in Zahlen:
 
 - Einerseits: nur geschätzt 20-30% der Kriterien können durch automatisierte Werkzeuge geprüft werden (siehe z.B. [bik-fuer-alle](https://bik-fuer-alle.de/automatisierte-tests.html), [level access](https://www.levelaccess.com/blog/automated-accessibility-testing-tools-how-much-do-scans-catch/), [gov.uk](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/))
 - Andererseits: 57% der Fehler können entdeckt werden [Deque](https://www.deque.com/automated-accessibility-testing-coverage/)
 
-[Nebenbemerkung: [Accessibility Overlays](https://overlayfactsheet.com/) sind sehr problematisch.]
+[Sollte man wissen: [Accessibility Overlays](https://overlayfactsheet.com/) sind sehr problematisch.]
 
 ## Werkzeuge zum automatisierten Testen
 
@@ -47,11 +47,19 @@ Browser-Erweiterungen
 
 Weitere Helfer:  [SkipTo Landmarks&Headings](https://github.com/skipto-landmarks-headings/browser-extension), [Landmarks](http://matatk.agrip.org.uk/landmarks/), Browser *Reader Mode*, [und viele weitere Erweiterungen](https://chromewebstore.google.com/category/extensions/make_chrome_yours/accessibility)
 
+## Manuelles Testen
+
+Unersetzlich! Die meisten WCAG Kritieren sind kontextabhängig.
+
+"Hat der Knopf eine Beschriftung?" vs "Ist die Beschriftung des Knopfs richtig/verständlich?"
+
 ## Werkzeuge zum manuellen Testen
 
-- Gesunder Menschenverstand (POUR etc)
-- HTML Quellcode
-- [Browser Entwicklertools](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) ([kulturbanause.de Artikel](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/))
+- Gesunder Menschenverstand (POUR!)
+- grundlegende Tests sind erlernbar ([a11y collective Artikel](https://www.a11y-collective.com/blog/how-to-check-web-accessibility/#h-3-perform-manual-testing-for-thorough-evaluation))
+- Checklisten helfen ([Beispiel 1](https://www.webaccessibilitychecklist.com/), [Beispiel 2](https://www.a11y-collective.com/blog/accessibility-checklist/))
+- HTML Quellcode hilft
+- [Browser Entwicklertools](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) helfen ([kulturbanause.de Artikel](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/))
 
 ## Für Fortgeschrittene: Screenreader
 
@@ -68,17 +76,19 @@ Demos: [ATHEN STEM conference, 2022](https://pkra.github.io/2022-athen-stem-conf
 *Kleine* Screenreader: [Texthelp](https://www.texthelp.com/), [Speechify](https://speechify.com/) (oft als browser Erweiterungen); *Reader Mode*
 
 
-## Was wir testen: WCAG Reloaded
+## Jetzt aber: Welche Barrieren wir testen
 
 [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/)
 
 - ~80 Success Criteria (Erfolgskriterien) eingeteilt in A, AA, AAA
-- A&AA rechtlich gefordert, AAA optional/ideal
-- Betreffen größtenteils Interaktion, weniger "statische" Inhalte
+- A&AA rechtlich gefordert, AAA optional/ideal, mehr Interaktion, weniger "statische" Inhalte
 
 Zur Erinnerung: WCAG ist lediglich das **Minimum**!
 
-⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien. Mehr unter [/materialien/WCAG-rundschau.md](../../materialien/WCAG-rundschau.md)
+⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien. 
+
+Schnelldurchlauf unter [/materialien/WCAG-rundschau.md](../../materialien/WCAG-rundschau.md)
+
 ## WCAG 1.1.1 Nicht-Text-Inhalt
 
 > Alle Nicht-Text-Inhalte, die dem Benutzer präsentiert werden, haben eine Textalternative, die einem äquivalenten Zweck dient, mit Ausnahme der unten aufgelisteten Situationen. [...]
@@ -92,16 +102,14 @@ NB: Dekorativausnahme.
 
 ## Einordnung: WCAG 1.1.1
 
-- Kurze vs Lange Alternativen
-- Viele Techniken ([Understanding 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)), aber mit LaTeX Quellen oft schwierig:
-  - *kurz* via `\includegraphics`; *lang* via *kurz* möglich
-  - Unterschiede bei <q>fixen</q> und erzeugten Grafiken (tikz etc // R, matplotlib etc)
-  - Immer (LaTeX) Quellen behalten! Evtl. Alternativen erzeugen (z.B. Daten als Tabellen, notfalls als Rohtext)
-- Formelsatz → [MathJax](https://www.mathjax.org/) hilft
-- SVG > Raster (SVG+Raster!)
+- Viele Techniken ([Understanding 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html))
+- Kurze und Lange Alternativen sind unterschiedlich
+- Komplexe Alternativen sind möglich (z.B. Daten als Tabellen)
+- **aber** mit LaTeX oft schwierig:
+  - nur `\includegraphics[alt=""]`
+  - erzeugte Grafiken außen vor (tikz etc // R, matplotlib etc) eher nicht
 
-Mehr: [TU Chemnitz](https://www.tu-chemnitz.de/urz/www/bf/alt.html), [FAU Artikel "perfekter" Alttext](https://www.rrze.fau.de/2022/08/der-perfekte-alt-text-interview-mit-blinden-und-sehbehinderten-menschen/), [barrierefreies.design](https://barrierefreies.design/blog/gute-alternativtexte-fur-bilder-formulieren), [BIK](https://bik-fuer-alle.de/alternativtexte-fuer-grafiken.html), [Harvard](https://accessibility.huit.harvard.edu/describe-content-images)\
-Inspiration: [Sorge&Austin@ w4a2023](https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html), [@krautzource/aria-tree-walker](https://krautzource.github.io/aria-tree-walker/)
+Mehr dazu in Teil 3.
 
 ## WCAG 1.3.1 Info und Beziehungen
 
@@ -112,8 +120,9 @@ Inspiration: [Sorge&Austin@ w4a2023](https://githubraw.com/zorkow/pretext/w4a202
 - viele Fälle und Techniken ([Understanding 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html))
 - Die Best Practices zu Dokumentstruktur (und mehr) helfen
   - aber auch: pragmatische Möglichkeiten (z.B. hervorgehobenes List item ⇒ "neu" dazu schreiben)
-- Gleichheitsgrundsatz nicht missbrauchen
 - Mein LaTeX Litmustest: Tabellenkopf, Theorem-Umgebungen
+
+Gleichheitsgrundsatz nicht missbrauchen!
 
 ## WCAG 1.3.2 Bedeutungstragende Reihenfolge
 
