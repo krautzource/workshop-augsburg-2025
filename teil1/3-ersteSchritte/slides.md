@@ -54,10 +54,12 @@ Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex
 
 - Basisdokument `einfach.tex`
 - Strukturelemente, z.B.
+  - `toc.tex`
+  - `theorem.tex`
+  - `mathmode.tex`
   - `lists.tex`
   - `graphics.tex`
   - `tables.tex`
-  - `mathmode.tex`
 
 ## Formelsatz mit MathJax
 
@@ -73,6 +75,8 @@ Typische Probleme:
 
 ## Weiterführende Beispiele
 
+- Gliederung (`toc.tex`)
+  - pandoc braucht option `--toc`
 - Bibliographie mit BibTeX `bibtex.tex`
   - make4ht unterstützt Bibliographien direkt
   - `$ pandoc ../bibtex.tex --bibliography=../bibtex.bib -o bibtex.html -s --citeproc -M link-citations=true`
@@ -83,7 +87,7 @@ Typische Probleme:
 - [arxiv:1312.4289](https://arxiv.org/abs/1312.4289) `rademacher.tex`
 - [arxiv:2207.01335](https://arxiv.org/abs/2207.01335) `costoyaEtAl.tex`
 
-## Erweiterungen
+## Komplexe Erweiterungen
 
 [Pandoc Filters](https://pandoc.org/filters.html)
 

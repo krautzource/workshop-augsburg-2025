@@ -69,10 +69,12 @@
 <li>Basisdokument <code>einfach.tex</code></li>
 <li>Strukturelemente, z.B.
 <ul>
+<li><code>toc.tex</code></li>
+<li><code>theorem.tex</code></li>
+<li><code>mathmode.tex</code></li>
 <li><code>lists.tex</code></li>
 <li><code>graphics.tex</code></li>
 <li><code>tables.tex</code></li>
-<li><code>mathmode.tex</code></li>
 </ul>
 </li>
 </ul>
@@ -91,6 +93,11 @@
 <section>
 <h2 id="weiterf%C3%BChrende-beispiele" tabindex="-1"><a class="header-anchor" href="#weiterf%C3%BChrende-beispiele">Weiterführende Beispiele</a></h2>
 <ul>
+<li>Gliederung (<code>toc.tex</code>)
+<ul>
+<li>pandoc braucht option <code>--toc</code></li>
+</ul>
+</li>
 <li>Bibliographie mit BibTeX <code>bibtex.tex</code>
 <ul>
 <li>make4ht unterstützt Bibliographien direkt</li>
@@ -108,7 +115,7 @@
 </ul>
 </section>
 <section>
-<h2 id="erweiterungen" tabindex="-1"><a class="header-anchor" href="#erweiterungen">Erweiterungen</a></h2>
+<h2 id="komplexe-erweiterungen" tabindex="-1"><a class="header-anchor" href="#komplexe-erweiterungen">Komplexe Erweiterungen</a></h2>
 <p><a href="https://pandoc.org/filters.html">Pandoc Filters</a></p>
 <p><code>$ pandoc --from latex+raw_tex --lua-filter pandoc-filter.lua -s input.tex -o output.html  --standalone --mathjax</code></p>
 <p><a href="https://www.kodymirus.cz/tex4ht-doc/Configurations.html">make4ht Configurations</a></p>
