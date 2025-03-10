@@ -22,6 +22,7 @@ Tag 2
 
 - Browsererweiterungen
   - [Deque axe DevTools](https://www.deque.com/axe/devtools/)
+  - [webaim WAVE](https://wave.webaim.org/)
   - [Microsoft Accessibility Insights](https://accessibilityinsights.io/downloads/)
 
 Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2025](https://krautzource.github.io/workshop-augsburg-2025) (siehe auch Online System der Uni Augsburg)
