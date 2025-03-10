@@ -24,9 +24,14 @@ Browser-Erweiterungen
 
 - Inhaltlich Arbeiten
   - POUR Prinzipien / WCAG Kriterien
-- HTML Quellcode evaluieren
-- [Browser Entwicklertools](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) ([kulturbanause.de Artikel](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/))
-
+- Grundlegende Tests
+  - Überschriften und Seitenstruktur
+  - Tab order
+  - Links
+- Checklisten helfen ([Beispiel 1](https://www.webaccessibilitychecklist.com/), [Beispiel 2](https://www.a11y-collective.com/blog/accessibility-checklist/))
+- HTML Quellcode hilft, [Browser Entwicklerwerkzeuge](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) helfen 
+  
+Mehr: [Website Accessibility Testing (a11y collective)](https://www.a11y-collective.com/blog/how-to-check-web-accessibility/), [Chrome Entwicklerwerkzeuge (kulturbanause.de)](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/)
 
 ## Textalternativen in LaTeX (WCAG 1.1.1)
 
@@ -52,7 +57,7 @@ Eine einfache Technik, um Fehler zu identifizieren:
 - Via Browser Entwicklertools
 - Via Betriebssystem ([Windows](https://support.microsoft.com/de-de/windows/verwenden-von-farbfiltern-in-windows-43893e44-b8b3-2e27-1a29-b0c15ef0e5ce), [MacOS](https://support.apple.com/de-de/guide/mac-help/unac089/14.0/mac/14.0))
 
-Weitere Artikel: [farbschwaeche.de](https://www.farbsehschwaeche.de/materialien), [distriko.de](https://distriko.de/blog/barrierefreie-farbkontraste/),  [smashing magazine](https://www.smashingmagazine.com/2024/02/designing-for-colorblindness/)
+Weitere Artikel: [farbschwaeche.de](https://www.farbsehschwaeche.de/materialien), [distriko.de](https://distriko.de/blog/barrierefreie-farbkontraste/), [smashing magazine](https://www.smashingmagazine.com/2024/02/designing-for-colorblindness/)
 
 ## (Not)lösungen für Inhalte aus LaTeX Quellen
 
@@ -62,4 +67,4 @@ Weitere Artikel: [farbschwaeche.de](https://www.farbsehschwaeche.de/materialien)
 
 ## Lesematerial
 
-* [Professional Web Accessibility Auditing Made Easy](https://pressbooks.library.torontomu.ca/pwaa/) (OA Buch, Toronto Metro University)
+- [Professional Web Accessibility Auditing Made Easy](https://pressbooks.library.torontomu.ca/pwaa/) (OA Buch, Toronto Metro University)
