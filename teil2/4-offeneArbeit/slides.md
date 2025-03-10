@@ -8,6 +8,7 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 
 - Testen der Beispieldateien
 - Testen eigener Dateien
+- Textalternativen erstellen und einbetten
 - Sammlung für Ergebnisrunde
   - Identifizierte Probleme
   - Erfolgreiche Korrekturen
