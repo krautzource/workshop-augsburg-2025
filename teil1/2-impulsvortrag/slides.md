@@ -36,7 +36,7 @@ Barrieren enstehen z.B. in den folgenden Bereichen:
 🖐 **Motorik**: keine Maus, langsame Reaktion, eingeschränkte Feinmotorik\
 🧠 **Kognition**: Dyslexie, Dyskalkulie, Ablenkung, Gedächtnisschwierigkeiten
 
-Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML), [Selfish Accessibility, Adrian Roselli](http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html), [Accessibility is usability, Sarah Richards](https://vimeo.com/336394764)
+Inspiration: [HTML: A good basis for accessibility (MDN)](https://developer.mozilla.org/en-US/docs/Learn/Accessibility/HTML), [Selfish Accessibility (Adrian Roselli)](http://adrianroselli.com/2017/03/selfish-accessibility-slides-from-wordcamp-london-2017.html), [Accessibility is usability (Sarah Richards)](https://vimeo.com/336394764)
 
 ## Universelles Design
 
@@ -61,8 +61,6 @@ Im Wesentlichen: [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w
 - Einstieg: [W3C Accessibility Principles](https://www.w3.org/WAI/fundamentals/accessibility-principles/) [WebAIM WCAG Checklist](https://webaim.org/standards/wcag/checklist)
 
 Mehr: [EAA Umsetzung in Deutschland](https://www.bitvtest.de/bitv_test/das_testverfahren_im_detail/vertiefend/european_accessibility_act.html), [WCAG 2.1 auf Deutsch](https://outline-rocks.github.io/wcag/translations/WCAG21-de/), [WebAIM Artikel (Englisch)](https://webaim.org/articles/)
-
-**Barrierefreiheit ist ein auf Menschen ausgerichteter Prozess**.
 
 ## WCAGs POUR Prinzipien
 
@@ -124,14 +122,14 @@ Printtraditionen bergen versteckte Problem. Eine Auswahl:
 
 - LaTeX
   - standardisiertes Makropaket
-  - Fokus: Trennung von Inhalt & Präsentation
+  - Trennung von Inhalt & Präsentation
 - Programmiersprache
   - Stabilität
   - text basiert
 - Kultur
-  - Lingua Franca in Mathematik, Physik, Informatik etc
+  - Lingua Franca in MINT Fächern
   - Teils im Schulbereich
-  - Tradition des [Literate Programming](https://de.wikipedia.org/wiki/Literate_Programming)
+  - Traditionen wie [Literate Programming](https://de.wikipedia.org/wiki/Literate_Programming)
 
 ## Aus LaTeX Quellen zum Web
 
@@ -146,20 +144,21 @@ Eine Auswahl:
 
 ## Eine Frage der Balance
 
-Separation of concerns.
+Separation of concerns:
 
 - Wie nah an TeX (d.h. Print) bleiben?
-  - zu weit weg vom Web: Printlayout, Barrieren
 - Wie nah ans Web kommen?
-  - zu weit weg von TeX: Einschränkungen bei Macros, Paketen etc.
 
-**Werkzeuge helfen, retten uns aber nicht. Und sie können es schlimmer machen.**
+Zu weit weg vom Web: Printlayout, Barrieren\
+Zu weit weg von TeX: Einschränkungen bei Macros, Paketen etc.
+
+**Werkzeuge helfen, retten uns aber nicht.**
 
 Beispiel: [Algorithm layout](https://www.peterkrautzberger.org/0217/)
 
 <img src="https://www.peterkrautzberger.org/assets/2020/euclid.png" alt="Euclid's Algorithmus als Textsatz mit dem algorithmicx Paket" style="margin-inline:auto">
 
-## Eine Frage der Balance 2
+## Eine Frage der Balance (2)
 
 Benutzbarkeit gegenüber Mächtigkeit.
 
@@ -167,40 +166,36 @@ Up-conversion als Chance und Risiko.
 
 Nische in der Nische.
 
-**Wir sind der Qualität der Tools ausgeliefert.**
-
 ## Stärken: Best Practices sind zentral
 
-LaTeX hat gute Best Practices. \
-Eine Auswahl:
+LaTeX hat gute Best Practices, z.B.
 
 - Gliederung
 - Listen, Abbildungen, Tabellen, Zitate, Quellcode
 - Theorem-Umgebungen (Definitionen, Theoreme, Lemmata etc)
 - Querverweise (Gliederung, Formeln, Theorem, Bibliographien, Fußnoten)
+- erzeugte Graphiken (Diagramme etc.)
 - Indizes, Glossare
-- erzeugte Graphiken (Diagramme etc)
 - Metadaten
 
-**Caveat: Menschen lernen LaTeX einmal und nur einmal.**
+**Caveat: Menschen lernen LaTeX meist nur einmal.**
 
-## Stärken
+## Stärken: Use the source!
 
-Use the Source!
+TeX-Quellen sind lesbar & weiterverwendbar
 
-- TeX ist lesbar, weiterverwendbar
+- Text und Struktur
 - erzeugte Graphiken (tikz, pstricks)
 - externer Code (matplotlib, Sage, R, Julia)
 - Formelsatz
 
-Keep the Source!
+**Keep the Source!**
 
 ## Problemgebiet: Formelsatz
 
 Formelsatz ist grundsätzlich problematisch.
 
-> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought. [[Krautzberger](https://www.peterkrautzberger.org/0218/)]
-
+> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought. [[Krautzberger]](https://www.peterkrautzberger.org/0218/)
 
 Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung von Formelsatz im Web. Gerade auch in Deutschland.
 
