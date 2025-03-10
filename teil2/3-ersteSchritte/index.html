@@ -60,16 +60,76 @@
 <p>Mehr: <a href="https://www.a11y-collective.com/blog/how-to-check-web-accessibility/">Website Accessibility Testing (a11y collective)</a>, <a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">Chrome Entwicklerwerkzeuge (kulturbanause.de)</a></p>
 </section>
 <section>
-<h2 id="textalternativen-in-latex-(wcag-1.1.1)" tabindex="-1"><a class="header-anchor" href="#textalternativen-in-latex-(wcag-1.1.1)">Textalternativen in LaTeX (WCAG 1.1.1)</a></h2>
+<h2 id="crashkurs-wcag-1.1.1" tabindex="-1"><a class="header-anchor" href="#crashkurs-wcag-1.1.1">Crashkurs WCAG 1.1.1</a></h2>
+<p>Viele Techniken (<a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html">Understanding 1.1.1</a>), aber mit LaTeX Quellen oft schwierig:</p>
 <ul>
-<li>Technisch: Neues LaTeX Feature: <code>\includegraphics[alt={}]{}</code>
+<li>Platzierung: <em>lokal</em> via <code>\includegraphics</code>; <em>nichtlokal</em> via <em>lokal</em></li>
+<li>Schwer: erzeugten Grafiken (tikz etc, evtl. auch R, matplotlib etc)
 <ul>
-<li>Bei langer Alternative, damit Hinweise geben.</li>
+<li>Alternativen erzeugen (z.B. Daten als Tabellen, notfalls Rohtext)</li>
+<li>Immer (LaTeX) Quellen behalten!</li>
 </ul>
 </li>
-<li>Inhaltlich: Üben, üben, üben
+<li>Formelsatz → <a href="https://www.mathjax.org/">MathJax</a> hilft</li>
+</ul>
+<p>Mehr: <a href="https://www.tu-chemnitz.de/urz/www/bf/alt.html">TU Chemnitz</a>, <a href="https://www.rrze.fau.de/2022/08/der-perfekte-alt-text-interview-mit-blinden-und-sehbehinderten-menschen/">FAU Artikel “perfekter” Alttext</a>, <a href="https://barrierefreies.design/blog/gute-alternativtexte-fur-bilder-formulieren">barrierefreies.design</a>, <a href="https://bik-fuer-alle.de/alternativtexte-fuer-grafiken.html">BIK</a>, <a href="https://accessibility.huit.harvard.edu/describe-content-images">Harvard</a><br>
+Inspiration: <a href="https://githubraw.com/zorkow/pretext/w4a2023/w4a2023/frontmatter-1.html">Sorge&amp;Austin@ w4a2023</a>, <a href="https://krautzource.github.io/aria-tree-walker/">@krautzource/aria-tree-walker</a></p>
+</section>
+<section>
+<h2 id="crashkurs-wcag-1.1.1-kategorisierung" tabindex="-1"><a class="header-anchor" href="#crashkurs-wcag-1.1.1-kategorisierung">Crashkurs WCAG 1.1.1 Kategorisierung</a></h2>
+<p>Eine grobe Kategorisierung von Bildern (vgl. <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">WCAG Alt Decision Tree</a>)</p>
 <ul>
-<li>am Besten mit Eigenem Material</li>
+<li>Dekorativ: Frontispiz, Rand, Aufmacherbild</li>
+<li>Text: Scans, Alltagsfotos etc</li>
+<li>Gruppe: mehrere als ein Ganzes</li>
+<li>Informativ: Icons, “visuelle Notation” wie Knoten, Graphen</li>
+<li>Komplex: Graphen, Diagramme, Illustrationen, Datenvisualisierung etc</li>
+</ul>
+</section>
+<section>
+<h2 id="crashkurs-wcag-1.1.1-inhalt" tabindex="-1"><a class="header-anchor" href="#crashkurs-wcag-1.1.1-inhalt">Crashkurs WCAG 1.1.1 Inhalt</a></h2>
+<p>Herangehensweise</p>
+<ul>
+<li>Dekorativ: explizit leer</li>
+<li>Text: den Text</li>
+<li>Gruppe: Jedes einzeln + Gruppierung</li>
+<li>Informativ: Funktionale Textalternative</li>
+<li>Komplex: Endgegner</li>
+</ul>
+<p><strong>Kontextabhängig!!</strong></p>
+</section>
+<section>
+<h2 id="crashkurs-wcag-1.1.1-platzierung-(1)" tabindex="-1"><a class="header-anchor" href="#crashkurs-wcag-1.1.1-platzierung-(1)">Crashkurs WCAG 1.1.1 Platzierung (1)</a></h2>
+<p>Die 2 Optionen für Textalternativen:</p>
+<ul>
+<li>lokal / am Bild  / “image alt”
+<ul>
+<li>kurz</li>
+<li>wenn nicht ausreichend, dann Grob + Hinweis auf vollwertige Alternative</li>
+</ul>
+</li>
+<li>nichtlokal / im Textfluss (das beste Bild ist ein Hilfsmittel)
+<ul>
+<li>beliebige Länge</li>
+<li>komplexe Inhalte möglich (z.B. Tabellen, Formeln)</li>
+</ul>
+</li>
+</ul>
+</section>
+<section>
+<h2 id="crashkurs-wcag-1.1.1-platzierung-(2)" tabindex="-1"><a class="header-anchor" href="#crashkurs-wcag-1.1.1-platzierung-(2)">Crashkurs WCAG 1.1.1 Platzierung (2)</a></h2>
+<ul>
+<li>Bild in Abbildung
+<ul>
+<li>Textalternative in <code>\caption</code></li>
+<li>sonst: Textalternative nahe <code>\ref</code></li>
+<li>am Bild: Kurzversion + Hinweis</li>
+</ul>
+</li>
+<li>Sonst / Position ist wichtig:
+<ul>
+<li>direkt davor oder danach</li>
+<li>Falls das nicht geht: äquivalenter Text am Bild</li>
 </ul>
 </li>
 </ul>
@@ -77,15 +137,15 @@
 <section>
 <h2 id="farben-testen" tabindex="-1"><a class="header-anchor" href="#farben-testen">Farben testen</a></h2>
 <ul>
-<li>
-<p>Color-Picker in <a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern">Browser Entwicklertools</a> (<a href="https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/">kulturbanause.de Artikel</a>)</p>
-</li>
-<li>
-<p><a href="https://www.leserlich.info/werkzeuge/kontrastrechner/">leserlich.info Kontrastrechner</a></p>
-</li>
-<li>
-<p>Und korrigieren</p>
+<li>Automatische Tests sind gut bei Textfarben</li>
+<li>Manuell: mit Kontrastrechner <a href="https://webaim.org/resources/contrastchecker/">bei webaim</a>, <a href="https://leserlich.info/kontrastrechner">bei leserlich.info</a>
 <ul>
+<li>Color-Picker App oder Browser DevTools</li>
+</ul>
+</li>
+<li>Korrigieren
+<ul>
+<li>bei Text einfach</li>
 <li>LaTeX Stärken nutzen (z.B. Makros, in generierte Grafiken)</li>
 </ul>
 </li>
@@ -105,7 +165,7 @@
 <h2 id="(not)l%C3%B6sungen-f%C3%BCr-inhalte-aus-latex-quellen" tabindex="-1"><a class="header-anchor" href="#(not)l%C3%B6sungen-f%C3%BCr-inhalte-aus-latex-quellen">(Not)lösungen für Inhalte aus LaTeX Quellen</a></h2>
 <ul>
 <li><a href="https://de.wikipedia.org/wiki/KISS-Prinzip"><em>KISS</em></a> Vereinfachung hilft oftmals</li>
-<li>manuelle Nachbearbeitung (d.h. im HTML) sind manchmal notwendig</li>
+<li>manuelle Nachbearbeitung (d.h. im HTML) sind manchmal notwendig (evtl. automatisierbar)</li>
 <li>make4ht: Fallback Bilder erzeugen</li>
 </ul>
 </section>
