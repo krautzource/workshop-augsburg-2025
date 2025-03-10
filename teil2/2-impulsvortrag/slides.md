@@ -27,9 +27,7 @@ Automatisiert & Manuell
 
 ## Automatisiertes Testen
 
-Automatisierung ist einfach aber nie vollständig.
-
-Ein grobes Bild in Zahlen:
+Automatisierung ist einfach aber nie vollständig. Zum Vergleich:
 
 - Einerseits: nur geschätzt 20-30% der Kriterien können durch automatisierte Werkzeuge geprüft werden (siehe z.B. [bik-fuer-alle](https://bik-fuer-alle.de/automatisierte-tests.html), [level access](https://www.levelaccess.com/blog/automated-accessibility-testing-tools-how-much-do-scans-catch/), [gov.uk](https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/))
 - Andererseits: 57% der Fehler können entdeckt werden [Deque](https://www.deque.com/automated-accessibility-testing-coverage/)
@@ -289,3 +287,24 @@ Hochgradig relevant aber schwer umsetzbar.
 - **3.1.4 Abkürzungen** <q>Es gibt einen Mechanismus, um die ausgeschriebene Form oder Bedeutung von Abkürzungen zu erkennen.</q>
 - **3.1.5 Leseniveau** <q> Wenn der Text nach der Entfernung von Eigennamen und Titeln Lesefähigkeiten voraussetzt, die über das Niveau der niedrigen, sekundären Schulbildung hinausgehen, dann gibt es ergänzenden Inhalt oder eine Version, die keine über die niedrige, sekundäre Schulbildung hinausgehenden Lesefähigkeiten verlangt.</q>
 - **3.1.6 Aussprache** <q>Es gibt einen Mechanismus, um die bestimmte Aussprache von Wörtern zu erkennen, wenn die Bedeutung der Wörter – im Zusammenhang – mehrdeutig ist, wenn man die Aussprache nicht kennt.</q>
+
+## Rückschau
+
+- Automatisiertes Testen ist einfach und deckt einen guten Teil ab
+  - Browsererweiterungen sind ein sehr guter Helfer
+- Manuelles Testen ist machbar
+  - Mit Verstand und Hilfsmitteln
+  - Screenreaderlernen ein Ziel für erste Vertiefung
+- WCAG 
+  - ~20 von 80 Kriterien diskutiert - Pareto!
+  - Die meisten sind mit LaTeX sehr einfach erreichbar
+    - Ausnahmen prüfen.
+
+
+## Nach der Pause...
+
+- Einführung in Browsererweiterungen
+- Crashkurs Textalternativen
+- Beispieldokumente testn
+  - Probleme lösen
+- Offene Arbeit
