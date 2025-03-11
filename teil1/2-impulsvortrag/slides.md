@@ -154,17 +154,31 @@ Zu weit weg von TeX: Einschränkungen bei Macros, Paketen etc.
 
 **Werkzeuge helfen, retten uns aber nicht.**
 
-Beispiel: [Algorithm layout](https://www.peterkrautzberger.org/0217/)
+(Aber auch: Balance Benutzbarkeit vs Mächtigkeit.)
+
+## Beispiel: Algorithmen
+
+[Algorithm layout](https://www.peterkrautzberger.org/0217/)
 
 <img src="https://www.peterkrautzberger.org/assets/2020/euclid.png" alt="Euclid's Algorithmus als Textsatz mit dem algorithmicx Paket" style="margin-inline:auto">
 
-## Eine Frage der Balance (2)
+## Beispiel: Formelsatz
 
-Benutzbarkeit gegenüber Mächtigkeit.
+Formelsatz ist grundsätzlich problematisch.
 
-Up-conversion als Chance und Risiko.
+> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought. [[Krautzberger]](https://www.peterkrautzberger.org/0218/)
 
-Nische in der Nische.
+Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung von Formelsatz im Web. Gerade auch in Deutschland.
+
+[MathJax](https://www.mathjax.org/) hilft.
+
+## Problemgebiete: Visuelle Kommunikation
+
+- Graphiken
+- Farben
+- Sensorische Kommunikation
+
+Mehr dazu morgen!
 
 ## Stärken: Best Practices sind zentral
 
@@ -190,27 +204,6 @@ TeX-Quellen sind lesbar & weiterverwendbar
 - Formelsatz
 
 **Keep the Source!**
-
-## Problemgebiet: Formelsatz
-
-Formelsatz ist grundsätzlich problematisch.
-
-> an elaborate, two-dimensional form of abbreviated notation for compressed, highly complex, context dependent, abstract thought. [[Krautzberger]](https://www.peterkrautzberger.org/0218/)
-
-Gute LaTeX-Quellen sind das bisher beste Format für barrierefreie Darstellung von Formelsatz im Web. Gerade auch in Deutschland.
-
-[MathJax](https://www.mathjax.org/) hilft.
-
-## Problemgebiete: Visuelle Kommunikation
-
-- Graphiken
-  - Textalternativen
-  - Farbgebung
-- Farben
-- Sensorische Kommunikation
-- Bad Practices
-
-Mehr dazu morgen!
 
 ## Rückschau
 
