@@ -84,8 +84,8 @@ Typische Probleme:
 
 ## Ganze Dokumente
 
-- [arxiv:1312.4289](https://arxiv.org/abs/1312.4289) `rademacher.tex`
-- [arxiv:2207.01335](https://arxiv.org/abs/2207.01335) `costoyaEtAl.tex`
+- [arxiv:1312.4289](https://arxiv.org/abs/1312.4289) `rademacher.tex` ([published CC-BY-3.0](https://www.ams.org/journals/bproc/2014-01-11/S2330-1511-2014-00014-6/))
+- [arxiv:2207.01335](https://arxiv.org/abs/2207.01335) `costoyaEtAl.tex` ([published CC-BY-4.0](https://link.springer.com/article/10.1007/s13398-023-01414-w))
 
 ## Komplexe Erweiterungen
 
