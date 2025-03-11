@@ -35,8 +35,8 @@ Ein paar erhoffte Voraussetzungen:
 - LaTeX Grundkenntnisse
   - insbesondere Benutzung eines Texteditors und der Kommandozeile.
 - Eine aktuelle [texlive](https://tug.org/texlive/) Installation
-  - insbesondere auch [tex4ht/make4ht](https://tug.org/tex4ht/)
-- Eine aktuelle Installation von [pandoc](https://pandoc.org/)
+  - insbesondere auch [tex4ht/make4ht](https://tug.org/tex4ht/) (~v0.4)
+- Eine aktuelle Installation von [pandoc](https://pandoc.org/) (~v3.6)
 - Einen aktuellen Webbrowser (z.B. Chrome, Safari, Firefox, Edge)
   - evtl. Grundkentnisse HTML, CSS etc (z.B. [selfHTML](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg))
 - Für Mutige: ein Installation von [AmerMathSoc/texml](https://github.com/AmerMathSoc/texml)

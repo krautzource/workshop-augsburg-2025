@@ -136,8 +136,8 @@ Printtraditionen bergen versteckte Problem. Eine Auswahl:
 Etliche Programme können LaTeX zu Webinhalten konvertieren. \
 Eine Auswahl:
 
-- [pandoc](https://pandoc.org/) \* (~v3.6)
-- [tex4ht / make4ht](https://tug.org/tex4ht/) \* (~v0.4)
+- [pandoc](https://pandoc.org/) \* 
+- [tex4ht / make4ht](https://tug.org/tex4ht/) \*
 - [plastex](http://plastex.github.io/plastex/)
 - [latexml](https://math.nist.gov/~BMiller/LaTeXML/)
 - [texml](https://github.com/AmerMathSoc/texml)\*\*
