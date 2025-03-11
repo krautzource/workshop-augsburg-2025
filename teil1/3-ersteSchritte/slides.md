@@ -50,7 +50,7 @@ Minimal Beispiele:
 
 ## Einfache Beispiele
 
-Die Beispiele befinden sich in [/materialien/tex-einfach/](../../materialien/tex-einfach/)
+Die Beispiele befinden sich in [/materialien/tex-einfach/](https://github.com/krautzource/workshop-augsburg-2025/tree/main/materialien/tex-einfach)
 
 - Basisdokument `einfach.tex`
 - Strukturelemente, z.B.
