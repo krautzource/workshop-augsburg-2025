@@ -169,3 +169,14 @@ Bei einigen Bilderarten, wie z.B. Fotos, gestaltet sich eine Alternative meist a
 In seltenen Fällen ist es zentral für einen Text, ein Bild visuell wahrzunehmen. Z.B. kann eine Aufgabe darin bestehen, einen Graphen zu analysieren. Da eine "ordentliche" Textalternative dieser Aufgabe zuwiderlaufen würde, kann die Textalternative hier den Zweck des Bildes beschreiben, siehe auch [Understanding SC
 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html). Dabei sollte sichergestellt sein, dass solch ein Bild nicht kritisch für das Verständnis oder das Lernziel ist, z.B. in dem andere äquivalente Aufgaben bereitgestellt werden, die keine visuelle Wahrnehmung erfordern.
 
+## Programmatisch generierte Bilder
+
+Oftmals sind Bilder in LaTeX Dokument programmatisch generiert. Eine häufige Quelle sind LaTeX Pakete wie tikz und xypic. Andere Quellen sind CAS-Systeme, Werkzeuge wie Jupyter oder SAGE, sowie Programmiersprachen wie Python, R, oder Julia. Zudem kommen intermediäre Werkzeuge wie matplotlib sowie Werkzeuge wie Geogebra, JSXGraph, und Desmos.
+
+All diese haben gemein, dass sie von strukturiertem Text/Code oder Markup erzeugt werden. Diese Quellen bieten einen guten Anfangspunkt.
+
+Einerseits sind Quellen eine Art Textalternative. Manchmal sehr konkret (Tabellarische Daten für einen Plot), manchmal indirect (für Menschen, die den Code weiterverwenden können). So werden im Hochschulbereich viele Menschen mit rohem LaTeX code viel anfangen können.
+
+Daher sollten Quellen stets bereitgestellt werden. Im Zweifel kann jemand damit mehr anfangen, als was ein einziges Bild bieten kann. Sei es die Verarbeitung der Rohformate oder die Veränderung (z.B. von Farben und Mustern einer Visualisierung).
+
+Es ist zudem wahrscheinlich, dass solche Werkzeuge Funktionen für barrierefreie Darstellungen anbieten (oder planen), sowohl visuell als auch nichtvisuell. Neben der eigenen Verwendung solcher Funktionen können Rohdaten dafür sorgen, dass auch zukünftige Fortschritte rückwirkend helfen.
