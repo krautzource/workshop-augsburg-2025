@@ -24,3 +24,103 @@ Zur Zeit ermöglicht LaTeX lediglich für `\includegraphics` eine lokale Alterna
 Wenn ein Bild Teil einer Abbildung ist, empfiehlt es sich, die Textalternative in der Bildunterschrift oder nahe des ersten Querverweises auf die Abbildung zu platzieren. (Abbildung, Bilderunterschrift und Querverweise sind stets empfehlenswert).
 
 Falls das nicht möglich ist, ist das Bild vermutlich an einer kritischen Position im Text. Dann sollte eine nichtlokale Alternative direkt davor oder danach platziert werden. Falls das auch nicht möglich ist, muss eine lokale Platzierung verwendet werden und die Alternative muss funktional identisch zum Bild sein.
+
+## Bildkategorien
+
+Bilder werden auf höchst unterschiedliche Arten genutzt. Ihre Textalternativen sind sich dementsprechend ebenso unterschiedlich in Funktion und Gestalt.
+
+Das [Tutorial on images](https://www.w3.org/WAI/tutorials/images/) der W3C WAI (Web Accessibility Initiative) unterscheidet 7 Bildtypen. Wir konzentrieren uns auf 5
+
+- komplexe Bilder
+- informative Bilder
+- Gruppen von Bildern
+- Bilder von Text
+- dekorative Bilder
+
+### Dekorative Bilder
+
+Dekorative Bilder sind, grob gesagt, Bilder, die inhaltlich nicht relevant sind.
+
+Dies kann verschiedene Gründe haben, z.B.
+
+**Dekoration.** Ein Bild wird als ausgefallener Rahmen verwendet (z.B. eines Kapitelanfangs) oder als spezieller QED Marker.
+
+**Redundant.** Z.B., wenn eine Textalternative dem Bild direkt folgt ("diese Daten sind durch einen roten Punkt ([ICON]) markiert") oder auch wenn ein Bild als Trennelement genutzt wird (z.B. nach einer Einleitung)
+
+**Ambiente.** Z.B. ein Frontispiz oder ein Symbolbild, um dass ein Absatz fließt.
+
+Dekorative Bilder sind die Ausnahme der Regel: sie sollten explizit leere (lokale) Textalternativen erhalten, z.B. `\includegraphics[alt={}]{...}`, damit sie von assistiven Technologien ignoriert werden können. Eine Textalternative wäre bei solchen Bilden überflüssig und störend für nichtvisuelle Darstellungen.
+
+Eine Ausnahme kann bei Bildern fürs Ambiente gemacht werden, bei denen eine lokal platzierten Textalternative einen äquivalenten Effekt erzielen kann.
+
+### Bilder von Text
+
+Diese Art Bild enthält im wesentlichen nur "normalen" Text.
+
+Nicht gemeint sind Bilder, die Text und weiter Inhalte beinhalten (Diagramme einer Buch oder Beweisstruktur) oder Bilder, die Texte künstlerisch darstellen (Kreuzworträtsel, Wortwolken).
+
+Typische Beispiele sind Scans handgeschriebener oder historischer Texte sowie Fotos von Texten aus dem Alltag.
+
+Für Bilder von Text müssen Textalternativen identische zum Text im Bild sein. Anpassungen sind möglich (z.B. Übersetzungen oder Auslassungen von Artefakten), sollten im Zweifel aber erschlossen werden können.
+
+Manchmal sind Bilder von Text tatsächlich informative Bilder, z.B. wenn sie spezielle Notation oder feste Konzepte darstellen. Dann sollten diese Kriterien angewandt werden.
+
+### Gruppen von Bildern.
+
+Gruppen von Bildern teilen sich in zwei wesentliche Fälle.
+
+Bildet eine Gruppe ein einziges inhaltliches Element (z.B. Rotation mit Zwischenschritten, Strichliste als Liste von Strichen), so sollte genau eines der Bilder die Textalternative für das ganze erhalten, die weiteren aber als dekorative behandelt werden.
+
+Bildet die Gruppe eine Kollektion, so muss jedes Bild eine angemessene Textalternative erhalten. Zusätzlich benötigt die Gruppe als ganzes Information in Textform, die die Verbindung der Gruppe erklärt.
+
+Meist liegt für eine Kollektion die Form einer Abbildung mit Unterabbildungen nahe.
+
+Da eine Gruppe von Bildern auf unterschiedlichen Bildschirmgrößen evtl. unterschiedlich umfließen, muss darauf geachtet werden, bei Textalternativen nicht (nur) sensorische Eigenschaften (links/rechts/oben/unten)zu verwenden.
+
+### Informative Bilder
+
+Informative Bilder werden genutzt um spezifische Inhalte zu transportieren, z.B. ein abstraktes Konzept or eine schematisches Zeichnung. Anstatt eine reine Beschreibung der visuellen Aspekte sollte eine Textalternative hier äquivalente Information bereit stellen.
+
+Typische Beispiele für informative Bilder sind kleine Bilder im direkten Text- der Formelfluss, die eher wie Buchstaben oder Terme verwendet werden, z.B. kleine Diagramme für Knotennotation oder Dinkin Diagramme. In diesem Fall wird die Textalternative oft lokal gesetzt. Oftmals kann eine systematische Einführung der entsprechenden Konzepte (z.B. Knotennotation) ermöglichen, die Textalternativen im Verlauf des Dokuments kurz zu halten (z.B. bipartite Graphen, "K-3-3 Graph").
+
+Ebenso fallen Skizzen und Schemata oftmals in diese Kategorie, wenn der Schwerpunkt nicht auf der konkrete visuellen Gestalt sondern dem dahinterliegenden abstrakten Konzept liegt, insbesondere wenn solch ein Bild andere Inhalte ergänzt (z.B. ein Beispiel eines Random Walks).
+
+Wenn das Bild ergänzend ist, kann es unter Umständen auch dekorativ erscheinen.
+
+### Komplexe Bilder
+
+Aus dem WAI Tutorial:
+
+> Complex images contain substantial information -- more than can be
+> conveyed in a short phrase or sentence. These are typically:
+>
+> - graphs and charts, including flow charts and organizational
+>   charts;
+>
+> - diagrams and illustrations where the page text relies on the user
+>   being able to understand the image;
+>
+> - maps showing locations or other information such as weather
+>   systems.
+
+Komplexe Bilder benötigen meist eine nichtlokale Textalternative. Der lokal platzierte Text muss zusätzlich das Bild im Kontext idenfizierbar machen; meist sollte zudem die Position der Textalternative erläutert werden.
+
+Idealerweise enthält der lokale Text eine Art Zusammenfassung der Textalternative.
+
+Die nichtlokale Textalternative kann dann auf unterschiedliche Art verknüpft werden. Z.B.
+
+- durch Gruppierung:
+  \begin{figure}
+  \includegraphics[alt={kurzer Text}]{meinBild.png}
+  \caption{Textalternative}
+  \end{figure}
+- Durch Vernküpfung
+  \begin{figure}
+  \includegraphics[alt={Kurzer Text, siehe Link in Abbildungstext}]{/path/to/image}
+  \caption{ ...; für eine Textalternative siehe \ref{anhangA}}
+  \end{figure}
+- Durch Beschreibung
+  \includegraphics[alt={Diagramm des Beweisesverlaufs von Theorem 1; visuelle Hilfe für ersten Absatz des Beweises}]{meinBild.png}
+
+Die Textalternative eines Komplexen Bilds ist meist mindestens so komplex. Wannimmer möglich, sollten Bilder soweit es geht in einfacher Teile zerlegt werden. Dies reduziert sowhol die Komplexität der Textalternative als auch der Bilder selbst, zum Nutzen aller.
+
