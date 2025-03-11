@@ -5,9 +5,10 @@
 % 2. install https://github.com/michal-h21/dvisvgm4ht
 %   - add the following
 
-\ifdefined\HCode
-  \def\pgfsysdriver{pgfsys-tex4ht-updated.def}
-\fi 
+% Depending on your version, try this:
+% \ifdefined\HCode
+%   \def\pgfsysdriver{pgfsys-tex4ht-updated.def}
+% \fi 
 
 % 3. run `'$ make4ht -f html5+dvisvgm_hashes tikz-test.tex  "mathjax"`'
 % 4. SVG files may be populated with (invalid) stray closing </p> tags
