@@ -123,3 +123,47 @@ Die nichtlokale Textalternative kann dann auf unterschiedliche Art verknüpft we
   \includegraphics[alt={Diagramm des Beweisverlaufs von Theorem 1; visuelle Hilfe für ersten Absatz des Beweises}]{meinBild.png}
 
 Die Textalternative eines Komplexen Bilds ist meist mindestens so komplex. Wann immer möglich, sollten Bilder soweit es geht in einfacher Teile zerlegt werden. Dies reduziert sowohl die Komplexität der Textalternative als auch der Bilder selbst, zum Nutzen aller.
+## Strategien zum Verfassen von Textalternativen
+
+Die elementaren Fragen (siehe auch [WCAG alt
+decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)):
+
+- Braucht diese Bild eine Textalternative?
+- Ist die Alternative kurz oder lang/komplex?
+- Muss die Alternative lokal platziert werden?
+- Ist das Bild eine Alternative für andere Teile des Dokuments? (z.B. Graph eines Beispiels)
+- Steht das Bild für sich? (z.B. ein Foto)
+
+### Kontextabhängigkeit
+
+Eine Textalternative ist **immer** kontextabhängig, da ihr Zweck mit dem Kontext variiert. Ein künstliches Beispiel: die Textalternative eines Portraits wird sich unterscheiden, wenn das Bild im Klappentext eines Buches die AutorInnen präsentiert, in einer Biographie die Stationen des Lebens dokumentiert, oder im Katalog eines Brillengeschäfts ein Brillenmodell vermarktet.
+
+Näher an unseren Zwecken: ein Bild mag eher dekorativ in einer Einleitung erscheinen, aber später im Beweis eine komplexe Rolle einnehmne.
+
+Ebenso kann ein Torus je nach Kontext eine Alternative benötigen, die ihn als Rotationskörper oder als kompakte Mannigfaltigkeit präsentiert.
+
+Nota bene: wenn ein Bild mehrfach wiederholt wird, um Teile zu diskutieren, lohnt es sich, Ausschnitte zu benutzen. Dies reduziert die visuelle und nicht-visuelle Komplexität.
+
+### Ideenfindung
+
+Die Entwicklung einer guten Textalternative verlangt ebensoviel Kreativität wie eine gute Visualisierung. Dementsprechend führen ebenso viele Wege dorthin.
+
+Eine einfache Taktik ist ein fiktives Telefonat mit Menshcen, evtl. mit unterschiedlichen Kentnissen. Welche Eigenschaften des Bildes müsste kommuniziert werden? Welche Funktion hat das Bild an der Stelle des Textes? Auf welchen Inhalten kann eine Alternative aufbauen?
+
+Besonder nützlich sind etablierte Notationssystem, z.B. hat [Knotentheorie](https://de.wikipedia.org/wiki/Knotentheorie) mehrere Kurzformen. Eine systematische Einführung solcher Kurzschrift ermöglicht eine einfache Wiederverwendung.
+
+Je nach Art des Bildes kann [computer
+vision](https://de.wikipedia.org/wiki/Computer_vision) bei der Ideenfindung behilflich sein, einen Einstieg in eine Textalternative zu finden. Jedoch können solche Werkzeuge bisher nicht den Kontext eines Bildes einbeziehen, so dass sie oft völlig unnütze oder gar falsche Textalternativen produzieren. So kann es sein, dass ein geometrisches Diagram lediglich eine Beschreibung wie "ein monochromes Diagramm eines Problems in Geometrie" erhält, die, wenn auch evtl. richtig, doch selten ausreichend ist.
+
+Vor allem Spezialwerkzeuge (z.B. OCR, Datenextraktion) können aber durchaus hilfreich sein. Insbesondere, um zumindest Teile eines Bilds zu extrahieren und in den Textfluss zu integrieren.
+
+### Praktische Tipps
+
+In einer perfekten Welt sind alle wesentliche Merkmale eines Bild im Text selbst enthalten, denn eine solche Textalternative hilft allen. Sobald Formulierungen wie "wie dargestellt in Abb. 1" auftreten, ist man evtl, schon in einer guten Position, um aus dem angrenzenden Text eine vollwertige Alternative zu machen.
+
+Dies ist einfacher für Bilder, die visuell helfen den Text zu verstehen. Wohingegen bei Bildern, die wichtig oder kritisch zum Verständnis sind (zentrale Resultate, Beweis ohne Worte), eine gute Alternative wie eine vermeintlch unnötige Duplizierung erscheinen können.
+
+Bei einigen Bilderarten, wie z.B. Fotos, gestaltet sich eine Alternative meist als Bildbeschreibung. Hierbei gilt es Vollständigkeit gegen Nutzen abzuwägen.
+
+In seltenen Fällen ist es zentral für einen Text, ein Bild visuell wahrzunehmen. Z.B. kann eine Aufgabe darin bestehen, einen Graphen zu anayliseren. Da eine "ordentliche" Textalternative dieser Aufgabe zuwiderlaufen würde, kann die Textalternative hier den Zweck des Bildes beschreiben, siehe auch [Understanding SC
+1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html). Dabei sollte sichergestellt sein, dass solch ein Bild nicht kritisch für das Verständnis oder das Lernziel ist, z.B. in dem andere äquivalente Aufgaben bereitgestellt werden, die keine visuelle Wahrnehmung erfordern.
