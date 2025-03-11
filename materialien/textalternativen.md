@@ -103,7 +103,7 @@ Aus dem WAI Tutorial:
 > - maps showing locations or other information such as weather
 >   systems.
 
-Komplexe Bilder benötigen meist eine nichtlokale Textalternative. Der lokal platzierte Text muss zusätzlich das Bild im Kontext idenfizierbar machen; meist sollte zudem die Position der Textalternative erläutert werden.
+Komplexe Bilder benötigen meist eine nichtlokale Textalternative. Der lokal platzierte Text muss zusätzlich das Bild im Kontext identifizierbar machen; meist sollte zudem die Position der Textalternative erläutert werden.
 
 Idealerweise enthält der lokale Text eine Art Zusammenfassung der Textalternative.
 
@@ -120,7 +120,6 @@ Die nichtlokale Textalternative kann dann auf unterschiedliche Art verknüpft we
   \caption{ ...; für eine Textalternative siehe \ref{anhangA}}
   \end{figure}
 - Durch Beschreibung
-  \includegraphics[alt={Diagramm des Beweisesverlaufs von Theorem 1; visuelle Hilfe für ersten Absatz des Beweises}]{meinBild.png}
+  \includegraphics[alt={Diagramm des Beweisverlaufs von Theorem 1; visuelle Hilfe für ersten Absatz des Beweises}]{meinBild.png}
 
-Die Textalternative eines Komplexen Bilds ist meist mindestens so komplex. Wannimmer möglich, sollten Bilder soweit es geht in einfacher Teile zerlegt werden. Dies reduziert sowhol die Komplexität der Textalternative als auch der Bilder selbst, zum Nutzen aller.
-
+Die Textalternative eines Komplexen Bilds ist meist mindestens so komplex. Wann immer möglich, sollten Bilder soweit es geht in einfacher Teile zerlegt werden. Dies reduziert sowohl die Komplexität der Textalternative als auch der Bilder selbst, zum Nutzen aller.
