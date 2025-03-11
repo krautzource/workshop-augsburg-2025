@@ -97,5 +97,5 @@ Typische Probleme:
 
 `$ make4ht -c configuration.cfg input.tex "mathjax"`
 
-Beispiele befinden sich in [/materialien/tex-spezial/](../../materialien/tex-spezial/)
+Siehe auch [/materialien/tex-spezial/](https://github.com/krautzource/workshop-augsburg-2025/tree/main/materialien/tex-spezial)
 
