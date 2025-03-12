@@ -6,9 +6,13 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 
 ## Mögliche Ziele
 
-- Testen der Beispieldateien
-- Testen eigener Dateien
+- Automatische Tests ausprobieren
+  - an den Materialien
+  - an eigenen Dokumenten von gestern
+  - and allgemeinen Websites
 - Textalternativen erstellen und einbetten
+  - schreiben und einbetten
+  - in anderen Dokumenten suchen
 - Sammlung für Ergebnisrunde
   - Identifizierte Probleme
   - Erfolgreiche Korrekturen
