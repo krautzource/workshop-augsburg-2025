@@ -38,7 +38,7 @@ Automatisierung ist einfach aber nie vollständig. Zum Vergleich:
 
 Browser-Erweiterungen
 
-- [Deque axe DevTools](https://www.deque.com/axe/devtools/) (\*)
+- [Deque axe DevTools](https://www.deque.com/axe/browser-extensions/) (\*)
 - [Microsoft Accessibility Insights](https://accessibilityinsights.io/downloads/) (\*)
 - [IBM Equal Access Toolkit](https://www.ibm.com/able/toolkit/tools/)
 - [WebAIM WAVE](https://wave.webaim.org/extension/)
@@ -68,10 +68,12 @@ Assistive Technologien bilden ein komplexes Feld an Software und Hardware. Eine 
 - Android: [Talkback](https://support.google.com/accessibility/android/answer/6283677?hl=de)
 - Linux: [Gnome ORCA](https://wiki.gnome.org/Projects/Orca) (ChromeOS: [ChromeVox](http://www.chromevox.com/))
 
-Demos: [ATHEN STEM conference, 2022](https://pkra.github.io/2022-athen-stem-conf/)
+Demos: [ATHEN STEM conference, 2022](https://pkra.github.io/2022-athen-stem-conf/), [Sina Baharam 1000 WPM (sehr laut bis 2:20m)](https://youtu.be/G1r55efei5c), [Hadi Rangin, U of Washington](https://youtu.be/7Rs3YpsnfoI)
 
 
 *Kleine* Screenreader: [Texthelp](https://www.texthelp.com/), [Speechify](https://speechify.com/) (oft als browser Erweiterungen); *Reader Mode*
+
+Viele weitere Technologien: Spracherkennung, Mundmaus, Bildschirmlupe, Single Switch, Sip&Puff, Eye Tracker...
 
 
 ## Jetzt aber: Welche Barrieren wir testen
@@ -83,7 +85,7 @@ Demos: [ATHEN STEM conference, 2022](https://pkra.github.io/2022-athen-stem-conf
 
 Zur Erinnerung: WCAG ist lediglich das **Minimum**!
 
-⇒ Wir werfen einen Blick auf einige wichtige Erfolgskriterien. 
+⇒ Wir werfen einen Blick auf die ~20 (hier) wichtigsten Erfolgskriterien. 
 
 Schnelldurchlauf unter [/materialien/WCAG-rundschau.md](../../materialien/WCAG-rundschau.md)
 
@@ -118,7 +120,7 @@ Mehr dazu in Teil 3.
 - viele Fälle und Techniken ([Understanding 1.3.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html))
 - Die Best Practices zu Dokumentstruktur (und mehr) helfen
   - aber auch: pragmatische Möglichkeiten (z.B. hervorgehobenes List item ⇒ "neu" dazu schreiben)
-- Mein LaTeX Litmustest: Tabellenkopf, Theorem-Umgebungen
+- Es gibt ein paar fundamentale LaTeX Schwierigkeiten (`\item[]`, Tabellenkopf, Theoreme)
 
 Gleichheitsgrundsatz nicht missbrauchen!
 
@@ -142,7 +144,6 @@ Typische Risikobereiche:
 - Querverweise ohne Links (<q>Bild rechts</q>, <q>Seite XX</q>)
 - Textfarben referenzieren
 - Abbildungen mit mehreren Grafiken (1x4 →  2x2  →  4x1)
-- Inline-Grafiken (z.B. Glyph-artiges)
 - Wrapfig Paket
 
 ## WCAG 1.4.1 Benutzung von Farbe
@@ -294,7 +295,7 @@ Hochgradig relevant aber schwer umsetzbar.
   - Browsererweiterungen sind ein sehr guter Helfer
 - Manuelles Testen ist machbar
   - Mit Verstand und Hilfsmitteln
-  - Screenreaderlernen ein Ziel für erste Vertiefung
+  - Screenreader lernen ein Ziel für erste Vertiefung
 - WCAG 
   - ~20 von 80 Kriterien diskutiert - Pareto!
   - Die meisten sind mit LaTeX sehr einfach erreichbar
@@ -305,6 +306,6 @@ Hochgradig relevant aber schwer umsetzbar.
 
 - Einführung in Browsererweiterungen
 - Crashkurs Textalternativen
-- Beispieldokumente testn
+- Beispieldokumente testen
   - Probleme lösen
 - Offene Arbeit
