@@ -43,9 +43,36 @@
 <section>
 <h2 id="retrospektive-tag-1" tabindex="-1"><a class="header-anchor" href="#retrospektive-tag-1">Retrospektive Tag 1</a></h2>
 <ul>
-<li>Erkenntnisse</li>
-<li>Herausforderungen</li>
-<li>Vertiefung</li>
+<li>Erkenntnisse
+<ul>
+<li>Sowohl pandoc als make4hst handhaben LaTeX Grundstruktur adäquat
+<ul>
+<li>sie weichen oft in visuellen Details bei “echtem” LaTeX Output ab</li>
+</ul>
+</li>
+<li>pandoc lässt eher Inhalte weg, make4ht kann oft näher am TeX bleiben</li>
+<li>pandoc generiert “saubereres” HTML</li>
+<li>make4ht ist durch LaTeX-nähe manches Mal besser - aber crashed auch öfter</li>
+<li>pandoc versteckt vieles hinter flags (Nummerierungen, Inhaltsverzeichnis, Bibliographie)</li>
+<li>…</li>
+</ul>
+</li>
+<li>Herausforderungen
+<ul>
+<li>math mode geht mit MathJax erstmal ganz gut
+<ul>
+<li>kleine&amp;große Schwierigkeiten bleiben (<code>\ref</code>, User Makros, Umgebungen)</li>
+<li>pandoc ist etwas eigen beim Umschreiben von Umgebungen (equation fällt weg, array-likes werden “aligned”)</li>
+</ul>
+</li>
+<li>…</li>
+</ul>
+</li>
+<li>Vertiefung?
+<ul>
+<li>…</li>
+</ul>
+</li>
 </ul>
 </section>
 </section>

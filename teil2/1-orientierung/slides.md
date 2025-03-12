@@ -30,5 +30,17 @@ Slides und Materialien auf [krautzource.github.io/workshop-augsburg-2025](https:
 ## Retrospektive Tag 1
 
 - Erkenntnisse
--  Herausforderungen
-- Vertiefung
+  - Sowohl pandoc als make4hst handhaben LaTeX Grundstruktur adäquat
+    - sie weichen oft in visuellen Details bei "echtem" LaTeX Output ab
+  - pandoc lässt eher Inhalte weg, make4ht kann oft näher am TeX bleiben
+  - pandoc generiert "saubereres" HTML
+  - make4ht ist durch LaTeX-nähe manches Mal besser - aber crashed auch öfter
+  - pandoc versteckt vieles hinter flags (Nummerierungen, Inhaltsverzeichnis, Bibliographie)
+  - ...
+- Herausforderungen
+  - math mode geht mit MathJax erstmal ganz gut
+    - kleine&große Schwierigkeiten bleiben (`\ref`, User Makros, Umgebungen)
+    - pandoc ist etwas eigen beim Umschreiben von Umgebungen (equation fällt weg, array-likes werden "aligned")
+  - ...
+- Vertiefung?
+  - ...
