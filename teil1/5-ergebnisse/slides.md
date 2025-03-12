@@ -22,7 +22,7 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
   - beide schaffen es nicht gut; make4ht leicht besser
 - color.tex
   - pandoc verliert fcolorbox inkl. Inhalt
-- figures.tx
+- figures.tex
   - includegraphics klappt an sich 
   - web-fremde Bildformate (eps, pdf) machen evtl. Probleme
   - floats sind "gefährlich", wenn sie an der falschen Position enden
@@ -38,7 +38,7 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
     - pandoc: bei alten Versionen `flalign` problem 
   - KISS - einfache Umgebungen meist besser unterstützt
   - Letztlich: MathJax checken
-- macros
+- macros.tex
   - einfache macros
     - pandoc: ok
     - make4ht: cfg datei
@@ -50,11 +50,10 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 - theorem.tex
   - beide machen es gut
   - Nummerierung variiert
-- toc
+- toc.tex
   - pandoc: braucht `--toc`, dann brauchbar.
-- tikz
-  - Beispiele in `tex-spezial`
-  - alles kompliziert, nichts prickelnd gut
+- Beispiele in `tex-spezial` (tikz etc)
+  - alles kompliziert, nichts klappt wirklich gut
   - andere tools sind evtl. besser
 
 </details>
