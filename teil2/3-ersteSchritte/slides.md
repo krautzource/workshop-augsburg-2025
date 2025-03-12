@@ -28,12 +28,16 @@ Browser-Erweiterungen
   - Überschriften und Seitenstruktur
   - Tab order
   - Links
+  - Alternativtexte für Bilder (nächste Slides)
 - Checklisten helfen ([Beispiel 1](https://www.webaccessibilitychecklist.com/), [Beispiel 2](https://www.a11y-collective.com/blog/accessibility-checklist/))
 - HTML Quellcode hilft, [Browser Entwicklerwerkzeuge](https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern) helfen 
   
-Mehr: [Website Accessibility Testing (a11y collective)](https://www.a11y-collective.com/blog/how-to-check-web-accessibility/), [Chrome Entwicklerwerkzeuge (kulturbanause.de)](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/)
+Mehr: [Website Accessibility Testing (a11y collective)](https://www.a11y-collective.com/blog/how-to-check-web-accessibility/), [Chrome Entwicklerwerkzeuge (kulturbanause.de)](https://kulturbanause.de/blog/die-chrome-entwicklertools-devtools-fuer-designer-und-einsteiger/),[Professional Web Accessibility Auditing Made Easy](https://pressbooks.library.torontomu.ca/pwaa/) (OA Buch, Toronto Metro University)
+
 
 ##  Crashkurs WCAG 1.1.1
+
+Länger: [/materialien/textalternativen.md](https://github.com/krautzource/workshop-augsburg-2025/tree/main/materialien/textalternativen.md)
 
 Viele Techniken ([Understanding 1.1.1](https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html)), aber mit LaTeX Quellen oft schwierig:
 - Platzierung: *lokal* via `\includegraphics`; *nichtlokal* via *lokal* 
@@ -80,6 +84,7 @@ Die 2 Optionen für Textalternativen:
 
 ## Crashkurs WCAG 1.1.1 Platzierung (2)
 
+Decision tree:
 - Bild in Abbildung
   - Textalternative in `\caption`
   - sonst: Textalternative nahe `\ref`
@@ -96,6 +101,7 @@ Die 2 Optionen für Textalternativen:
 - Korrigieren
   - bei Text einfach
   - LaTeX Stärken nutzen (z.B. Makros, in generierte Grafiken)
+- Farbalette planen (z.B. [inclusivecolors.com](https://www.inclusivecolors.com/))
 
 Mehr: Artikel von [mindescreen.de](https://www.mindscreen.de/farbkontraste), [barrierefreies.design](https://barrierefreies.design/barrierefreiheit-interaktiv-testen/farben-und-kontraste-pruefen)
 
@@ -114,6 +120,3 @@ Weitere Artikel: [farbschwaeche.de](https://www.farbsehschwaeche.de/materialien)
 - manuelle Nachbearbeitung (d.h. im HTML) sind manchmal notwendig (evtl. automatisierbar)
 - make4ht: Fallback Bilder erzeugen
 
-## Lesematerial
-
-- [Professional Web Accessibility Auditing Made Easy](https://pressbooks.library.torontomu.ca/pwaa/) (OA Buch, Toronto Metro University)
