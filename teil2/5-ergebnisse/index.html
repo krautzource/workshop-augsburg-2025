@@ -17,10 +17,25 @@
 <section>
 <h2 id="ergebnissammlung" tabindex="-1"><a class="header-anchor" href="#ergebnissammlung">Ergebnissammlung</a></h2>
 <ul>
-<li>Farben in Graphiken
+<li>Testerfahrung
 <ul>
-<li>Simulationsfunktionen helfen bei der Einschätzung</li>
-<li>Schwierigkeit, Kontraste zu überprüfen</li>
+<li>Wikipedia: Linkfarbe in lila Tabelle nicht mehr ausreichend</li>
+<li>Gruppenhomepage: Hintergrund “ruiniert” Kontrast</li>
+</ul>
+</li>
+<li>Textalternativen
+<ul>
+<li>Eigene Page: alt kommt nicht durch das System</li>
+<li>jupyter notebook: handzeichnung, eher visualierend, kurz reicht, länger auch</li>
+<li>paper: komplexe Graphik. Viele Bilder in eins. Herausforderung Kontraste, Trennfarben helfen gut,  Probleme bei Farbvariationen</li>
+<li>paper: Verlagsbearbeitung hat Farben/Kontraste verändert</li>
+</ul>
+</li>
+<li>fehlende Pakete bei MathJax
+<ul>
+<li>macros configuration <a href="https://docs.mathjax.org/en/latest/input/tex/macros.html">https://docs.mathjax.org/en/latest/input/tex/macros.html</a></li>
+<li>z.B. via <a href="https://pandoc.org/MANUAL.html#templates">https://pandoc.org/MANUAL.html#templates</a> oder <a href="https://www.kodymirus.cz/make4ht/make4ht-doc.html#makeht-configuration-file">https://www.kodymirus.cz/make4ht/make4ht-doc.html#makeht-configuration-file</a></li>
+<li>Beispiel: <code>Materialien/tex-einfach/mathmode.cfg</code></li>
 </ul>
 </li>
 <li>Bildbeschreibungen
@@ -49,6 +64,82 @@
 <li>Mit Einschränkungen</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>Farben in Graphiken
+<ul>
+<li>Simulationsfunktionen helfen bei der Einschätzung</li>
+<li>Schwierigkeit, Kontraste zu überprüfen</li>
+</ul>
+</li>
+<li>Browser Accessibility Tools / Inspektor</li>
+</ul>
+<details><summary>Peters Notizen&amp;Tipps</summary>
+<ul>
+<li>einfach.tex
+<ul>
+<li>expected errors</li>
+</ul>
+</li>
+<li>beamer.tex
+<ul>
+<li>mak4ht: empty heading - frametitle bug</li>
+<li>pandoc: 2x h1 (title, section)</li>
+</ul>
+</li>
+<li>color.tex
+<ul>
+<li>axe findet nur text color, nicht in MathJax</li>
+<li>pandoc verliert content fcolorbox</li>
+</ul>
+</li>
+<li>figures.tex
+<ul>
+<li>nested figures in make4ht nicht detektierbar</li>
+<li>pandoc macht keinen dummy alt text - detektierbar</li>
+<li>beide können includegraphics alt</li>
+</ul>
+</li>
+<li>lists.tex
+<ul>
+<li>beide verlieren <code>\item[]</code> Konstruktionen</li>
+<li>pandoc: link Inhalt inkorrekt aber link ok; keine description lists</li>
+<li>Nummerierungen variieren - Referenzen können Probleme bringen.</li>
+</ul>
+</li>
+<li>mathmode.tex
+<ul>
+<li>MathJax notwendig</li>
+</ul>
+</li>
+<li>sprache.tex
+<ul>
+<li>make4ht: schafft nur globales lang</li>
+<li>pandoc schafft nur lokales lang, aber flag <code>-V lang=&quot;fr&quot;</code> geht</li>
+</ul>
+</li>
+<li>theorem.tex
+<ul>
+<li>keine Struktur für niemand</li>
+<li>LaTeX hilft (Label+Title am Anfang)</li>
+</ul>
+</li>
+<li>toc.tex
+<ul>
+<li>level skipping</li>
+<li>make4ht keine TOC struktur</li>
+<li>pandoc keine Nummerierung aber listen</li>
+</ul>
+</li>
+</ul>
+</details>
+<p>Anderes:</p>
+<ul>
+<li>​HTML Slides
+<ul>
+<li><a href="https://revealjs.com/">https://revealjs.com/</a> - HTML oder markdown</li>
+<li><a href="https://pandoc.org/">https://pandoc.org/</a> “Slide show formats”</li>
+<li><a href="https://gist.github.com/johnloy/27dd124ad40e210e91c70dd1c24ac8c8">List of markdown presentation tools (gist)</a></li>
 </ul>
 </li>
 </ul>
