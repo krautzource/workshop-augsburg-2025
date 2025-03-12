@@ -1,0 +1,107 @@
+\documentclass[a4paper]{amsart}
+
+\usepackage{amsmath}
+\newtheorem{theorem}{Satz}[section]
+\newtheorem{corollary}{Korollar}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\usepackage{hyperref}
+
+\usepackage{tensor}
+
+\begin{document}
+
+
+Further simplification:
+\begin{align*}
+(T_{\mathring{\mathcal{L}}})^{\mu \nu} 
+&= 
+- \frac{1}{8}
+\Bigl(  
+3 (\partial_\lambda 
+\tensor{e}{^c_\kappa}) 
++
+(\partial_\kappa \tensor{e}{^c_\lambda})  
+\Bigr) 
+\,
+\tensor{e}{_c^\kappa} 
+\, 
+\bar{\psi} \, 
+( g^{\lambda\mu}\gamma^\nu 
++ g^{\lambda\nu}\gamma^\mu )
+\psi
+\nonumber \\ %=========================
+&\qquad 
++
+\frac{1}{2} 
+g^{\mu\nu} 
+[ 
+(\partial_\lambda \tensor{e}{^c_\kappa})
++
+(\partial_\kappa \tensor{e}{^c_\lambda}) 
+]  
+\tensor{e}{_c^\kappa} 
+\, 
+\bar{\psi} 
+\, 
+\gamma^\lambda  
+\psi
+\nonumber \\ %======================
+&\qquad 
++ 
+\frac{i}{4} 
+\bar{\psi} \,
+\Bigl[  
+-
+\tensor{e}{_c_\rho}
+[
+(\partial_\lambda \tensor{e}{^c_\kappa})
+-  
+(\partial_\kappa \tensor{e}{^c_\lambda})
+]
+(  
+g^{\kappa \nu}
+\sigma^{\mu\lambda}
++ 
+g^{\kappa \mu}
+\sigma^{\nu\lambda}
+) 
+\gamma^\rho  
+- 
+(\partial_\lambda\tensor{e}{^c_\kappa})
+\sigma^{\lambda\kappa}
+(
+\tensor{e}{_c^\mu}
+\gamma^\nu
++
+\tensor{e}{_c^\nu}
+\gamma^\mu
+)
+\Bigr]
+\psi
+%==========================
+\nonumber \\ 
+&\qquad 
+- \frac{1}{2}  g^{\mu\nu}
+\Bigl[ 
+(\partial_\lambda\bar{\psi}) 
+\, \gamma^\lambda \, \psi 
++ \bar{\psi} \,\gamma^\lambda 
+\, (\partial_\lambda \psi)
+\Bigr]
++
+\frac{1}{4}  
+(\partial_\lambda\bar{\psi}) \,
+( g^{\lambda\mu}\gamma^\nu 
++ g^{\lambda\nu}\gamma^\mu )
+\, 
+\psi 
++
+\frac{1}{4} \bar{\psi} \,
+( g^{\lambda\mu}\gamma^\nu 
++ g^{\lambda\nu}\gamma^\mu )
+\, 
+(\partial_\lambda \psi)
+\end{align*}
+
+
+\end{document}

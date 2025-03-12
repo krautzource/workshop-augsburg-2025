@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="C. Costoya" />
+  <meta name="author" content="V. Muñoz" />
+  <meta name="author" content="A. Tocino" />
+  <meta name="author" content="A. Viruel" />
+  <title>Automorphism groups of Cayley evolution algebras</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Automorphism groups of Cayley evolution algebras</h1>
+<p class="author">C. Costoya</p>
+<p class="author">V. Mu<span>ñ</span>oz</p>
+<p class="author">A. Tocino</p>
+<p class="author">A. Viruel</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>In this paper we introduce a new species of evolution algebras that
+we call Cayley evolution algebras. We show that if a field <span
+class="math inline">\(\Bbbk\)</span> contains sufficiently many elements
+(for example if <span class="math inline">\(\Bbbk\)</span> is infinite)
+then every finite group <span class="math inline">\(G\)</span> is
+isomorphic to <span class="math inline">\(\operatorname{Aut}(X)\)</span>
+where <span class="math inline">\(X\)</span> is a finite-dimensional
+absolutely simple Cayley evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra.</p>
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introduction" id="toc-introduction">Introduction</a></li>
+<li><a href="#sec:evolution" id="toc-sec:evolution">Background on
+evolution algebras</a></li>
+<li><a href="#sec:general" id="toc-sec:general">The Cayley evolution
+algebra of a <span class="math inline">\(\Bbbk\)</span>-algebra</a></li>
+<li><a href="#sec:cayleygroupalgebras"
+id="toc-sec:cayleygroupalgebras">Cayley evolution algebras of group
+algebras</a>
+<ul>
+<li><a href="#funding" id="toc-funding">Funding</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="introduction">Introduction</h1>
+<p>The question of whether any finite group may be realised as the full
+automorphism group of a finite-dimensional simple algebra (over an
+algebraically closed field <span class="math inline">\(\Bbbk\)</span> of
+characteristic zero) was raised by Popov in <span class="citation"
+data-cites="Popov">(<a href="#ref-Popov" role="doc-biblioref">Popov.,
+n.d.</a>)</span>. Years later, in the celebrated paper by Gordeev and
+Popov <span class="citation" data-cites="PopovAnnals">(<a
+href="#ref-PopovAnnals" role="doc-biblioref">Gordeev and Popov.,
+n.d.</a>)</span>, a positive answer was given in a more general setting:
+if <span class="math inline">\(\Bbbk\)</span> is a field containing
+sufficiently many elements, every linear algebraic <span
+class="math inline">\(\Bbbk\)</span>-group is isomorphic to the full
+automorphism group of a finite-dimensional simple <span
+class="math inline">\(\Bbbk\)</span>-algebra (which is neither
+associative nor commutative).</p>
+<p>Using techniques from Rational Homotopy Theory, in <span
+class="citation" data-cites="cmv3">(<a href="#ref-cmv3"
+role="doc-biblioref">C. Costoya D. Méndez and Viruel., n.d.</a>,
+Proposition 4.2, Corollary 4.11(2))</span> it was shown that every group
+<span class="math inline">\(G\)</span> is the full automorphism group of
+an infinite number of non-isomorphic differential graded <span
+class="math inline">\(\mathbb Q\)</span>-algebras <span
+class="math inline">\(M_n,\; n \geq 1\)</span> (that are associative and
+commutative in the graded sense). Moreover, if the group <span
+class="math inline">\(G\)</span> is finite, then for every integer <span
+class="math inline">\(n \geq 1\)</span>, <span
+class="math inline">\(M_n\)</span> is an elliptic algebra, which means
+that it is finitely generated with finite-dimensional cohomology over
+<span class="math inline">\(\mathbb Q.\)</span></p>
+<p>In this paper, we place ourselves in the framework of evolution
+algebras, which are commutative and non-associative algebras. Recall
+that a <span class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(X\)</span> is called absolutely simple, if for
+every field extension <span
+class="math inline">\(\mathbb{F}/\Bbbk\)</span>, the <span
+class="math inline">\(\mathbb{F}\)</span>-algebra <span
+class="math inline">\(X_{\mathbb F}=X\otimes_\Bbbk {\mathbb F}\)</span>
+is simple. Then our main result is:</p>
+<div id="thm:main" class="thmx">
+<p><strong>Theorem 1</strong>. <em>Let <span
+class="math inline">\(G\)</span> be a finite group and let <span
+class="math inline">\(\Bbbk\)</span> be a not necessarily finite field
+with multiplicative group of order <span class="math inline">\(|\Bbbk^*|
+\geq 2|G|\)</span>. Then, there exists an absolutely simple evolution
+<span class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(X\)</span> such that <span
+class="math inline">\(\operatorname{Aut}(X_{\mathbb F})\cong G\)</span>
+for every field extension <span
+class="math inline">\(\mathbb{F}/\Bbbk\)</span>.</em></p>
+</div>
+<p>The proof of Theorem <a href="#thm:main" data-reference-type="ref"
+data-reference="thm:main">1</a> is postponed to Section <a
+href="#sec:cayleygroupalgebras" data-reference-type="ref"
+data-reference="sec:cayleygroupalgebras">4</a> and relies on the
+<em>good</em> properties of Cayley evolution algebras, which are new
+objects introduced in this work (see Definition <a href="#def:cay"
+data-reference-type="ref" data-reference="def:cay">5</a>). They are
+constructed out of any finite-dimensional associative <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(\mathcal A\)</span>, <span
+class="math inline">\(\Bbbk\)</span> an arbitrary field. In the special
+case that <span class="math inline">\(\mathcal A= \Bbbk[G]\)</span>, a
+group algebra with <span class="math inline">\(G\)</span> finite group,
+the associated Cayley evolution algebras will be closely related to
+classical Cayley graphs.</p>
+<p>We end this section by pointing out that our main result is an
+improvement of our previous result <span class="citation"
+data-cites="CLTV">(<a href="#ref-CLTV" role="doc-biblioref">A. T. C.
+Costoya P. Ligouras and Viruel., n.d.</a>, Theorem 1.1)</span> where
+finite groups were realised by regular, but not simple (see Remark <a
+href="#notsimple" data-reference-type="ref"
+data-reference="notsimple">10</a>), evolution algebras (see also <span
+class="citation" data-cites="chinos">(<a href="#ref-chinos"
+role="doc-biblioref">Sriwongsa and Zou., n.d.</a>)</span> for an
+independent proof in char <span class="math inline">\(\Bbbk
+=0\)</span>).</p>
+<h1 id="sec:evolution">Background on evolution algebras</h1>
+<p>We present here the definitions on evolution algebras that are needed
+in the following sections. We mainly follow the notation in <span
+class="citation" data-cites="Tesis-Yolanda">(<a
+href="#ref-Tesis-Yolanda" role="doc-biblioref">Casado.,
+n.d.</a>)</span>, although the reader is encouraged to also check <span
+class="citation" data-cites="Tian">(<a href="#ref-Tian"
+role="doc-biblioref">Tian, n.d.</a>)</span>, a classical reference on
+the subject. Other properties of evolution algebras appear in <span
+class="citation" data-cites="extra3 extra1 extra2">(<a
+href="#ref-extra3" role="doc-biblioref">H. Ahmed and Rakhimov.,
+n.d.</a>; <a href="#ref-extra1" role="doc-biblioref">A. Alarafeen and
+Ahmad., n.d.</a>; <a href="#ref-extra2" role="doc-biblioref">F.
+Mukhamedov and Qaralleh., n.d.</a>)</span>.</p>
+<p>Let <span class="math inline">\(\Bbbk\)</span> be a field. An
+automorphism of <span class="math inline">\(\Bbbk\)</span>-algebra is a
+linear isomorphism which commutes with the multiplication of the
+algebra. In this work we consider only finite-dimensional algebras. We
+now recall the definition of an evolution algebra <span class="citation"
+data-cites="Tian">(<a href="#ref-Tian" role="doc-biblioref">Tian,
+n.d.</a>, Definition 1)</span>, <span class="citation"
+data-cites="Tesis-Yolanda">(<a href="#ref-Tesis-Yolanda"
+role="doc-biblioref">Casado., n.d.</a>, Definitions 1.2.1)</span>:</p>
+<div id="def:evolution" class="definition">
+<p><strong>Definition 1</strong>. Let <span
+class="math inline">\(X\)</span> be a <span
+class="math inline">\(\Bbbk\)</span>-algebra. We say that <span
+class="math inline">\(X\)</span> is an <em>evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra</em> if <span
+class="math inline">\(X\)</span> admits a basis <span
+class="math inline">\(B = \{b_i\, |\, i \in \Lambda\}\)</span> such that
+<span class="math inline">\(b_i b_j = 0\)</span> for <span
+class="math inline">\(i\neq j\)</span>. Such a basis <span
+class="math inline">\(B\)</span> is called a <em>natural basis</em>.</p>
+</div>
+<p>Observe that given an evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(X\)</span>, it may admit more than one natural
+basis (see for example  <span class="citation"
+data-cites="Tesis-Yolanda">(<a href="#ref-Tesis-Yolanda"
+role="doc-biblioref">Casado., n.d.</a>, Example 1.6.3)</span>). On the
+other hand, for a given <span
+class="math inline">\(\Bbbk\)</span>-vector space <span
+class="math inline">\(X\)</span> spanned by a basis <span
+class="math inline">\(B = \{b_i\, |\, i \in \Lambda\}\)</span>, an
+evolution <span class="math inline">\(\Bbbk\)</span>-algebra with
+natural basis <span class="math inline">\(B\)</span> is completely
+determined by just giving <span class="math inline">\(b_i^2:=b_i b_i\in
+X\)</span> as a linear combination of elements in <span
+class="math inline">\(B\)</span>, for every <span
+class="math inline">\(i\in\Lambda\)</span>, and declaring <span
+class="math inline">\(b_ib_j=0\)</span> for <span
+class="math inline">\(i \neq j\)</span>. This motivates the following
+definition <span class="citation" data-cites="Tesis-Yolanda">(<a
+href="#ref-Tesis-Yolanda" role="doc-biblioref">Casado., n.d.</a>,
+Definition 1.2.1)</span>:</p>
+<div id="def:structure" class="definition">
+<p><strong>Definition 2</strong>. Let <span
+class="math inline">\(X\)</span> be an evolution algebra with a fixed
+natural basis <span class="math inline">\(B\)</span>. The scalars <span
+class="math inline">\(\omega_{ki} \in\Bbbk\)</span> such that <span
+class="math inline">\(b_i^2:=b_i
+b_i=\sum_{k\in\Lambda}\omega_{ki}b_k\)</span> are called the
+<em>structure constants</em> of <span class="math inline">\(X\)</span>
+relative to <span class="math inline">\(B\)</span>, and the matrix <span
+class="math inline">\(M_B(X) := (\omega_{ki})\)</span> is said to be the
+<em>structure matrix</em> of <span class="math inline">\(X\)</span>
+relative to <span class="math inline">\(B\)</span>.</p>
+</div>
+<div id="def:regular" class="definition">
+<p><strong>Definition 3</strong>. An evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(X\)</span> is called <em>regular</em> (or perfect,
+or idempotent) if <span class="math inline">\(X=X^2\)</span>. An
+evolution algebra <span class="math inline">\(X\)</span> is called
+<em>simple</em> if <span class="math inline">\(X^2\neq 0\)</span> and
+<span class="math inline">\(0\)</span> is the only proper ideal.</p>
+</div>
+<p>Notice that an evolution algebra <span
+class="math inline">\(X\)</span> is regular if and only if for any
+natural basis <span class="math inline">\(B\)</span>, the structure
+matrix <span class="math inline">\(M_B(X)\)</span> is a regular (or
+invertible) matrix. It is also clear that if <span
+class="math inline">\(X\)</span> simple then <span
+class="math inline">\(X\)</span> is regular, but the converse is not
+always true (see Proposition <a href="#prop:Cay simple_algebra"
+data-reference-type="ref"
+data-reference="prop:Cay simple_algebra">9</a>).</p>
+<p>Every evolution algebra has a directed graph and a weighted (or
+coloured) graph attached depending on the chosen natural basis <span
+class="citation" data-cites="Tian">(<a href="#ref-Tian"
+role="doc-biblioref">Tian, n.d.</a>, Definition 15)</span>, <span
+class="citation" data-cites="Elduque-Labra-2015">(<a
+href="#ref-Elduque-Labra-2015" role="doc-biblioref">Elduque and Labra.,
+n.d.a</a>, Definition 2.2)</span>:</p>
+<div id="def:digraph" class="definition">
+<p><strong>Definition 4</strong>. Let <span
+class="math inline">\(X\)</span> be an evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra, and <span
+class="math inline">\(B=\{b_1,\ldots,b_n\}\)</span> its natural basis.
+The directed graph <span
+class="math inline">\(\Gamma(X,B)=(V,E)\)</span> with set of vertices
+<span class="math inline">\(V=\{1,\ldots,n\}\)</span> and set of edges
+<span class="math inline">\(E=\{(i,j)\in V\times V: \omega_{ij}\ne
+0\}\)</span> is called the directed graph attached to the evolution
+algebra <span class="math inline">\(X\)</span> relative to <span
+class="math inline">\(B\)</span>. The directed graph <span
+class="math inline">\(\Gamma^w(X,B)=(V,E,w)\)</span> with <span
+class="math inline">\(\Gamma(X,B)=(V,E)\)</span> and weight function
+<span class="math inline">\(w\colon E\to \Bbbk\)</span>, given by <span
+class="math inline">\(w(i,j)=\omega_{ij}\)</span>, is called the
+weighted graph attached to the evolution algebra <span
+class="math inline">\(X\)</span> relative to <span
+class="math inline">\(B\)</span>.</p>
+</div>
+<h1 id="sec:general">The Cayley evolution algebra of a <span
+class="math inline">\(\Bbbk\)</span>-algebra</h1>
+<p>We now explain how, to a given associative <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(\mathcal{A}\)</span>, we can associate an
+evolution <span class="math inline">\(\Bbbk\)</span>-algebra that takes
+into account the inner product of <span
+class="math inline">\(\mathcal{A}\)</span>:</p>
+<div id="def:cay" class="definition">
+<p><strong>Definition 5</strong>. Let <span
+class="math inline">\(\mathcal{A}\)</span> be a finite-dimensional
+associative <span class="math inline">\(\Bbbk\)</span>-algebra with
+basis <span
+class="math inline">\(B=\{b_i\,\colon\,i\in\Lambda\}\)</span> together
+with a function <span class="math inline">\(f:B\rightarrow\Bbbk\)</span>
+(a set-theoretical map). We define the <em>Cayley evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra associated to <span
+class="math inline">\(f\)</span></em>, that we denote by <span
+class="math inline">\({\rm Cay}(f)\)</span>, as the evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra with <span
+class="math inline">\({\rm Cay}(f)\cong \mathcal{A}\)</span>, as a <span
+class="math inline">\(\Bbbk\)</span>-vector space, furnished with
+natural basis <span class="math inline">\(B\)</span> and structure
+constants given by <span class="math inline">\(b_i\cdot b_i=\sum_{b_j\in
+B}f(b_j)b_ib_j\)</span>, where <span class="math inline">\(x\cdot
+y\)</span> denotes the product in <span class="math inline">\({\rm
+Cay}(f)\)</span> and <span class="math inline">\(xy\)</span> the inner
+product in <span class="math inline">\(\mathcal{A}\)</span>.</p>
+</div>
+<div id="rmk:cayley_con_vector" class="remark">
+<p><em>Remark 6</em>. Observe that fixing a function <span
+class="math inline">\(f:B\rightarrow\Bbbk\)</span> is equivalent to
+choosing a vector <span class="math inline">\(w=\sum f(b_i)b_i\)</span>.
+Therefore, the Cayley evolution algebra associated to <span
+class="math inline">\(f\)</span> could also be defined as the Cayley
+evolution algebra associated to a vector <span
+class="math inline">\(w\in\mathcal{A}\)</span> with <span
+class="math inline">\({\rm Cay}(w)\cong \mathcal{A}\)</span>, as <span
+class="math inline">\(\Bbbk-\)</span>vector space, furnished with
+natural basis <span class="math inline">\(B\)</span> and structure
+constants given by <span class="math inline">\(b_i\cdot b_i=\sum_{b_j\in
+B}w^*(b_j)b_ib_j\)</span>, where <span
+class="math inline">\(w^*\)</span> is the dual of <span
+class="math inline">\(w\)</span>.</p>
+</div>
+<div id="rmk:diferentes_cayley" class="remark">
+<p><em>Remark 7</em>. Given a finite-dimensional associative <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(\mathcal{A}\)</span> with basis <span
+class="math inline">\(B\)</span>, the isomorphism type of the evolution
+<span class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\({\rm Cay}(f)\)</span> strongly depends on the
+choice of <span class="math inline">\(f:B\rightarrow\Bbbk\)</span>. For
+example, if <span class="math inline">\(\mathcal{A}\)</span> is a
+non-degenerate evolution algebra with natural basis <span
+class="math inline">\(B\)</span>, then the constant map given by <span
+class="math inline">\(f_0(b_i)=0\)</span> converts <span
+class="math inline">\({\rm Cay}(f_0)\)</span> into a degenerated
+evolution algebra, whereas the constant map given by <span
+class="math inline">\(f_1(b_i)=1\)</span> transforms <span
+class="math inline">\({\rm Cay}(f_1)\cong\mathcal{A}\)</span>. A more
+elaborated example is constructed in Example <a href="#ex:hertwek"
+data-reference-type="ref" data-reference="ex:hertwek">20</a> to
+illustrate how the isomorphism type of the Cayley evolution algebra
+depends on the choice of the basis.</p>
+</div>
+<p>From now on, let us fix a unital finite-dimensional associative <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(\mathcal{A}\)</span>, with basis <span
+class="math inline">\(B\)</span>, and a function <span
+class="math inline">\(f:B\rightarrow\Bbbk\)</span>. We now prove several
+properties of the Cayley evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra associated to <span
+class="math inline">\(f\)</span>, <span class="math inline">\({\rm
+Cay}(f)\)</span>. First we show how units in <span
+class="math inline">\(\mathcal{A}\)</span> give rise to automorphisms of
+<span class="math inline">\({\rm Cay}(f)\)</span>.</p>
+<div id="prop:units_vs_aut" class="proposition">
+<p><strong>Proposition 8</strong>. <em>If <span
+class="math inline">\(x\in\mathcal{A}\)</span> is a unit such that <span
+class="math inline">\(xB=B\)</span> then the left-multiplication by
+<span class="math inline">\(x\)</span> induces <span
+class="math inline">\(\psi_x\in\operatorname{Aut}\big({\rm
+Cay}(f)\big)\)</span>. If moreover <span
+class="math inline">\(B\)</span> consists of units in <span
+class="math inline">\(\mathcal{A}\)</span>, then <span
+class="math inline">\(\psi_x\)</span> acts freely on <span
+class="math inline">\(B\)</span> for <span class="math inline">\(x \neq
+1\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Given a unit <span
+class="math inline">\(x\in\mathcal{A}\)</span>, we construct the map
+<span class="math inline">\(\psi_x:{\rm Cay}(f)\rightarrow {\rm
+Cay}(f)\)</span> given by <span
+class="math inline">\(\psi_x(a)=xa\)</span>. Observe that <span
+class="math inline">\(\psi_x\)</span> maps the natural basis <span
+class="math inline">\(B\)</span> to itself since <span
+class="math inline">\(\psi_x(B)=xB=B\)</span>. Hence it is an
+automorphism of <span class="math inline">\({\rm Cay}(f)\)</span> as
+<span class="math inline">\(\Bbbk\)</span>–vector space. Now, to check
+that <span class="math inline">\(\psi_x\)</span> is an automorphism of
+evolution algebras, on the one hand we have that <span
+class="math inline">\(\psi_x(b_i\cdot b_i)=\psi_x(\sum_{b_j\in
+B}f(b_j)b_ib_j)=\sum_{b_j\in B}f(b_j)x(b_ib_j)=\sum_{b_j\in B}f(b_j)(x
+b_i)b_j= \sum_{b_j\in B}f(b_j)\psi_x(b_i)b_j=\psi_x(b_i)\cdot
+\psi_x(b_i)\)</span>. On the other hand, for <span
+class="math inline">\(b_i \neq b_j,\)</span> we have that <span
+class="math inline">\(\psi_x(b_i\cdot b_j)=\psi_x(0)=x0=0\)</span> and
+we are going to prove that <span class="math inline">\(\psi_x(b_i)\cdot
+\psi_x(b_j)\)</span> is also zero. Suppose that it is not, hence <span
+class="math inline">\(\psi_x(b_i)\cdot \psi_x(b_j)=xb_i\cdot xb_j \neq
+0\)</span>, and since <span class="math inline">\(xb_i\)</span> and
+<span class="math inline">\(xb_j\)</span> are elements in the natural
+basis <span class="math inline">\(B\)</span>, they must be equal. But
+<span class="math inline">\(x\)</span> is a unit in <span
+class="math inline">\(\mathcal{A}\)</span>, which leads to the
+contradiction <span class="math inline">\(b_i = b_j\)</span>.</p>
+<p>Now, suppose that <span class="math inline">\(B\)</span> consists of
+units in <span class="math inline">\(\mathcal{A}\)</span>. If <span
+class="math inline">\(\psi_x\)</span> fixes an element <span
+class="math inline">\(b \in B\)</span>, then <span
+class="math inline">\(\psi_x(b)=xb= b\)</span>, so we obtain that <span
+class="math inline">\(x=1\)</span> since <span
+class="math inline">\(b\)</span> is a unit. ◻</p>
+</div>
+<p>Let us define <span class="math inline">\(\operatorname{supp}(f: B
+\to \Bbbk):=\{b\in B\colon f(b)\ne 0\}\)</span>.</p>
+<div id="prop:Cay simple_algebra" class="proposition">
+<p><strong>Proposition 9</strong>. <em>Suppose that <span
+class="math inline">\(B\)</span> consists of units in <span
+class="math inline">\(\mathcal{A}\)</span>, and that <span
+class="math inline">\(\operatorname{supp}(f)\)</span> generates <span
+class="math inline">\(\mathcal{A}\)</span> as an algebra. If the Cayley
+evolution <span class="math inline">\(\Bbbk\)</span>-algebra associated
+to <span class="math inline">\(f\)</span>, <span
+class="math inline">\({\rm Cay}(f)\)</span>, is regular, then <span
+class="math inline">\({\rm Cay}(f)\)</span> is also simple.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Suppose that <span class="math inline">\({\rm
+Cay}(f)\)</span> is regular but not simple. Then, according to <span
+class="citation" data-cites="Cabrera-Siles-Velasco">(<a
+href="#ref-Cabrera-Siles-Velasco" role="doc-biblioref">Y. Cabrera Casado
+and Velasco., n.d.</a>, Corollary 4.6)</span>, the elements in <span
+class="math inline">\(B\)</span> can be reordered, namely <span
+class="math inline">\(B=\{b_{1},b_{2},\ldots,b_{r},\ldots,b_n\}\)</span>,
+<span class="math inline">\(1\leq r&lt;n\)</span>, such that the
+structure matrix of <span class="math inline">\({\rm Cay}(f)\)</span>
+becomes <span class="math display">\[M_B({\rm Cay}(f))=\left(
+    \begin{array}{ccc|ccc}
+    * &amp; \ldots  &amp; *  &amp; * &amp; \ldots &amp; *\\
+    \vdots &amp; r \times r  &amp; \vdots  &amp; \vdots  &amp; \ddots
+&amp; \vdots\\
+    * &amp; \ldots  &amp; *  &amp; *  &amp; \ldots  &amp; *\\
+    \hline
+    &amp;  &amp;   &amp; * &amp; \ldots  &amp; *\\
+     &amp; \text{\Large 0}&amp;   &amp; \vdots &amp; \ddots  &amp;
+\vdots\\
+     &amp; &amp; &amp; * &amp; \ldots  &amp; *\\
+    \end{array}
+    \right).\]</span> Let <span
+class="math inline">\(S=\operatorname{supp}(f)\)</span> and consider an
+element <span class="math inline">\(b\in
+B\smallsetminus\{b_1,\ldots,b_r\}\)</span>. Since <span
+class="math inline">\(S\)</span> generates <span
+class="math inline">\(\mathcal{A}\)</span> as algebra, and <span
+class="math inline">\(B\)</span> consists of units in <span
+class="math inline">\(\mathcal{A}\)</span>, the product <span
+class="math inline">\(b_1^{-1}b=\sum_k \lambda_k
+\prod_{i=1}^{l_k}s_{i,k}\)</span>, where <span
+class="math inline">\(\lambda_k\in\Bbbk\)</span> and <span
+class="math inline">\(s_{i,k}\in S\)</span>. Then, <span
+class="math inline">\(b  = b_1b_1^{-1}b
+= b_1\big(\sum_k \lambda_k \prod_{i=1}^{l_k}s_{i,k}\big)
+= \sum_k \lambda_k b_1\big(\prod_{i=1}^{l_k}s_{i,k}\big).\)</span></p>
+<p>We claim that <span
+class="math inline">\(b_1\big(\prod_{i=1}^{l_k}s_{i,k}\big) \in
+Span(\{b_1,\ldots,b_r\})\)</span>. Indeed, for <span
+class="math inline">\(j\in\{1,\ldots,r\}\)</span>, <span
+class="math display">\[b_j\cdot b_j=\sum_{b_k\in
+B}f(b_k)b_jb_k=\sum_{s\in S}f(s)b_js,\]</span> thus, by the shape of
+<span class="math inline">\(M_B({\rm Cay}(f))\)</span>, we conclude that
+<span class="math inline">\(b_js\in Span ( \{b_1,\ldots,b_r\} )\)</span>
+for all <span class="math inline">\(j\in\{1,\ldots,r\}\)</span> and for
+all <span class="math inline">\(s\in S\)</span>. Even more, given <span
+class="math inline">\(\prod_{i=1}^{l_k}s_{i,k}\)</span>, for <span
+class="math inline">\(s_{i,k}\in S\)</span>, an inductive argument shows
+that <span
+class="math inline">\(b_j\big(\prod_{i=1}^{l_k}s_{i,k}\big)\in
+Span(\{b_1,\ldots,b_r\})\)</span> for all <span
+class="math inline">\(j\in\{1,\ldots,r\}\)</span>. In particular, we
+obtain that <span class="math inline">\(b \in
+Span(\{b_1,\ldots,b_r\}).\)</span> This leads to a contradiction as
+<span class="math inline">\(B\)</span> is a linearly independent set,
+hence <span class="math inline">\({\rm Cay}(f)\)</span> is simple. ◻</p>
+</div>
+<div id="notsimple" class="remark">
+<p><em>Remark 10</em>. As we mentioned in Introduction, the evolution
+algebras obtained in <span class="citation" data-cites="cmv3">(<a
+href="#ref-cmv3" role="doc-biblioref">C. Costoya D. Méndez and Viruel.,
+n.d.</a>)</span> are regular but not simple. Recall that associated to a
+simple graph <span class="math inline">\(\mathcal G = (V,E)\)</span>, we
+construct an evolution algebra <span class="math inline">\(\mathcal X
+(G)\)</span> over any field <span class="math inline">\(\Bbbk\)</span>
+with natural basis <span class="math inline">\(B = \{b_v\,,\, v \in V\}
+\cup \{b_e \,,\,e \in E\}\)</span> (see <span class="citation"
+data-cites="cmv3">(<a href="#ref-cmv3" role="doc-biblioref">C. Costoya
+D. Méndez and Viruel., n.d.</a>, Definition 3.2)</span>). In particular,
+the multiplication for the elements associated to the vertices of the
+graph is given by <span class="math inline">\(b_v^2 = b_v,\)</span> for
+all <span class="math inline">\(v \in V\)</span>. Hence, for <span
+class="math inline">\(I_r\)</span> the identity matrix of order <span
+class="math inline">\(r= |V|\)</span>, and <span
+class="math inline">\(I_s\)</span> the identity matrix of order <span
+class="math inline">\(s=|E|\)</span>, the structure matrix of <span
+class="math inline">\(\mathcal X (G)\)</span> becomes <span
+class="math display">\[M_B(\mathcal X (G))=\left(
+    \begin{array}{ccc|ccc}
+      &amp;    &amp;    &amp; * &amp; \ldots &amp; *\\
+      &amp;  I_r &amp;    &amp; \vdots  &amp; \ddots &amp; \vdots\\
+      &amp;    &amp;    &amp; *  &amp; \ldots  &amp; *\\
+    \hline
+     &amp; &amp;   &amp;  &amp;   &amp; \\
+     &amp;\text{\large 0}&amp;  &amp; &amp; I_s &amp; \\
+     &amp;&amp; &amp; &amp;   &amp; \\
+    \end{array}
+    \right)\]</span> which by <span class="citation"
+data-cites="Cabrera-Siles-Velasco">(<a href="#ref-Cabrera-Siles-Velasco"
+role="doc-biblioref">Y. Cabrera Casado and Velasco., n.d.</a>, Corollary
+4.6)</span>, implies that <span class="math inline">\(\mathcal X
+(G)\)</span> is not simple for <span
+class="math inline">\(r,s&gt;0\)</span>.</p>
+</div>
+<h1 id="sec:cayleygroupalgebras">Cayley evolution algebras of group
+algebras</h1>
+<p>In this section we refine the results in Section <a
+href="#sec:general" data-reference-type="ref"
+data-reference="sec:general">3</a>. We fix a finite group <span
+class="math inline">\(G\)</span> and we consider the group algebra over
+<span class="math inline">\(\Bbbk\)</span>, <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span>. Now, we take as a
+basis <span class="math inline">\(B=G\)</span> and a function <span
+class="math inline">\(f:G\rightarrow\Bbbk.\)</span> In this setting,
+observe that the structure constants of <span class="math inline">\({\rm
+Cay}(f)\)</span> with respect to <span class="math inline">\(G\)</span>
+can be given by <span class="math inline">\(g\cdot g=\sum_{k\in
+G}f(g^{-1}k)k\)</span>.</p>
+<div id="remark:Cay_simple" class="remark">
+<p><em>Remark 11</em>. Observe that Proposition <a
+href="#prop:Cay simple_algebra" data-reference-type="ref"
+data-reference="prop:Cay simple_algebra">9</a> can be done starting from
+a finite group <span class="math inline">\(G\)</span> instead of an
+algebra. So, if <span class="math inline">\({\rm Cay}(f)\)</span> is
+regular and <span
+class="math inline">\(S=\operatorname{supp}(f)\)</span> generates <span
+class="math inline">\(G\)</span>, then <span class="math inline">\({\rm
+Cay}(f)\)</span> is simple.</p>
+</div>
+<p>Our first result is a straightforward consequence of Proposition <a
+href="#prop:units_vs_aut" data-reference-type="ref"
+data-reference="prop:units_vs_aut">8</a>:</p>
+<div id="prop:faith" class="proposition">
+<p><strong>Proposition 12</strong>. <em><span
+class="math inline">\(G\)</span> acts faithfully on <span
+class="math inline">\({\rm Cay}(f)\)</span> as a permutation group over
+its natural basis by left-multiplication. That is, <span
+class="math inline">\(G\leq \operatorname{Aut}({\rm
+Cay}(f))\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> The elements of <span
+class="math inline">\(G\)</span> are units in <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span> and since <span
+class="math inline">\(G^2=G\)</span>, then <span
+class="math inline">\(GB=B\)</span>. Hence by Proposition <a
+href="#prop:units_vs_aut" data-reference-type="ref"
+data-reference="prop:units_vs_aut">8</a>, <span
+class="math inline">\(\psi_g \in \operatorname{Aut}\big({\rm
+Cay}(f)\big).\)</span> Moreover, for any <span
+class="math inline">\(g,h\in G\)</span>, <span
+class="math inline">\(\psi_g\circ\psi_h=\psi_{gh}\)</span>, thus the
+units <span class="math inline">\(G\subset \mathcal{A}\)</span> produce
+a subgroup of automorphisms which is isomorphic to <span
+class="math inline">\(G\)</span>. ◻</p>
+</div>
+<p>We now recall the definition of Cayley graph <span class="citation"
+data-cites="CayleyGraph">(<a href="#ref-CayleyGraph"
+role="doc-biblioref">White, n.d.</a>, Definition 4-5)</span>.</p>
+<div id="def:cayley_graph" class="definition">
+<p><strong>Definition 13</strong>. Let <span
+class="math inline">\(G\)</span> be a finite group, and <span
+class="math inline">\(S\)</span> be a subset of <span
+class="math inline">\(G\)</span>. The <em>Cayley graph</em> of <span
+class="math inline">\(G\)</span> with respect to <span
+class="math inline">\(S\)</span> is the directed graph <span
+class="math inline">\({\rm Cay}(G,S)\)</span> with vertex set <span
+class="math inline">\(G\)</span> and edges <span
+class="math inline">\((g,gs)\)</span> for each <span
+class="math inline">\(g\in G\)</span> and <span
+class="math inline">\(s\in S\)</span>. Moreover, we can assign a colour
+<span class="math inline">\(c_s\)</span> to each edge <span
+class="math inline">\((g,gs)\)</span>, <span class="math inline">\(s\in
+S\)</span>, where <span class="math inline">\(c_s\ne c_{s&#39;}\)</span>
+if <span class="math inline">\(s\ne s&#39;\)</span>. Hence, we obtain an
+<em>edge-coloured directed graph</em>, the coloured Cayley graph. In
+this work we will denote it by <span class="math inline">\({\rm
+Cay}^{cor}(G,S)\)</span>.</p>
+</div>
+<p>The Cayley evolution algebras that we have previously introduced are
+closely related to Cayley graphs. By comparing Definitions <a
+href="#def:digraph" data-reference-type="ref"
+data-reference="def:digraph">4</a> and <a href="#def:cayley_graph"
+data-reference-type="ref" data-reference="def:cayley_graph">13</a> we
+immediately obtain:</p>
+<div id="lem:graph_of_cayley_is_cayley" class="lemma">
+<p><strong>Lemma 14</strong>. <em>Let <span
+class="math inline">\(S=\operatorname{supp}(f)\)</span>, and assume
+<span class="math inline">\(f|_S\)</span> is injective. Then <span
+class="math inline">\(\Gamma\big({\rm Cay}(f),G\big)={\rm
+Cay}(G,S)\)</span> as abstract directed graphs while <span
+class="math inline">\(\Gamma^w\big({\rm Cay}(f),G\big)={\rm
+Cay}^{cor}(G,S)\)</span> as edge-coloured directed graphs.</em></p>
+</div>
+<p>One of the key features of the coloured Cayley graph <span
+class="math inline">\({\rm Cay}^{cor}(G,S)\)</span> is that whenever
+<span class="math inline">\(S\)</span> generates <span
+class="math inline">\(G\)</span>, the group <span
+class="math inline">\(G\)</span> can be represented as the full group of
+automorphisms of <span class="math inline">\({\rm
+Cay}^{cor}(G,S)\)</span>, that is <span class="math inline">\(G\cong
+\operatorname{Aut}({\rm Cay}^{cor}(G,S))\)</span> <span class="citation"
+data-cites="CayleyGraph">(<a href="#ref-CayleyGraph"
+role="doc-biblioref">White, n.d.</a>, Theorem 4-8)</span>. In a similar
+way we prove:</p>
+<div id="th:coprime" class="proposition">
+<p><strong>Proposition 15</strong>. <em>Suppose that the evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\({\rm Cay}(f)\)</span> is regular, <span
+class="math inline">\(S=\operatorname{supp}(f)\)</span> generates <span
+class="math inline">\(G\)</span> and <span
+class="math inline">\(f|_S\)</span> injective. If <span
+class="math inline">\(S\)</span> contains two elements of coprime order,
+then <span class="math inline">\(G \cong \operatorname{Aut}({\rm
+Cay}(f))\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> First of all, we make use of the identification <span
+class="math inline">\(\Gamma\big({\rm Cay}(f),S\big)={\rm
+Cay}(G,S)\)</span> as abstract directed graphs, according to Lemma <a
+href="#lem:graph_of_cayley_is_cayley" data-reference-type="ref"
+data-reference="lem:graph_of_cayley_is_cayley">14</a>. Now, since <span
+class="math inline">\({\rm Cay}(f)\)</span> is regular, by <span
+class="citation" data-cites="Elduque-Labra-2019">(<a
+href="#ref-Elduque-Labra-2019" role="doc-biblioref">Elduque and Labra.,
+n.d.b</a>, Theorem 3.2)</span>, there exists an exact sequence <span
+class="math display">\[1\hookrightarrow \operatorname{Diag}({\rm
+Cay}(G,S))\rightarrow \operatorname{Aut}({\rm Cay}(f))\rightarrow
+\operatorname{Aut}({\rm Cay}(G,S)),\]</span> with <span
+class="math inline">\(\operatorname{Diag}({\rm Cay}(G,S)) = \mu_N = \{ k
+\in \mathbb K \, ; k^N =1\}\)</span> for <span class="math inline">\(N =
+2^{\rm b({\rm Cay}(G, S))}-1\)</span> where <span
+class="math inline">\(\operatorname b({\rm Cay}(G, S))\)</span> is the
+balance of <span class="math inline">\({\rm Cay}(G,S)\)</span> (see
+<span class="citation" data-cites="Elduque-Labra-2019">(<a
+href="#ref-Elduque-Labra-2019" role="doc-biblioref">Elduque and Labra.,
+n.d.b, sec. 2</a>)</span> and <span class="citation"
+data-cites="Elduque-Labra-2019">(<a href="#ref-Elduque-Labra-2019"
+role="doc-biblioref">Elduque and Labra., n.d.b</a>, Theorem
+2.7)</span>).</p>
+<p>We first calculate <span
+class="math inline">\(\operatorname{Diag}({\rm Cay}(G,S))\)</span>.
+Notice that for every <span class="math inline">\(s\in S\)</span>, the
+graph <span class="math inline">\({\rm Cay}(G,S)\)</span> has a directed
+cycle of length the order of the element <span
+class="math inline">\(s\)</span>, <span
+class="math inline">\(o(s)\)</span>. Therefore, if <span
+class="math inline">\(s_1,s_2\in S\)</span> are elements such that <span
+class="math inline">\({\rm gcd} (o(s_1),o(s_2))=1\)</span>, we obtain
+<span class="math display">\[1\leq {\rm b}({\rm Cay}(G,S))= {\rm
+gcd}\{|{\rm b} (\gamma)|\,:\, \gamma\text{ cycle in} \,{\rm Cay}(G,S)
+\}\leq {\rm gcd} (o(s_1),o(s_2))=1.\]</span> Hence <span
+class="math inline">\(N=2^{{\rm b}({\rm Cay}(G,S))-1}=1\)</span>, and
+<span class="math inline">\(\operatorname{Diag}({\rm
+Cay}(G,S))=\mu_1=\{1\}\)</span> so, <span
+class="math display">\[\operatorname{Aut}({\rm Cay}(f))\leq
+\operatorname{Aut}({\rm Cay}(G,S)).\]</span> Therefore, elements in
+<span class="math inline">\(\operatorname{Aut}({\rm Cay}(f))\)</span>
+can be thought as those graph automorphisms of <span
+class="math inline">\({\rm Cay}(G,S)\)</span> that preserve the
+structure matrix <span class="math inline">\(M_G({\rm Cay}(f))\)</span>
+in the following sense. Let <span class="math inline">\(\psi \in
+\operatorname{Aut}({\rm Cay}(f))\)</span> and <span
+class="math inline">\(g \in G\)</span> an arbitrary element. As <span
+class="math inline">\(\psi\)</span> preserves the product in <span
+class="math inline">\({\rm Cay}(f)\)</span>, for <span
+class="math inline">\(g\cdot g=\sum_{k\in G}f(g^{-1}k)k\)</span>, we
+have that</p>
+<p><span class="math display">\[\label{psiprod}\psi (g\cdot g)
+=\sum_{k\in G}f(g^{-1}k) \psi (k)\]</span> must coincide with <span
+class="math inline">\(\psi (g) \cdot \psi (g) = \sum_{k\in G}f(
+\psi(g)^{-1}k)k\)</span>. Since <span
+class="math inline">\(\psi\)</span> can be thought as a graph
+automorphism of <span class="math inline">\({\rm Cay}(G,S)\)</span>,
+<span class="math inline">\(\psi\)</span> is in particular a permutation
+of the elements in <span class="math inline">\(G\)</span>, which allows
+us to express <span class="math display">\[\label{prodpsi}
+\psi (g) \cdot \psi (g) = \sum_{k \in G}f( \psi(g)^{-1}\psi(k))
+\psi(k).\]</span> Comparing both <a href="#psiprod"
+data-reference-type="eqref" data-reference="psiprod">[psiprod]</a> and
+<a href="#prodpsi" data-reference-type="eqref"
+data-reference="prodpsi">[prodpsi]</a> we deduce that <span
+class="math inline">\(f(g^{-1}k)= f( \psi(g)^{-1}\psi(k))\)</span> for
+arbitrary <span class="math inline">\(g, k \in G\)</span>. In other
+words, <span class="math inline">\(\psi\)</span> is an automorphism of
+the weighted graph <span class="math inline">\(\Gamma^w\big({\rm
+Cay}(f),G\big)\)</span> which, by Lemma <a
+href="#lem:graph_of_cayley_is_cayley" data-reference-type="ref"
+data-reference="lem:graph_of_cayley_is_cayley">14</a> coincides with
+<span class="math inline">\({\rm Cay}^{cor}(G,S)\)</span>. That is,
+<span class="math display">\[\operatorname{Aut}({\rm Cay}(f))\leq
+\operatorname{Aut}({\rm Cay}^{cor}(G,S))\cong G.\]</span> Since <span
+class="math inline">\(G\leq \operatorname{Aut}({\rm Cay}(f))\)</span> by
+Proposition <a href="#prop:faith" data-reference-type="ref"
+data-reference="prop:faith">12</a>, we conclude that <span
+class="math inline">\(G \cong \operatorname{Aut}({\rm
+Cay}(f))\)</span>. ◻</p>
+</div>
+<p>We prove now that if the field <span
+class="math inline">\(\Bbbk\)</span> is large enough compared with <span
+class="math inline">\(|G|\)</span> (for instance, if <span
+class="math inline">\(\Bbbk\)</span> is infinite), it is then possible
+to construct <span class="math inline">\({\rm Cay}(f)\)</span>, a Cayley
+evolution <span class="math inline">\(\Bbbk\)</span>-algebra associated
+to the function <span class="math inline">\(f: G \to \Bbbk\)</span>,
+fulfilling hypotheses from Lemma <a
+href="#lem:graph_of_cayley_is_cayley" data-reference-type="ref"
+data-reference="lem:graph_of_cayley_is_cayley">14</a> and Proposition <a
+href="#th:coprime" data-reference-type="ref"
+data-reference="th:coprime">15</a>.</p>
+<p>The following lemma makes the condition “large enough compared with
+an integer" precise. Recall that a polynomial <span
+class="math inline">\(P\in \Bbbk[X_1,\ldots, X_m]\)</span> is said to be
+homogeneous of degree <span
+class="math inline">\(n\in\mathbb{N}\)</span>, denoted by <span
+class="math inline">\(\deg(P)=n\)</span>, if <span
+class="math inline">\(P\)</span> is a linear combination of monomials
+<span class="math inline">\(X_1^{d_1}X_2^{d_2}\cdots X_m^{d_m}\)</span>
+such that <span class="math inline">\(\sum d_i=n\)</span>.</p>
+<div id="lem:large_enough" class="lemma">
+<p><strong>Lemma 16</strong>. <em>Let <span
+class="math inline">\(\Bbbk\)</span> be a not necessarily finite field
+with multiplicative group of order <span
+class="math inline">\(|\Bbbk^*|\)</span>, and let <span
+class="math inline">\(n\)</span> and <span
+class="math inline">\(m\)</span> be positive integers such that <span
+class="math inline">\(|\Bbbk^*|\geq 2n\)</span> and <span
+class="math inline">\(n \geq m\)</span>. Then, for any homogeneous
+polynomial of degree <span class="math inline">\(n\)</span> in <span
+class="math inline">\(m\)</span> variables <span
+class="math display">\[P=\sum_{i=1}^m \lambda_iX_i^n +
+Q\in\Bbbk[X_1,\ldots, X_m],\]</span> with <span
+class="math inline">\(\lambda_i \neq 0\)</span> for all <span
+class="math inline">\(i\)</span>, and where every monomial in <span
+class="math inline">\(Q\)</span> involves at least two different
+variables, there exists a choice of non-zero pairwise distinct values
+<span class="math inline">\(k_1,\ldots, k_m\in\Bbbk^*\)</span> such that
+<span class="math inline">\(P(X_i=k_i: i=1,\ldots, m)\ne
+0\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> Fix <span class="math inline">\(n \geq m\)</span> and
+<span class="math inline">\(P\in\Bbbk[X_1,\ldots, X_m]\)</span> as in
+the hypotheses. Since <span class="math inline">\(|\Bbbk^*| \geq
+m\)</span>, we can choose <span class="math inline">\(k_1,\ldots,
+k_{m-1}\in\Bbbk^*\)</span> pairwise distinct values. Hence, the
+polynomial <span class="math inline">\(\widetilde{P}(X_m):=P(X_i=k_i:
+i&lt;m)\)</span> is a non-trivial polynomial of degree <span
+class="math inline">\(n\)</span>, and therefore the equation <span
+class="math inline">\(\widetilde{P}(X_m)=0\)</span> admits a most <span
+class="math inline">\(n\)</span> different non-zero solutions. That is,
+there exist at most <span
+class="math inline">\(\kappa_1,\ldots,\kappa_n\in\Bbbk^*\)</span> such
+that <span class="math inline">\(\widetilde{P}(X_m=\kappa_r)=0\)</span>,
+for <span class="math inline">\(r=1, \ldots, n\)</span>. Since <span
+class="math inline">\(|\Bbbk^*|\geq 2n&gt; m-1+n\)</span>, there exists
+a non-zero value <span class="math inline">\(k_m\in\Bbbk^*\)</span> such
+that <span class="math inline">\(k_m\ne k_j\)</span> for <span
+class="math inline">\(j=1,\ldots,m-1\)</span> and <span
+class="math inline">\(k_m\ne \kappa_r\)</span> for <span
+class="math inline">\(r=1,\ldots, n\)</span>. Then, <span
+class="math inline">\(k_1,\ldots, k_m\in\Bbbk^*\)</span> are non-zero
+pairwise distinct values and <span class="math inline">\(P(X_i=k_i:
+i=1,\ldots, m)\ne 0\)</span>. ◻</p>
+</div>
+<div id="th:ultimo" class="theorem">
+<p><strong>Theorem 17</strong>. <em>Let <span
+class="math inline">\(\Bbbk\)</span> be a not necessarily finite field
+with multiplicative group of order <span
+class="math inline">\(|\Bbbk^*|\)</span> and let <span
+class="math inline">\(G\)</span> be a finite group. If <span
+class="math inline">\(|\Bbbk^*|\geq 2 |G|\)</span>, then for any
+non-empty <span class="math inline">\(S\subset G\)</span> there exists a
+function <span class="math inline">\(f \colon G\rightarrow
+\Bbbk\)</span> such that:</em></p>
+<ol>
+<li><p><em><span id="th:ultimo_1" data-label="th:ultimo_1"></span> <span
+class="math inline">\(S=\operatorname{supp}(f)\)</span></em></p></li>
+<li><p><em><span id="th:ultimo_2" data-label="th:ultimo_2"></span> <span
+class="math inline">\(f|_S\)</span> is injective</em></p></li>
+<li><p><em><span id="th:ultimo_3" data-label="th:ultimo_3"></span> <span
+class="math inline">\({\rm Cay}(f)\)</span> is regular.</em></p></li>
+</ol>
+</div>
+<div class="proof">
+<p><em>Proof.</em> For any function <span
+class="math inline">\(f:G\rightarrow\Bbbk\)</span>, if we denote by
+<span class="math inline">\(X_g\)</span> the variable such that <span
+class="math inline">\(X_g=f(g)\)</span>, the structure coefficients of
+<span class="math inline">\({\rm Cay}(f)\)</span> can be described by
+<span class="math display">\[g\cdot g=\sum_{h\in G}f(h)gh=\sum_{k\in
+G}f(g^{-1}k)k=\sum_{k\in G}X_{g^{-1}k}k,\]</span> and therefore, the
+structure matrix of <span class="math inline">\({\rm Cay}(f)\)</span>
+becomes <span class="math display">\[M_B({\rm
+Cay}(f))=(X_{g^{-1}k})_{g,k\in G}\in M_{|G|\times |G|}(\Bbbk),\]</span>
+whose determinant is a homogeneous polynomial <span
+class="math inline">\(P(X_g\,:\,g\in G)\)</span> of degree <span
+class="math inline">\(|G|\)</span>, that we now describe. Given <span
+class="math inline">\(k\in G\)</span>, let <span
+class="math inline">\(P_k:=P(X_g=0: g\neq k)\in \Bbbk[X_k],\)</span>
+thus <span class="math inline">\(P=\sum_{k\in G} P_k + Q\)</span> where
+<span class="math inline">\(Q\)</span> is a homogeneous polynomial in
+<span class="math inline">\(\Bbbk[X_g : g\in G]\)</span> such that every
+monomial in <span class="math inline">\(Q\)</span> involves at least two
+different variables. Since <span class="math inline">\(P\)</span> is
+homogeneous, <span class="math inline">\(P_k(X_k)=\lambda_k
+X_k^{|G|}\)</span> for some <span
+class="math inline">\(\lambda_k\in\Bbbk\)</span>. Following the notation
+of <span class="citation" data-cites="harary">(<a href="#ref-harary"
+role="doc-biblioref">Harary., n.d.</a>)</span>, we can think of the
+polynomials <span class="math inline">\(P_k\)</span> as <span
+class="math display">\[P_k(X_k)=\det\Big({\rm A}\big({\rm Cay}(G,\{k\}),
+X_k\big)\Big)\]</span> where <span class="math inline">\({\rm
+A}\big({\rm Cay}(G,\{k\}), X_k\big)\)</span> denotes the variable
+adjacency matrix of the Cayley graph <span class="math inline">\({\rm
+Cay}(G,\{k\})\)</span>. And, according to <span class="citation"
+data-cites="harary">(<a href="#ref-harary" role="doc-biblioref">Harary.,
+n.d.</a>, Theorem 2)</span>, as <span class="math inline">\({\rm
+Cay}(G,\{k\})\)</span> is a directed graph consisting of a total of
+<span class="math inline">\(\frac{|G|}{o(k)}\)</span> disjoint directed
+cycles of length <span class="math inline">\(o(k)\)</span>, which are
+also the strong components of <span class="math inline">\({\rm
+Cay}(G,\{k\})\)</span>, we obtain that <span
+class="math display">\[P_k(X_k)= \Big( \det \big( {\rm
+A}\big(o(k)\text{-cycle}, X_k \big) \big)
+\Big)^{\frac{|G|}{o(k)}}.\]</span> Since the variable adjacency matrix
+of a directed <span class="math inline">\(o(k)\)</span>-cycle is of the
+form <span class="math display">\[\left(
+    \begin{array}{ccccc}
+    0 &amp; X_{k}  &amp; 0  &amp; \ldots &amp; 0\\
+    0 &amp; 0  &amp; X_{k}  &amp; \ldots  &amp; 0\\
+    \vdots &amp; \vdots  &amp; \vdots  &amp; \ddots  &amp; \vdots\\
+    0 &amp; 0  &amp; 0  &amp; \ldots &amp; X_{k}\\
+    X_{k} &amp; 0 &amp; 0  &amp; \ldots &amp; 0\\
+    \end{array}
+    \right) \in M_{o(k) \times o(k)} (\Bbbk)\]</span> we conclude that
+<span
+class="math display">\[P_k(X_k)=\Big((-1)^{o(k)+1}X_{k}^{o(k)}\Big)^{\frac{|G|}{o(k)}}=
+(-1)^{\frac{(o(k)+1)|G|}{o(k)}} X_k^{|G|}.\]</span></p>
+<p>We proceed now to construct, for a given <span
+class="math inline">\(S \subset G\)</span>, the desired function <span
+class="math inline">\(f\colon G\to \Bbbk\)</span>. Let <span
+class="math inline">\(P_S:=P(X_g=0: g\not\in S)\in\Bbbk[X_s:s\in
+S]\)</span> which is a non-trivial homogeneous polynomial of degree
+<span class="math inline">\(|G|\)</span> on <span
+class="math inline">\(|S|\)</span> variables. As <span
+class="math inline">\(|\Bbbk^*| \geq 2n\)</span>, Lemma <a
+href="#lem:large_enough" data-reference-type="ref"
+data-reference="lem:large_enough">16</a> ensures the existence of
+non-zero pairwise distinct values <span
+class="math inline">\(k_s\in\Bbbk^*\)</span>, <span
+class="math inline">\(s\in S\)</span>, satisfying that <span
+class="math inline">\(P_S(X_s=k_s : s\in S)\ne 0\)</span>. With that in
+mind, let <span class="math inline">\(f\colon G\to \Bbbk\)</span> be
+defined by <span class="math display">\[f(g)=\begin{cases}
+            k_g, &amp; \text{if $g\in S$}\\
+            0, &amp; \text{otherwise}
+         \end{cases}\]</span> Notice that since all the values <span
+class="math inline">\(k_s\in\Bbbk^*\)</span>, for <span
+class="math inline">\(s\in S\)</span>, are non-zero and pairwise
+distinct, <span class="math inline">\(S=\operatorname{supp}(f)\)</span>
+and <span class="math inline">\(f|_S\)</span> is injective. Finally,
+<span class="math display">\[\begin{split}
+\det\big(M_B({\rm Cay}(f))\big) &amp; = P(X_g=f(g):g\in G)\\
+&amp; = P_S(X_s=k_s:s\in S) \\
+&amp; \ne 0
+\end{split}\]</span> hence <span class="math inline">\({\rm
+Cay}(f)\)</span> is regular. ◻</p>
+</div>
+<p>Combining the results previously obtained, we give the proof of our
+main result.</p>
+<div class="proof">
+<p><em>Proof of Theorem <a href="#thm:main" data-reference-type="ref"
+data-reference="thm:main">1</a>.</em> Let <span
+class="math inline">\(S\)</span> be a set of generators of <span
+class="math inline">\(G\)</span> containing coprime order elements.
+Observe that <span class="math inline">\(S\)</span> is also a set of
+generators of <span class="math inline">\(\Bbbk[G]\)</span> as an
+algebra, and such <span class="math inline">\(S\)</span> always exists,
+it suffices to consider a generating set <span
+class="math inline">\(S\)</span> containing <span
+class="math inline">\(1\in S\)</span>, for example <span
+class="math inline">\(S = G\)</span>. Considering the function <span
+class="math inline">\(f:G\rightarrow \Bbbk\)</span> given in Theorem <a
+href="#th:ultimo" data-reference-type="ref"
+data-reference="th:ultimo">17</a>, <span class="math inline">\({\rm
+Cay}(f)\)</span> is regular, <span
+class="math inline">\(S=\operatorname{supp}(f)\)</span> and <span
+class="math inline">\(f|_S\)</span> is injective. Moreover, <span
+class="math inline">\(S\)</span> contains coprime order elements, so by
+Proposition <a href="#th:coprime" data-reference-type="ref"
+data-reference="th:coprime">15</a> we conclude that <span
+class="math inline">\(\operatorname{Aut}({\rm Cay}(f))\cong G\)</span>.
+Moreover, since <span class="math inline">\(S\)</span> generates <span
+class="math inline">\(\Bbbk[G]\)</span> and <span
+class="math inline">\({\rm Cay}(f)\)</span> is regular, by Proposition
+<a href="#prop:Cay simple_algebra" data-reference-type="ref"
+data-reference="prop:Cay simple_algebra">9</a> we obtain that <span
+class="math inline">\({\rm Cay}(f)\)</span> is simple.</p>
+<p>We now check that the simple evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\(X ={\rm Cay}(f)\)</span> above is indeed
+absolutely simple, and <span
+class="math inline">\(\operatorname{Aut}(X_{\mathbb F})\cong G\)</span>
+for every field extension <span
+class="math inline">\(\mathbb{F}/\Bbbk\)</span>. In fact, since the
+function <span class="math inline">\(f_{\mathbb F}\colon G\to {\mathbb
+F}\)</span> induced by <span class="math inline">\(f\)</span> also
+satisfies conclusions <a href="#th:ultimo_1" data-reference-type="eqref"
+data-reference="th:ultimo_1">[th:ultimo_1]</a>, <a href="#th:ultimo_2"
+data-reference-type="eqref"
+data-reference="th:ultimo_2">[th:ultimo_2]</a>, and <a
+href="#th:ultimo_3" data-reference-type="eqref"
+data-reference="th:ultimo_3">[th:ultimo_3]</a> in Theorem <a
+href="#th:ultimo" data-reference-type="ref"
+data-reference="th:ultimo">17</a>, <span
+class="math inline">\(\operatorname{Aut}({\rm Cay}(f_{\mathbb F}))\cong
+G\)</span>, and <span class="math inline">\({\rm Cay}(f_{\mathbb
+F})\)</span> is simple. Finally, since <span
+class="math inline">\({\mathbb F}[G]=\Bbbk[G]\otimes_\Bbbk {\mathbb
+F}\)</span> then <span class="math inline">\({\rm Cay}(f_{\mathbb
+F})={\rm Cay}(f)\otimes_\Bbbk {\mathbb F}=X_{\mathbb F}\)</span>, thus
+<span class="math inline">\(X_{\mathbb F}\)</span> is simple and <span
+class="math inline">\(\operatorname{Aut}(X_{\mathbb F})\cong
+G\)</span>. ◻</p>
+</div>
+<p>We end this paper with some remarks on the non-uniqueness of the
+simple evolution algebras realizing finite groups.</p>
+<div id="rmk:not_unique" class="remark">
+<p><em>Remark 18</em>. Our construction of the simple evolution <span
+class="math inline">\(\Bbbk\)</span>-algebra <span
+class="math inline">\({\rm Cay}(f)\)</span> such that <span
+class="math inline">\(\operatorname{Aut}({\rm Cay}(f))\cong G\)</span>,
+for a fixed finite group <span class="math inline">\(G\)</span> involves
+several choices: first, a generator set <span
+class="math inline">\(S\subset G\)</span> containing coprime order
+elements, which is not unique if <span
+class="math inline">\(|G|&gt;1\)</span>. Secondly, a function <span
+class="math inline">\(f\colon G\to \Bbbk\)</span> such that <span
+class="math inline">\({\rm Cay}(f)\)</span> is regular, as in the proof
+of Theorem <a href="#th:ultimo" data-reference-type="ref"
+data-reference="th:ultimo">17</a>, which is not is unique either since
+any non-zero scalar multiple of <span class="math inline">\(f\colon G\to
+\Bbbk\)</span> will also work. An easy argument on the edge-coloured
+directed graphs <span class="math inline">\(\Gamma^w\big({\rm
+Cay}(f),B\big)={\rm Cay}^{cor}(G,S)\)</span> illustrates that both
+choices lead to non-isomorphic evolution <span
+class="math inline">\(\Bbbk\)</span>-algebras with the same group of
+automorphism <span class="math inline">\(G\)</span>.</p>
+</div>
+<div id="rmk:bounds" class="remark">
+<p><em>Remark 19</em>. For any evolution algebra <span
+class="math inline">\({\rm Cay}(f)\)</span> built upon the group algebra
+<span class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span> with fixed
+natural basis <span class="math inline">\(B=G\)</span>, and any given
+<span class="math inline">\(f\colon B\to \Bbbk\)</span>, the following
+holds <span class="math display">\[G\leq\operatorname{Aut}({\rm
+Cay}(f))\leq \rm{GL}(\Bbbk, |G|)\]</span> since <span
+class="math inline">\(B=G\)</span> is a group of units basis in <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span> (see Proposition <a
+href="#prop:faith" data-reference-type="ref"
+data-reference="prop:faith">12</a>). The lower bound <span
+class="math inline">\(G= \operatorname{Aut}({\rm Cay}(f))\)</span> is
+obtained when <span class="math inline">\(f\)</span> is as in the proof
+of Theorem <a href="#thm:main" data-reference-type="ref"
+data-reference="thm:main">1</a> (see also Theorem <a href="#th:ultimo"
+data-reference-type="ref" data-reference="th:ultimo">17</a>) while the
+upper bound <span class="math inline">\(\operatorname{Aut}({\rm
+Cay}(f))=\rm{GL}(\Bbbk, |G|)\)</span> is obtained when <span
+class="math inline">\(f= 0\)</span>. Although it is not the purpose of
+this paper, we could raise the question of which intermediate groups
+<span class="math inline">\(H\)</span>, <span
+class="math display">\[G\leq H\leq \rm{GL}(\Bbbk, |G|),\]</span> can be
+realized as automorphisms of simple Cayley evolution algebras. That is,
+<span class="math inline">\(\operatorname{Aut}({\rm Cay}(f))= H\)</span>
+for some function <span class="math inline">\(f\colon G\to
+\Bbbk\)</span>.</p>
+</div>
+<p>We now highlight that not only <span
+class="math inline">\(\operatorname{Aut}({\rm Cay}(f))\)</span> depends
+on how <em>good</em> or <em>bad</em> the function <span
+class="math inline">\(f: G \rightarrow \Bbbk\)</span> is, as Remark <a
+href="#rmk:bounds" data-reference-type="ref"
+data-reference="rmk:bounds">19</a> illustrates, but it also depends on
+the group of units of <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span>. And in fact, since
+the isomorphism problem for group rings <span class="citation"
+data-cites="Sandling">(<a href="#ref-Sandling"
+role="doc-biblioref">Sandling., n.d.</a>, Problem 1.1)</span> has a
+negative answer in general <span class="citation" data-cites="Hert">(<a
+href="#ref-Hert" role="doc-biblioref">Hertweck., n.d.</a>)</span>, the
+group of units basis is not unique in a group algebra. The following
+example shows that the choice of the group of units basis as natural
+basis for <span class="math inline">\({\rm Cay}(f)\)</span> might lead
+to non-isomorphic Cayley evolution algebras with non-isomorphic group of
+automorphisms:</p>
+<div id="ex:hertwek" class="example">
+<p><em>Example 20</em>. Let <span class="math inline">\(G_1\)</span> and
+<span class="math inline">\(G_2\)</span> be the finite groups of order
+<span class="math inline">\(n=2^{21}97^{28}\)</span> denoted by
+respectively <span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> in <span class="citation"
+data-cites="Hert">(<a href="#ref-Hert" role="doc-biblioref">Hertweck.,
+n.d.</a>, Theorem B)</span>. Let <span
+class="math inline">\(\Bbbk\)</span> be a field (not necessarily finite)
+with multiplicative group of order <span class="math inline">\(|\Bbbk^*|
+\geq 2 \cdot 2^{21}97^{28}\)</span> and let <span
+class="math inline">\(\mathcal{A}= \Bbbk[G_1]\)</span> be the group
+<span class="math inline">\(\Bbbk\)</span>-algebra. By <span
+class="citation" data-cites="Hert">(<a href="#ref-Hert"
+role="doc-biblioref">Hertweck., n.d.</a>, Theorem B)</span>, although
+<span class="math inline">\(G_1\)</span> and <span
+class="math inline">\(G_2\)</span> are non-isomorphic, they can both be
+the group of units basis of <span
+class="math inline">\(\mathcal{A}\)</span>. Hence, following the proof
+of Theorem <a href="#thm:main" data-reference-type="ref"
+data-reference="thm:main">1</a>, there exist functions <span
+class="math inline">\(f_1\colon G_1\to \Bbbk\)</span>, and <span
+class="math inline">\(f_2\colon G_2\to \Bbbk\)</span>, such that <span
+class="math inline">\({\rm Cay}(f_1)\)</span> and <span
+class="math inline">\({\rm Cay}(f_2)\)</span> are simple evolution <span
+class="math inline">\(\Bbbk\)</span>-algebras with <span
+class="math inline">\(\operatorname{Aut}({\rm Cay}(f_1))\cong G_1 \not
+\cong G_2 \cong \operatorname{Aut}({\rm Cay}(f_2))\)</span>, and so
+<span class="math inline">\({\rm Cay}(f_1) \not \cong {\rm
+Cay}(f_2)\)</span>.</p>
+</div>
+<p>Finally, it is also natural to ask whether the function <span
+class="math inline">\(f\colon G\to \Bbbk\)</span> defining <span
+class="math inline">\({\rm Cay}(f)\)</span> can be chosen to be a
+significant one, for example a character, or more generally, a class
+function, that is <span class="math inline">\(f(g^{-1}kg)=f(k)\)</span>
+for all <span class="math inline">\(g,k\in G\)</span>. We prove the
+following:</p>
+<div id="prop:class_function" class="proposition">
+<p><strong>Proposition 21</strong>. <em>Let <span
+class="math inline">\(G\)</span> be a finite group, <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span>, and <span
+class="math inline">\(f\colon G\to \Bbbk\)</span> be a class function.
+Then <span class="math inline">\(\operatorname{Aut}({\rm
+Cay}(f))\)</span> contains two subgroups <span
+class="math inline">\(K_i\)</span>, <span
+class="math inline">\(i=1,2\)</span>, such that <span
+class="math inline">\(K_1\cong G\)</span>, <span
+class="math inline">\(K_2\cong G/Z(G)\)</span> and <span
+class="math inline">\(K_1\cap K_2=\{1\}\)</span>.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> By Proposition <a href="#prop:faith"
+data-reference-type="ref" data-reference="prop:faith">12</a>, there
+exists <span class="math inline">\(K_1\cong G\leq
+\operatorname{Aut}({\rm Cay}(f))\)</span>. Moreover, since the natural
+basis <span class="math inline">\(B=G\)</span> of <span
+class="math inline">\({\rm Cay}(f)\)</span> consists of units in <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span>, Proposition <a
+href="#prop:units_vs_aut" data-reference-type="ref"
+data-reference="prop:units_vs_aut">8</a> ensures that <span
+class="math inline">\(K_1\)</span> acts freely on the natural basis of
+<span class="math inline">\({\rm Cay}(f)\)</span>.</p>
+<p>We now consider the following morphism <span
+class="math inline">\(\rho\colon G\to \operatorname{Aut}({\rm
+Cay}(f))\)</span>: for any <span class="math inline">\(h\in G\)</span>,
+let <span class="math inline">\(\rho(h)\)</span> be the linear
+automorphism of <span class="math inline">\({\rm
+Cay}(f)=\Bbbk[G]\)</span> given by inner conjugation in <span
+class="math inline">\(G\)</span>, that is, <span
+class="math inline">\(\rho(h)(g)=hgh^{-1}\)</span>. Observe that <span
+class="math inline">\(\rho(h)\)</span> maps the natural basis <span
+class="math inline">\(B=G\)</span> of <span class="math inline">\({\rm
+Cay}(f)\)</span> to itself, hence if <span class="math inline">\(g \neq
+g&#39;\)</span> thus <span class="math inline">\(g\cdot
+g&#39;=0\)</span>, then <span class="math inline">\(\rho(h)(g) \neq
+\rho(h)(g&#39;)\)</span> and <span
+class="math inline">\(\rho(h)(g)\cdot\rho(h)(g&#39;)=0\)</span>.
+Moreover <span class="math display">\[\begin{split}
+\rho(h)(g\cdot g) &amp;=\rho(h)\Big(\sum_{k\in G}f(g^{-1}k)k\Big)\\
+&amp; =\sum_{k\in G}f(g^{-1}k)\rho(h)(k)\\
+&amp; =\sum_{k\in G}f(g^{-1}k) hkh^{-1}\\
+&amp; =\sum_{k\in G}f(hg^{-1}kh^{-1}) hkh^{-1}\text{ (since $f$ is a
+class function)}\\
+&amp; =\sum_{k\in G}f(hg^{-1}h^{-1}hkh^{-1}) hkh^{-1}\\
+&amp; =\sum_{k\in G}f(hg^{-1}h^{-1}k) k\\
+&amp; =\sum_{k\in G}f(\rho(h)(g)^{-1}k) k\\
+&amp; = \rho(h)(g)\cdot\rho(h)(g).
+\end{split}\]</span> Therefore, <span
+class="math inline">\(\rho(h)\)</span> is an actual automorphism of
+<span class="math inline">\({\rm Cay}(f)\)</span> for every <span
+class="math inline">\(h\in G\)</span> and by construction <span
+class="math inline">\(\rho(h)=\rm{Id}\)</span> if and only if <span
+class="math inline">\(h\in Z(G)\)</span>. Hence <span
+class="math inline">\(\ker(\rho)=Z(G)\)</span> and <span
+class="math inline">\(K_2=\operatorname{Im}(\rho)\cong
+G/Z(G)\)</span>.</p>
+<p>Finally, notice that every <span class="math inline">\(\rho(h)\in
+K_2\)</span> fixes, at least, the element <span
+class="math inline">\(h\)</span> in <span
+class="math inline">\(B\)</span>, while every non-trivial element in
+<span class="math inline">\(K_1\)</span> acts freely on <span
+class="math inline">\(B\)</span>. Therefore <span
+class="math inline">\(K_1\cap K_2=\{1\}\)</span>. ◻</p>
+</div>
+<p>We obtain the following corollary:</p>
+<div class="corollary">
+<p><strong>Corollary 22</strong>. <em>Let <span
+class="math inline">\(\mathcal{A}=\Bbbk[G]\)</span>, and <span
+class="math inline">\(f\colon G\to \Bbbk\)</span> be a class function
+satisfying that <span class="math inline">\(\operatorname{Aut}({\rm
+Cay}(f))\cong G\)</span>. Then <span class="math inline">\(G\)</span> is
+abelian.</em></p>
+</div>
+<div class="proof">
+<p><em>Proof.</em> According to Proposition <a
+href="#prop:class_function" data-reference-type="ref"
+data-reference="prop:class_function">21</a>, as <span
+class="math inline">\(\operatorname{Aut}({\rm Cay}(f))\cong G\)</span>,
+the subgroup <span class="math inline">\(G/Z(G)\)</span> must be
+trivial. ◻</p>
+</div>
+<h2 class="unnumbered" id="funding">Funding</h2>
+<p><span>This work was partially supported by
+MCIN/AEI/10.13039/501100011033 [PID2020-115155GB-I00 and
+TED2021-131201B-I00 to C.C., PID2020-118452GB-I00 to V.M.,
+PID2019-104236GB-I00 to A.T, and PID2020-118753GB-I00 to A.V.], and by
+Junta de Andalucı́a [UMA18-FEDERJA-119, FQM-336 to A.T., and
+PROYEXCEL-00827, FQM-213 to A.V.].</span></p>
+<div id="refs" class="references csl-bib-body hanging-indent"
+data-entry-spacing="0" role="list">
+<div id="ref-extra1" class="csl-entry" role="listitem">
+A. Alarafeen, I. Qaralleh, and A. Ahmad. n.d. <span>“Properties of
+Nilpotent Evolution Algebras with No Maximal Nilindex.”</span>
+<em>European Journal of Pure and Applied Mathematics 14(1):278–300,
+2021.</em>
+</div>
+<div id="ref-CLTV" class="csl-entry" role="listitem">
+C. Costoya, A. Tocino, P. Ligouras, and A. Viruel. n.d. <span>“Regular
+Evolution Algebras Are Universally Finite.”</span> <em><span><em>Proc.
+Am. Math. Soc.</em></span>, 150(3):919–925, 2022.</em>
+</div>
+<div id="ref-cmv3" class="csl-entry" role="listitem">
+C. Costoya, D. Méndez, and A. Viruel. n.d. <span>“Realisability Problem
+in Arrow Categories.”</span> <em><span><em>Collectanea
+Mathematica</em></span>, Sep 2019.</em>
+</div>
+<div id="ref-Tesis-Yolanda" class="csl-entry" role="listitem">
+Casado., Y. Cabrera. n.d. <span>“<span><em>Evolution
+Algebras</em></span>,. PhD Thesis, University of m<span>á</span>laga,
+Spain, Dec 2016.”</span>
+</div>
+<div id="ref-Elduque-Labra-2015" class="csl-entry" role="listitem">
+Elduque, A., and A. Labra. n.d.a. <span>“Evolution Algebras and
+Graphs.”</span> <em><span><em>J. Algebra Appl.</em></span>,
+14(7):1550103, 10, 2015.</em>
+</div>
+<div id="ref-Elduque-Labra-2019" class="csl-entry" role="listitem">
+———. n.d.b. <span>“Evolution Algebras, Automorphisms, and
+Graphs.”</span> <em><span><em>Linear and Multilinear
+Algebra</em></span>, 69(2):1–12, 2019.</em>
+</div>
+<div id="ref-extra2" class="csl-entry" role="listitem">
+F. Mukhamedov, B. Omirov, O. Khakimov, and I. Qaralleh. n.d.
+<span>“Derivations and Automorphisms of Nilpotent Evolution Algebras
+with Maximal Nilindex.”</span> <em><span><em>Journal of Algebra and Its
+Applications</em></span>, 18(12):1950233, 2019.</em>
+</div>
+<div id="ref-PopovAnnals" class="csl-entry" role="listitem">
+Gordeev, N. L., and V. L. Popov. n.d. <span>“Automorphism Groups of
+Finite Dimensional Simple Algebras.”</span> <em><span><em>Annals of
+Mathematics</em></span>, 158:1041–1065, 2003.</em>
+</div>
+<div id="ref-extra3" class="csl-entry" role="listitem">
+H. Ahmed, U. Bekbaev, and I. Rakhimov. n.d. <span>“On Classification of
+<span class="math inline">\(2\)</span>-Dimensional Evolution Algebras
+and Its Applications.”</span> <em>5th International Conference on
+Mathematical Applications in Engineering 30-31 October 2019, Putrajaya,
+Malaysia</em>.
+</div>
+<div id="ref-harary" class="csl-entry" role="listitem">
+Harary., F. n.d. <span>“The Determinant of the Adjacency Matrix of a
+Graph.”</span> <em><span><em>Siam Review</em></span>, 4(3):202–210,
+1962.</em>
+</div>
+<div id="ref-Hert" class="csl-entry" role="listitem">
+Hertweck., M. n.d. <span>“A Counterexample to the Isomorphism Problem
+for Integral Group Rings.”</span> <em><span><em>Ann. Of Math.
+(2)</em></span>, 154(1):115–138, 2001.</em>
+</div>
+<div id="ref-Popov" class="csl-entry" role="listitem">
+Popov., V. L. n.d. <span>“An Analogue of <span>M</span>.
+<span>A</span>rtin’s Conjecture on Invariants for Non-Associative
+Algebras. <span><em>Amer. Math. Soc. Transl.</em></span>, 169:121–143,
+1995.”</span>
+</div>
+<div id="ref-Sandling" class="csl-entry" role="listitem">
+Sandling., R. n.d. <span>“The Isomorphism Problem for Group Rings: A
+Survey.”</span> <em>In I. Reiner and K. W. Roggenkamp, Editors,
+<span><em>Orders and Their Applications</em></span>, Pages 256–288.
+Springer, Berlin, 1985.</em>
+</div>
+<div id="ref-chinos" class="csl-entry" role="listitem">
+Sriwongsa, S., and Y. M. Zou. n.d. <span>“On Automorphism Groups of
+Idempotent Evolution Algebras.”</span> <em><span><em>Linear Algebra and
+Its Applications</em></span>, 641:143–155, 2022.</em>
+</div>
+<div id="ref-Tian" class="csl-entry" role="listitem">
+Tian, J. P. n.d. <span>“Evolution Algebras and Their Applications,
+Volume 1921 of Lecture Notes in Mathematics.”</span>
+</div>
+<div id="ref-CayleyGraph" class="csl-entry" role="listitem">
+White, A. T. n.d. <em>Graphs, Groups and Surfaces, Volume 8 of
+<span><em>North-Holland Mathematics Studies</em></span></em>.
+North-Holland Publishing Co., Amsterdam, second edition, 1984.
+</div>
+<div id="ref-Cabrera-Siles-Velasco" class="csl-entry" role="listitem">
+Y. Cabrera Casado, M. Siles Molina, and M. V. Velasco. n.d.
+<span>“Evolution Algebras of Arbitrary Dimension and Their
+Decompositions.”</span> <em><span><em>Linear Algebra Appl.</em></span>,
+495:122–162, 2016.</em>
+</div>
+</div>
+</body>
+</html>
