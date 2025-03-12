@@ -10,6 +10,7 @@ Peter Krautzberger, [krautzource](https://krautzource.com)
 - pandoc macht saubereres HTML
 - Suche im Web hilft schnell mit typischen Problemen
 - beamer tests etwas enttäuschend, da kein CSS für Slideeffekte
+- darkmode: pandoc gut, make4ht schlecht
 
 <details><summary>Peters Notizen&amp;Tipps</summary>
 
