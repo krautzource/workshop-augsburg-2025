@@ -1,0 +1,436 @@
+<!DOCTYPE html> 
+<html lang='en-US' xml:lang='en-US'> 
+<head><title>Disproof of a conjecture by Rademacher on partial fractions</title> 
+<meta charset='utf-8' /> 
+<meta content='TeX4ht (https://tug.org/tex4ht/)' name='generator' /> 
+<meta content='width=device-width,initial-scale=1' name='viewport' /> 
+<link href='rademacher-fixes.css' rel='stylesheet' type='text/css' /> 
+<meta content='rademacher-fixes.tex' name='src' /> 
+<script>window.MathJax = { tex: { tags: "ams", }, }; </script> 
+ <script async='async' id='MathJax-script' src='https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js' type='text/javascript'></script>  
+</head><body>
+  <div class='maketitle'>
+  <h2 class='titleHead'>
+DISPROOF OF A CONJECTURE BY RADEMACHER ON
+PARTIAL FRACTIONS
+  </h2>
+  <div class='authors'><span class='author'>
+<span class='cmr-8'>MICHAEL DRMOTA AND STEFAN GERHOLD</span>
+  </span></div>
+         <div class='abstract'>
+       <!-- l. 54 --><p class='noindent'><span class='title'>
+       <span class='cmcsc-10x-x-80'>A<span class='small-caps'>bstract</span>.</span> </span><span class='cmr-8'>In  his  book  Topics  in  Analytic  Number  Theory,  Rademacher
+       considered  the  generating  function  of  partitions  into  at  most</span>  \(N\)  <span class='cmr-8'>parts,
+       and  conjectured  certain  limits  for  the  coefficients  of  its  partial  fraction
+       decomposition.  We  carry  out  an  asymptotic  analysis  that  disproves  this
+       conjecture, thus confirming recent observations of Sills and Zeilberger (Journal
+       of Difference Equations and Applications 19, 2013), who gave strong numerical
+       evidence against the conjecture.</span></p></div>
+<div class='submaketitle'>
+  <div class='date'>
+<!-- l. 69 --><p class='indent'>  <span class='cmti-10'>Date</span>: March 13, 2025.</p></div>
+  <div class='subjclass'>
+<!-- l. 69 --><p class='indent'>  2010 <span class='cmti-10'>Mathematics Subject Classification. </span>11P82, 41A60.</p></div>
+  <div class='keywords'>
+<!-- l. 69 --><p class='indent'>  <span class='cmti-10'>Key words and phrases. </span>Integer partitions, partial fraction decomposition, Mellin
+transform, polylogarithm, saddle point asymptotics.</p></div>
+  <div class='thanks'>
+<!-- l. 69 --><p class='indent'>  S. Gerhold gratefully acknowledges financial support from the Austrian Science Fund
+(FWF) under grant P 24880-N25.</p></div></div></div>
+  <h3 class='sectionHead'><span class='titlemark'>1. </span> <a id='x1-10001'></a>introduction</h3>
+<!-- l. 73 --><p class='noindent'>In his book Topics in Analytic Number Theory <span class='cite'>[<a href='#XRa73'>12</a>]</span>, Rademacher gave a partial fraction
+decomposition of the partition generating function \(\prod _{j\geq 1}(1-x^j)^{-1}\). He conjectured that the
+decomposition of the generating function of partitions into at most \(N\) parts, \[ \prod _{j=1}^N \frac {1}{1-x^j} = \sum _{k=1}^N \sum _{\substack {0\leq h&lt;k \\ \gcd (h,k)=1}} \sum _{l=1}^{\lfloor N/k \rfloor } \frac {C_{h,k,l}(N)}{(x-e^{2\pi i h/k})^l}, \] is consistent
+with it in the sense that the coefficients \(C_{h,k,l}(N)\) converge as \(N\to \infty \) to the coefficients of the
+decomposition of the unrestricted generating function. Despite attracting the attention of
+several authors <span class='cite'>[<a href='#XAn07'>1</a>, <a href='#XEh93'>4</a>, <a href='#XMu08'>9</a>]</span>, the conjecture has been open since 1973. See Sills and
+Zeilberger <span class='cite'>[<a href='#XSiZe13'>14</a>]</span> for some further historical remarks. The latter paper presents a
+recurrence for \(C_{0,1,l}(N)\); the values computed by it do not seem to show convergence, but
+rather oscillating and unbounded behavior. It is well known, though, that there
+are number-theoretic problems where the true asymptotics are numerically
+visible only for <span class='cmti-10'>very </span>large values. See, e.g., <span class='cite'>[<a href='#XGe10a'>6</a>]</span> for an example. The present note
+rigorously confirms the main observation from <span class='cite'>[<a href='#XSiZe13'>14</a>]</span>, i.e., we disprove Rademacher’s
+
+conjecture.<span class='footnote-mark'><a href='rademacher-fixes2.html#fn1x0'>1</a></span><a id='x1-1001f1'></a> 
+To formulate our main result, recall the definition of the dilogarithm function: \(\mathrm {Li}_2(w) = \sum _{k\geq 1}w^k/k^2\), \(|w|&lt;1\).
+Define \(z_0\approx -1.61 + 7.42i\) as the solution of \begin {equation} \label {eq:z0} \log (1-e^z) + \frac {1}{z}(\mathrm {Li}_2(e^z)-\pi ^2/6) = 0.  \end {equation}<a id='x1-1003r1'></a> (It is easy to show that there is a unique root within,
+say, distance \(1\) of the numerical value given above.) Furthermore, define \(\rho =\exp (i a)\), where
+\begin {equation} \label {eq:a} a = \frac { \pi }{2} - \frac 12 \arg \left ( \frac {e^{z_0}}{z_0(1-e^{z_0})} \right ) \approx 1.79.  \end {equation}<a id='x1-1004r2'></a>
+</p>
+  <div class='newtheorem'>
+<!-- l. 119 --><p class='noindent'><span class='head'>
+<a id='x1-1005r1'></a>
+<span class='cmbx-10'>Theorem 1.</span>  </span> <span class='cmti-10'>For any integer</span> \(l\geq 1\)<span class='cmti-10'>, we have the asymptotics </span>\begin {equation} \label {eq:C asympt} C_{0,1,l}(N) = b^N N^{-l-1} H_l(N) + O(b^N N^{-l-117/112}), \quad N\to \infty ,  \end {equation}<a id='x1-1006r3'></a> <span class='cmti-10'>where</span> \(b=1/|1-e^{z_0}|\approx 1.07\)<span class='cmti-10'>, and </span>\(H_l\) <span class='cmti-10'>is a bounded
+function with period</span> \(p=2\pi /|\arg (1-e^{z_0})|\approx 31.96\)<span class='cmti-10'>, given by </span>\begin {multline*}  H_l(N) = \frac {(-1)^{l-1}}{\pi } \sqrt {-\frac {z_0(1-e^{z_0})}{\rho ^2e^{z_0}}} \Bigg (\Im \left ( \frac {\rho (-z_0)^{l-1/2}}{\sqrt {1-e^{z_0}}}\right )\cos \big (N \arg (1-e^{z_0})\big ) \\ -\Re \left (\frac {\rho (-z_0)^{l-1/2}}{\sqrt {1-e^{z_0}}}\right )\sin \big (N \arg (1-e^{z_0})\big )\Bigg ).  \end {multline*}
+</p>
+  </div>
+<!-- l. 132 --><p class='indent'>   Note that the number under the first radical sign is real and positive. The period \(p\) of
+the oscillations is roughly \(32\), as observed by Sills and Zeilberger <span class='cite'>[<a href='#XSiZe13'>14</a>]</span>. It is independent
+of \(l\), as is the exponential growth order \(b^N\). Moreover, Sills and Zeilberger found that the
+successive peaks seem to grow exponentially with a factor around \(8\). The (asymptotically)
+true factor is \(b^p\approx 8.81\). Figures <a href='#x1-10071'>1<!-- tex4ht:ref: fig:1  --></a> and <a href='#x1-10082'>2<!-- tex4ht:ref: fig:2  --></a> illustrate the quality of the approximation, which seems
+to be better for \(l=1\) than for \(l=2\). </p><figure class='figure'> 
+
+
+<a id='x1-10071'></a>
+
+<div class='center'>
+<!-- l. 146 --><p class='noindent'>
+</p><!-- l. 147 --><p class='noindent'><img alt='PIC' height='144' src='fig1.png' width='144' /></p></div>
+<figcaption class='caption'><span class='id'>Figure 1: </span><span class='content'>The numbers \(C_{0,1,1}(N)\) (black) and the approximation \(\eqref {eq:C asympt}\) (gray), for \(N=100,\dots ,150\).</span></figcaption><!-- tex4ht:label?: x1-10071  -->
+
+  </figure>
+  <figure class='figure'> 
+
+
+<a id='x1-10082'></a>
+
+<div class='center'>
+<!-- l. 155 --><p class='noindent'>
+</p><!-- l. 156 --><p class='noindent'><img alt='PIC' height='144' src='fig2.png' width='144' /></p></div>
+<figcaption class='caption'><span class='id'>Figure 2: </span><span class='content'>The numbers \(C_{0,1,2}(N)\) (black) and the approximation \(\eqref {eq:C asympt}\) (gray), for \(N=100,\dots ,150\).</span></figcaption><!-- tex4ht:label?: x1-10082  -->
+
+  </figure>
+<!-- l. 163 --><p class='indent'>  In principle, it should be possible to extend our approach from \((h,k)=(0,1)\) to general \(h,k\). Moreover,
+a natural conjecture is that the period \(2\pi /|\arg (1-e^{z_0})|\) of \(H_l\) is a transcendental number. While there is
+some literature on transcendence of polylogarithm values (see, e.g., <span class='cite'>[<a href='#XHa93'>7</a>]</span>), we are not
+aware of any result that would imply this.
+</p><!-- l. 170 --><p class='indent'>  The rest of the paper is organized as follows. In Section <a href='#x1-20002'>2<!-- tex4ht:ref: se:mellin  --></a>, we appeal to the Cauchy
+integral representation of \(C_{0,1,l}(N)\) and find an asymptotic approximation for its integrand. The
+new integrand is analysed in Section <a href='#x1-30003'>3<!-- tex4ht:ref: se:saddle  --></a> by the saddle point method. Section <a href='#x1-40004'>4<!-- tex4ht:ref: se:right  --></a>
+completes the proof of Theorem <a href='#x1-1005r1'>1<!-- tex4ht:ref: thm:main  --></a> by adding estimates in regions where the
+asymptotic approximation for the integrand has to be modified or is invalid.
+In the conclusion, we comment on the error term in \(\eqref {eq:C asympt}\), and on possible future
+work.
+</p>
+  <h3 class='sectionHead'><span class='titlemark'>2. </span> <a id='x1-20002'></a>Mellin Transform asymptotics</h3>
+<!-- l. 184 --><p class='noindent'>Since the \(C_{0,1,l}(N)\) are the Laurent coefficients of \(\prod _{j=1}^N (1-x^j)^{-1}\) at \(x=1\), we can express them by Cauchy’s formula:
+\begin {align}  C_{0,1,l}(N) &amp;= \frac {1}{2i\pi } \oint x^{l-1} \prod _{j=1}^N \frac {1}{1-(x+1)^j}dx \notag \\ &amp; = \frac {(-1)^{l-1}}{N^l} \frac {1}{2i\pi } \oint F(z,N) dz, \label {eq:F}  \end {align}
+</p><!-- l. 191 --><p class='indent'>  where we have substituted \(x+1=e^{z/N}\), and \begin {equation} \label {eq:F def} F(z,N) := e^{f(z,N)} := e^{z/N}N^{l-1}(1-e^{z/N})^{l-1}\prod _{j=1}^N \frac {1}{1-e^{zj/N}}.  \end {equation}<a id='x1-2001r4'></a> We wish to replace the integrand \(F\) by an
+asymptotic approximation, derived by a Mellin transform approach. We do the
+analysis for \(\Re z&lt;0\), since the factor \(e^{-Nz/2}\) in \begin {equation} \label {eq:refl} \prod _{j=1}^N \frac 1{1-e^{zj/N}} = (-1)^N e^{-z(N+1)/2} \prod _{j=1}^N \frac 1{1-e^{-zj/N}}  \end {equation}<a id='x1-2002r5'></a> suggests that the contribution of the left
+half-circle dominates the integral \(\eqref {eq:F}\); a rigorous argument is given in Section <a href='#x1-40004'>4<!-- tex4ht:ref: se:right  --></a>. To
+take the Mellin transform of \(f=\log F\) w.r.t. \(N\), we have to interpolate between integral
+values of \(N\). We therefore rewrite the logarithm of the product \(\prod _{j=1}^N\) in \(\eqref {eq:F def}\) as follows:
+\begin {align*}  g(z,N) &amp;:= \log \prod _{j=1}^n \frac {1}{1-e^{zj/N}} \\ &amp;= - \sum _{j=1}^N \log (1-e^{zj/N}) \\ &amp;= \sum _{j=1}^N \sum _{k=1}^\infty \frac {1}{k}e^{zjk/N} = \sum _{k=1}^\infty \frac {1}{k} \frac {1-e^{kz}}{e^{-kz/N}-1}.  \end {align*}
+</p><!-- l. 212 --><p class='indent'>  Now we can compute the Mellin transform of \(g\) w.r.t. \(N\), for \(\Re (s)&lt;-1\): \begin {align}  \mathcal {M}g(z,\cdot )(s)&amp;=\int _0^\infty g(z,x)x^{s-1}dx \notag \\ &amp;= \sum _{k=1}^\infty \frac {1-e^{kz}}{k} \int _0^\infty \frac {x^{s-1}}{e^{-kz/x}-1} dx \notag \\ &amp;= \sum _{k=1}^\infty \frac {1-e^{kz}}{k} (-kz)^s \Gamma (-s)\zeta (-s) \notag \\ &amp;= (-z)^s \Gamma (-s)\zeta (-s) \left (\sum _{k=1}^\infty k^{s-1} - \sum _{k=1}^\infty k^{s-1} e^{kz} \right ) \notag \\ &amp;= (-z)^s \Gamma (-s)\zeta (-s) \Big (\zeta (1-s) - \mathrm {Li}_{1-s}(e^z)\Big ). \label {eq:mellin}  \end {align}
+</p><!-- l. 223 --><p class='indent'>  Recall that the polylogarithm is defined for \(|w|&lt;1\) and \(\nu \in \mathbb {C}\) by \(\mathrm {Li}_\nu (w) = \sum _{k\geq 1}w^k/k^\nu \). For the integral evaluation used
+in the third equality, see Titchmarsh <span class='cite'>[<a href='#XTi86'>15</a>]</span>, p. 18; it already appears in Riemann’s original
+memoir <span class='cite'>[<a href='#XRi59'>13</a>]</span>. By the Mellin inversion formula <span class='cite'>[<a href='#XFlGoDu95'>5</a>]</span>, \(g\) can be recovered by \begin {equation} \label {eq:g mell} g(z,N) = \frac {1}{2i\pi } \int _{-3/2-i\infty }^{-3/2+i \infty } \mathcal {M}g(z,\cdot )(s) N^{-s}ds.  \end {equation}<a id='x1-2003r6'></a> We now
+move the integration line to the right and collect residues. To estimate the
+resulting integral (and justify Mellin inversion), we first establish a bound on \( \mathrm {Li}_{1-s}(e^z)\) for \(|\Im s|\)
+large. Note that Pickard <span class='cite'>[<a href='#XPi68'>11</a>]</span> studied asymptotics of \(\mathrm {Li}_\nu (w)\) for \(\nu \to 0\) and \(\nu \to \infty \), and wrote that
+“little is known about behavior in the \(\nu \)-plane except along and near the line
+\((0,\infty )\).”
+</p>
+  <div class='newtheorem'>
+<!-- l. 240 --><p class='noindent'><span class='head'>
+<a id='x1-2004r2'></a>
+<span class='cmbx-10'>Lemma 2.</span>  </span> <span class='cmti-10'>Suppose that</span> \(z\) <span class='cmti-10'>is bounded, bounded away from </span>\(0\) <span class='cmti-10'>and</span> \(\pm 2i\pi \)<span class='cmti-10'>,</span> \(|\Im z|&lt;8\)<span class='cmti-10'>, and</span> \(\Re z \leq 0\)<span class='cmti-10'>. Then, for</span>
+\(\Re s&gt;1\) <span class='cmti-10'>fixed and</span> \(|\Im s|\to \infty \)<span class='cmti-10'>, we have </span>\[ \mathrm {Li}_{1-s}(e^z) = O( |\Im s|^{\Re s -1/2}). \]
+</p>
+  </div>
+<!-- l. 247 --><p class='indent'>
+</p>
+  <div class='proof'>
+<!-- l. 249 --><p class='indent'>  <span class='head'>
+<span class='cmti-10'>Proof.</span> </span>We use the representation \begin {equation} \label {eq:Li Hurwitz} \mathrm {Li}_{1-s}(e^z) = \frac {\Gamma (s)}{(2\pi )^s} \left ( i^s \zeta \left (s,\frac 12 + \frac {\log (-e^z)}{2i\pi }\right ) + i^{-s} \zeta \left (s,\frac 12 - \frac {\log (-e^z)}{2i\pi }\right )\right ),  \end {equation}<a id='x1-2005r7'></a> due to Jonquière <span class='cite'>[<a href='#XJo89'>8</a>]</span>, where \[ \zeta (s,q) = \sum _{k=0}^\infty \frac {1}{(q+n)^s}, \quad \Re s &gt;1, \Re q &gt;0, \] is the Hurwitz zeta
+
+function. First we establish some simple estimates for this function. Suppose that \(\Im s \to +\infty \) and
+that \(\Im q &lt;0\). Since \begin {equation} \label {eq:q+n} |q+n|^{-s} = |q+n|^{-\Re s} e^{\Im (s) \arg (q+n)}  \end {equation}<a id='x1-2006r8'></a> and \(\arg (q+n)&lt;0\), we obtain \[ |\zeta (s,q)| \leq \sum _{k=0}^\infty |q+n|^{-\Re s} = O(1), \] for bounded \(q\) with \(\Re q&gt;0\) and \(q\) bounded away from zero. If \(\Im q &gt;0\), on
+the other hand, we use the bound \(e^{\Im (s) \arg (q+n)} \leq e^{\tfrac 12 \pi \Im s}\) in \(\eqref {eq:q+n}\) to conclude \[ \zeta (s,q) = O(e^{\tfrac 12 \pi \Im s}). \] Analogous bounds hold for \(\Im s\to -\infty \). To apply
+them to \(\eqref {eq:Li Hurwitz}\), note that \[ \Re \left (\frac 12 \pm \frac {\log (-e^z)}{2i\pi }\right )&gt;0 \quad \text {and} \quad \Im \left (\frac 12 + \frac {\log (-e^z)}{2i\pi }\right )&gt;0 \] in the specified range of \(z\). For the desired estimate, it now suffices
+to observe that \(|i^{\pm s}|=\exp (\mp \tfrac 12\pi \Im s)\), that the factor \((2\pi )^{-s}\) is \(O(1)\), and that we have \[ \Gamma (s) = O(e^{-\tfrac 12 \pi |\Im s|} |\Im s|^{\Re s - 1/2}) \] by Stirling’s formula.
+<span class='qed'><span class='msam-10'>□</span></span>
+</p>
+  </div>
+<!-- l. 291 --><p class='indent'>  We can now find the asymptotics of \(g\) by shifting the integration in \(\eqref {eq:g mell}\) to the right,
+where \(\Re s =8/7\) turns out to be a suitable choice. The polylogarithm \(\mathrm {Li}_{1-s}(e^z)\) is an entire function of \(s\).
+Moreover, \(\zeta (-s)\) has a simple pole at \(s=-1\), and \(\Gamma (-s)\) has simple poles at the non-negative integers.
+Because of the factor \(\zeta (1-s)\), the transform \(\eqref {eq:mellin}\) has a double pole at \(s=0\), which results in a
+logarithmic term in the asymptotics of \(g\).
+</p>
+  <div class='newtheorem'>
+<!-- l. 300 --><p class='noindent'><span class='head'>
+<a id='x1-2007r3'></a>
+<span class='cmbx-10'>Lemma 3.</span>  </span> <span class='cmti-10'>For</span> \(\Re z&lt;0\)<span class='cmti-10'>, the function</span> \(f\) <span class='cmti-10'>defined in </span>\(\eqref {eq:F def}\) <span class='cmti-10'>has the representation </span>\begin {multline} \label {eq:f asympt} f(z,N) = \frac {1}{z}\Big ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\Big )N - \frac 12 \log N \\ - \frac 12 \Big (\log 2\pi +\log (1-e^{z}) - \log (-z)\Big ) +(l-1)\log (-z)+ h(z,N),  \end {multline} <span class='cmti-10'>where </span>\(h\) <span class='cmti-10'>is given by </span>\begin {multline} \label {eq:h} h(z,N) = \frac {z(e^z+1)}{24(e^z-1)} \frac 1N +\frac {z}{N} + \frac {1}{2i\pi }\int _{8/7-i\infty }^{8/7+i\infty } \mathcal {M}g(z,\cdot )(s) N^{-s} ds \\ -(l-1) \log (-z) + (l-1) (\log N + \log (1-e^{z/N})).  \end {multline}
+<span class='cmti-10'>The function </span>\(h\) <span class='cmti-10'>is</span> </p>
+         <ul class='itemize1'>
+       <li class='itemize'>   <span class='cmti-10'>uniformly</span> \(O(N^{-1/2})\) <span class='cmti-10'>if</span> \(|\arg z|\geq \pi /2+\varepsilon \)<span class='cmti-10'>,</span> \(z\) <span class='cmti-10'>is bounded away from </span>\(0\)<span class='cmti-10'>, and</span> \(z=O(N^{1/2})\)<span class='cmti-10'>,</span>
+         </li>
+       <li class='itemize'>   <span class='cmti-10'>uniformly</span> \(O(N^{33/112})\) <span class='cmti-10'>if</span> \(z\) <span class='cmti-10'>is bounded, bounded away from </span>\(0\) <span class='cmti-10'>and</span> \(\pm 2i\pi \)<span class='cmti-10'>,</span> \(|\Im z|&lt;8\)<span class='cmti-10'>, and</span> \(\Re z &lt; -N^{-7/8}\)<span class='cmti-10'>.</span></li></ul>
+  </div>
+<!-- l. 321 --><p class='indent'>
+</p>
+  <div class='proof'>
+<!-- l. 323 --><p class='indent'>  <span class='head'>
+<span class='cmti-10'>Proof.</span> </span>We shift the integration in \(\eqref {eq:g mell}\) to \(\Re s=8/7\). The residues of \(\eqref {eq:mellin}\) at \(s=-1\), \(s=0\), and \(s=1\) are straightforward to
+compute and yield \begin {multline*}  g(z,N) = \frac {1}{z}\Big ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\Big )N - \frac 12 \log N - \frac 12 \Big (\log 2\pi +\log (1-e^{z}) - \log (-z)\Big )\\ + \frac {z(e^z+1)}{24(e^z-1)} \frac 1N +\frac {1}{2i\pi }\int _{8/7-i\infty }^{8/7+i\infty } \mathcal {M}g(z,\cdot )(s) N^{-s} ds.  \end {multline*} Together with the definition of \(f=\log F\) in \(\eqref {eq:F}\), we obtain \(\eqref {eq:f asympt}\). Except for the
+integral, it is immediate that all terms in \(\eqref {eq:h}\) satisfy the bounds stated in (i) and (ii). Note
+that \[ \log (1-e^{z/N}) = \log (-z) - \log N + O(N^{-1/2}) \] in both cases (i) and (ii), and that \[ \left |\frac {e^z+1}{e^z-1}\right | = \frac {1+e^{2 \Re z} +2e^{ \Re z} \cos (\Im z)} {1+e^{2 \Re z} -2e^{ \Re z} \cos (\Im z)} \leq \frac {1+e^{2 \Re z} +2e^{ \Re z} } {1+e^{2 \Re z} -2e^{ \Re z} } \] is bounded. To estimate the integral in \(\eqref {eq:h}\), we use
+the following well-known equations resp. estimates, for \(\Re s= 8/7\) and \(\Im s\to \infty \) (\(\Im s&lt;0\) is treated by
+conjugation): \begin {align}  |N^{-s}| &amp;= N^{-\Re s}, \notag \\ |(-z)^s| &amp;= |z|^{\Re s} e^{-\Im (s) \arg (-z)}, \label {eq:-z} \\ |\Gamma (-s)| &amp;\sim \sqrt {2\pi } e^{-\tfrac 12\pi \Im s} (\Im s)^{-\Re s - 1/2}, \label {eq:stirling} \\ \zeta (-s) &amp;= O((\Im s)^{\Re s+1/2}), \label {eq:zeta} \\ \zeta (1-s)&amp;= O((\Im s)^{ \Re s-1/2}). \label {eq:zeta1}  \end {align}
+</p><!-- l. 357 --><p class='indent'>  For \(\eqref {eq:zeta}\) and \(\eqref {eq:zeta1}\), see Titchmarsh <span class='cite'>[<a href='#XTi86'>15</a>]</span>, p. 95. In case (i), we have \[ |\mathrm {Li}_{1-s}(e^z) | \leq \mathrm {Li}_{\Re (1-s)}(e^{\Re z}) = O(1) \] by the triangle inequality
+and the analyticity of the polylogarithm in the unit disk. Since \(|\arg z|\geq \pi /2+\varepsilon \), we see from \(\eqref {eq:-z}\) and \(\eqref {eq:stirling}\)
+that the integrand has an exponentially decaying factor \(\exp (-\Im (s) (\arg (-z) + \tfrac 12 \pi )) \leq \exp (-\varepsilon \Im s)\). The integral is thus
+\(O(N^{-\Re s}|z|^{\Re s})=O(N^{-4/7})=O(N^{-1/2})\).
+</p><!-- l. 369 --><p class='indent'>  In case (ii), the decay of the exponential bound slows down as \(N\) increases, because \(\arg (-z)\)
+may approach \(-\pi /2\), and we must also take into account the powers of \(\Im s\) in the estimates \(\eqref {eq:-z}--\ref {eq:zeta1}\) and
+Lemma <a href='#x1-2004r2'>2<!-- tex4ht:ref: le:Li  --></a>. The boundedness of \(z\) guarantees that \(|z|^{\Re s}\) in \(\eqref {eq:-z}\) stays bounded, and that \(\arg (-z) + \pi /2 \sim -\Re z\) for \(\Re z\to 0\). We
+can thus bound the integral by a constant multiple of \[ N^{-\Re s}\int _0^\infty e^{-N^{-7/8}x} x^{\Re s-1/2}dx= N^{-8/7} N^{23/26}=O(N^{33/112}). \] Note that the powers of \(\Im s\) in \(\eqref {eq:stirling}\) and \(\eqref {eq:zeta}\)
+cancel, and that \(\eqref {eq:zeta1}\) and Lemma <a href='#x1-2004r2'>2<!-- tex4ht:ref: le:Li  --></a> show that the term in parentheses in \(\eqref {eq:mellin}\) is \(O((\Im s)^{\Re s-1/2})\).
+
+<span class='qed'><span class='msam-10'>□</span></span>
+</p>
+  </div>
+<!-- l. 386 --><p class='indent'>  Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a> suggests the approximate integral representation \begin {multline} \label {eq:new int} C_{0,1,l}(N) \\ \approx \frac {(-1)^{l-1}}{N^{l+1/2}(2\pi )^{3/2}i} \int _{|z|=5, \Re z\leq 0} \frac {(-z)^{l-1/2}}{\sqrt {1-e^z}} \exp \left ( \frac {z}{N} + \frac {N}{z} \left ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\right ) \right ) dz,  \end {multline} where \(h\) from \(\eqref {eq:f asympt}\)
+has been replaced by zero, except the term \(z/N\), which was retained for better
+accuracy. Recall that the right half-circle is negligible, as mentioned above and
+proved in Section \(\eqref {se:right}\). Even for small \(N\), the fit is very good for \(l=1\); see Figure <a href='#x1-20083'>3<!-- tex4ht:ref: fig:approx  --></a>.
+</p><figure class='figure'> 
+
+
+<a id='x1-20083'></a>
+
+<div class='center'>
+<!-- l. 400 --><p class='noindent'>
+</p><!-- l. 401 --><p class='noindent'><img alt='PIC' height='144' src='approx.png' width='144' /></p></div>
+<figcaption class='caption'><span class='id'>Figure 3: </span><span class='content'>The numbers \(C_{0,1,1}(N)\) (black) and the approximation \(\eqref {eq:new int}\) (gray), for \(N=1,\dots ,70\).</span></figcaption><!-- tex4ht:label?: x1-20083  -->
+
+  </figure>
+  <h3 class='sectionHead'><span class='titlemark'>3. </span> <a id='x1-30003'></a>Saddle point asymptotics</h3>
+<!-- l. 412 --><p class='noindent'>We now proceed by a saddle point analysis of the integral \(\eqref {eq:F}\), using the approximation of
+the integrand provided by Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a>. According to this lemma, the factor \( \exp \left ( \frac 1z \left ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\right ) N \right )\) dominates the
+integrand in \(\eqref {eq:F}\). Equating its derivative to zero, we obtain the saddle point \(z_0\) defined in \(\eqref {eq:z0}\).
+The argument of its axis is (see <span class='cite'>[<a href='#XdeBr58'>3</a>]</span>) \begin {align*}  a &amp;= \frac { \pi }{2} - \frac 12 \arg \frac {d^2}{dz^2} \left .\left ( \frac 1z \left ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\right )\right ) \right |_{z=z_0} \\ &amp;= \frac { \pi }{2} - \frac 12 \arg \left ( \frac {e^{z_0}}{z_0(1-e^{z_0})} \right ) \approx 1.79,  \end {align*}
+</p><!-- l. 426 --><p class='indent'>  and \(\rho =e^{ia}\) is thus the direction of steepest decent. By symmetry, the conjugate \(\bar {z}_0\) is a saddle
+point, too, and its direction of steepest descent is \(\bar {\rho }\). We now deform the integration
+</p><figure class='figure'> 
+
+
+<a id='x1-30014'></a>
+
+<div class='center'>
+<!-- l. 431 --><p class='noindent'>
+</p><!-- l. 432 --><p class='noindent'><img alt='PIC' height='216' src='contour.png' width='216' /></p></div>
+<figcaption class='caption'><span class='id'>Figure 4: </span><span class='content'> The new integration contour, passing through the saddle point \(z_0\). The
+(upper)  dominating  part  lies  between  \(z_2(N)\)  and  \(z_3(N)\).  Angles  and  distances  have  been
+modified for better visibility.</span></figcaption><!-- tex4ht:label?: x1-30014  -->
+
+  </figure>
+<!-- l. 440 --><p class='indent'>  circle as follows (see Figure <a href='#x1-30014'>4<!-- tex4ht:ref: fig:path  --></a>): In the right half-plane, we stay with a half-circle, of
+radius \(5\). In the left half-plane, we connect the point \(z_1:=5i\) with the point \( z_0-\rho \) by a straight line.
+We then proceed by a line through the saddle point \(z_0\), up to a point \(z_4(N)\). A vertical line then
+connects this point to the real axis, to \(z_5(N):=-\sqrt {N}\), and so \(z_4\) must be \[ z_4(N) := -\sqrt {N} + i (\Im z_0-(\sqrt {N}+\Re z_0) \Im \rho / \Re \rho . \] Around the saddle point, we
+identify a range of width \(O(N^{-39/112})\), delimited by the points \[ z_2(N):=z_0-\rho N^{-39/112} \quad \text {and} \quad z_3(N):=z_0+\rho N^{-39/112}. \] In the lower half-plane, the contour is
+defined symmetrically. We refer to the line from \(z_2\) to \(z_3\) to the (upper) central part of the
+contour, as it gives the dominant contribution to the integral (in the upper
+half-plane). Note that \(-39/112\approx -0.348\) is just a little bit smaller than \(-1/3\). To make the third-order
+term \(N(z-z_0)^3\) in the local expansion of the integrand negligible, we must have \(z-z_0 \ll N^{-1/3}\). It is
+convenient to make the central part as large as possible, though, because this
+causes faster decrease of \(F=e^f\) at \(z=z_2(N)\) and \(z=z_3(N)\), which in turn makes it easier to beat the
+estimate for \(h\) from Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a>. (For details, see the tail estimate in Lemma <a href='#x1-3003r4'>4<!-- tex4ht:ref: le:tail  --></a>
+below.)
+</p><!-- l. 468 --><p class='indent'>  Part (i) of Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a> provides the local expansion in the central range, where \(z=z_0+t\rho \), \(-N^{-39/112}\leq t \leq N^{-39/112}\): \begin {multline} \label {eq:loc expans} f(z,N) = - N \log (1 -e^{z_0}) -\tfrac 12 \alpha N t^2 - \tfrac 12 \log N \\ + (l-\tfrac 12)\log (-z_0) -\tfrac 12 (\log 2\pi +\log (1-e^{z_0})) + O(N^{-5/112}).  \end {multline}
+(Note that the expansion was simplified by using the defining equation \(\eqref {eq:z0}\) of \(z_0\).) The
+constant \[ \alpha := -\frac {\rho ^2e^{z_0}} {z_0(1-e^{z_0})} \approx 0.028 \] is real and positive. Since \[ \int _{-N^{-39/112}}^{N^{-39/112}}\exp (-\tfrac 12 \alpha N t^2)dt \sim \frac {1}{\sqrt {\alpha N}}\int _{-\infty }^{\infty }e^{-x^2/2}dx = \sqrt {\frac {2\pi }{\alpha N}}, \] with exponentially decaying error term, the saddle
+point integral has the asymptotics \begin {equation} \label {eq:sp int} \int _{z_2(N)}^{z_3(N)} e^{f(z,N)}dz = \frac {\rho (-z_0)^{l-1/2}}{ \sqrt {\alpha (1-e^{z_0})}} \frac 1N (1-e^{z_0})^{-N}(1+O(N^{-5/112})).  \end {equation}<a id='x1-3002r9'></a> The integral over the lower saddle point segment is \[ \int _{\bar {z}_3(N)}^{\bar {z}_2(N)}e^{f(z,N)}dz = - \overline {\int _{z_2(N)}^{z_3(N)} e^{f(z,N)}dz}, \]
+and thus the contribution of both saddle points to the integral \(\eqref {eq:F}\) is \[ \frac {(-1)^{l-1}}{\pi N^l} \Im \left ( \int _{z_2(N)}^{z_3(N)} e^{f(z,N)}dz \right ). \] By \(\eqref {eq:sp int}\), we see that this
+gives the right hand side of \(\eqref {eq:C asympt}\).
+</p><!-- l. 508 --><p class='indent'>  To show that the two small line segments containing the saddle points \(z_0\) resp. \(\bar {z}_0\) capture
+the asymptotics of the full integral \(\eqref {eq:F}\), we have to show that the remaining part of the
+contour in Figure <a href='#x1-30014'>4<!-- tex4ht:ref: fig:path  --></a> is negligible. By conjugation, it clearly suffices to consider the upper
+half-plane. We begin with the part that, additionally, lies in the half-plane \(\Re z \leq N^{-7/8}\). In the next
+section, we show that the integral over the remaining part tends exponentially to
+zero.
+</p>
+  <div class='newtheorem'>
+<!-- l. 519 --><p class='noindent'><span class='head'>
+<a id='x1-3003r4'></a>
+<span class='cmbx-10'>Lemma 4.</span>  </span> \begin {multline} \label {eq:tail ints} \int _{z_1}^{z_2} \mathbf {1}_{\{\Re z \leq -N^{-7/8}\}}F(z,N) dz + \int _{z_3}^{z_4}F(z,N) dz \\ + \int _{z_4}^{z_5}F(z,N)dz = O\Big (b^N \exp \Big ( -\tfrac 13 \alpha N^{17/56} \Big )\Big ).  \end {multline}
+</p>
+  </div>
+<!-- l. 525 --><p class='indent'>
+</p>
+  <div class='proof'>
+<!-- l. 527 --><p class='indent'>  <span class='head'>
+<span class='cmti-10'>Proof.</span> </span>We begin with the first integral. By part (ii) of Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a>, \(f=\log F\) satisfies \[ f(z,N) = \frac {1}{z}\Big ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\Big )N + O(N^{33/112}) \]
+there. It is straightforward to verify that the function \begin {equation} \label {eq:z Re} z\mapsto \Re \left ( \frac {1}{z}\Big ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6}\Big )\right )  \end {equation}<a id='x1-3004r10'></a> increases as \(z\) moves along
+the contour from \(z_1\) to \(z_0\). By \(\eqref {eq:loc expans}\), we can therefore bound the first integral in \(\eqref {eq:tail ints}\) by
+\begin {align*}  \exp &amp;\left ( N \Re \left ( \frac {1}{z} \Big ( \mathrm {Li}_2(e^z) - \frac {\pi ^2}{6} \Big ) \Big |_{z=z_2} \right ) + O(N^{33/112}) \right ) \\ &amp;= |1-e^{z_0}|^{-N} \exp \Big ( -\tfrac 12 \alpha N^{17/56} + O(N^{33/112})\Big ) \\ &amp;= O\Big (b^N \exp \Big ( -\tfrac 13 \alpha N^{17/56} \Big )\Big ),  \end {align*}
+</p><!-- l. 549 --><p class='indent'>  where the length of the contour was absorbed into the \(O\). The second integral in \(\eqref {eq:tail ints}\) can
+be estimated analogously, by part (i) of Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a>. the function \(\eqref {eq:z Re}\) decreases
+only eventually as \(z\) moves from \(z_3\) to \(z_4\), but it is nowhere larger than at \(z_3\), which
+suffices.
+</p><!-- l. 555 --><p class='indent'>  Finally, we bound the last integral in \(\eqref {eq:tail ints}\). The function \(h\) from \(\eqref {eq:h}\) is \(o(1)\) here, by part (i) of
+
+Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a>. The factor \((e^z-1)^{-1/2}\) is \(O(1)\), and \(-\pi ^2N/(6z)\) is \(O(N^{1/2})\). The dilogarithm is \(\mathrm {Li}_2(e^z) = O(e^{-\sqrt {N}})\), hence \((N/z)\mathrm {Li}_2(e^z) = o(1)\), and so \[ f(z,N) = (l-\tfrac 12)\log (-z) +O(N^{1/2}). \] As the integral of
+\((-z)^{l-1/2}\) from \(z_4\) to \(z_5\) grows only polynomially, the last integral in \(\eqref {eq:tail ints}\) is \(\exp (O(\sqrt {N}))\), and we are done.
+<span class='qed'><span class='msam-10'>□</span></span>
+</p>
+  </div>
+  <h3 class='sectionHead'><span class='titlemark'>4. </span> <a id='x1-40004'></a>Estimates close to the imaginary axis and in the right half-plane</h3>
+<!-- l. 573 --><p class='noindent'>In the preceding section, have gave an asymptotic evaluation of the integral \(\eqref {eq:F}\), where the
+contour was deformed as in Figure <a href='#x1-30014'>4<!-- tex4ht:ref: fig:path  --></a>, and \(\Re z &lt; -N^{-7/8}\). We now show that the remaining part of the
+contour is negligible. Close to the imaginary axis, where \(-N^{-7/8} \leq \Re z \leq 0\), we are outside of the validity
+region of the Mellin transform asymptotics of Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a>. We thus estimate the integrand
+in \(\eqref {eq:F}\) directly.
+</p>
+  <div class='newtheorem'>
+<!-- l. 582 --><p class='noindent'><span class='head'>
+<a id='x1-4001r5'></a>
+<span class='cmbx-10'>Lemma 5.</span>  </span> <span class='cmti-10'>We have </span>\[ \int _{z_1}^{z_2} \mathbf {1}_{\{\Re z \geq -N^{-7/8}\}}F(z,N) dz = O(0.85^N). \]
+</p>
+  </div>
+<!-- l. 587 --><p class='indent'>
+</p>
+  <div class='proof'>
+<!-- l. 589 --><p class='indent'>  <span class='head'>
+<span class='cmti-10'>Proof.</span> </span>For simplicity, we assume that \(z\) lies on a horizontal line, so that \(\Im z=5\); this is justified,
+because the monotonicity used in the proof of Lemma <a href='#x1-3003r4'>4<!-- tex4ht:ref: le:tail  --></a> persists if we adjust the contour
+like this in a small neighborhood of \(5i\). It thus suffices to show that \begin {equation} \label {eq:prod est} \prod _{j=1}^N \frac {1}{|1-e^{z j/N}|} = O(0.84^N),  \end {equation}<a id='x1-4002r11'></a> uniformly for \(\Im z=5\) and \(-N^{-7/8} \leq \Re z \leq 0\),
+because all other factors in \(\eqref {eq:F}\) grow subexponentially. A simple calculation yields \begin {equation} \label {eq:abs expl} \frac {1}{|1-e^{z j/N}|} = \left (1+ e^{2j \Re (z)/N} - 2\cos (5j/N) e^{j \Re (z)/N} \right )^{-1/2}.  \end {equation}<a id='x1-4003r12'></a>
+We divide the product \(\eqref {eq:prod est}\) into \(j\leq N/10\) and \(j&gt;N/10\). In the latter range, we have \(1/(1-\cos (5j/N))=O(1)\), and thus
+\begin {align}  1+ e^{2j \Re (z)/N} - 2\cos (5j/N) e^{j \Re (z)/N} &amp;= 2(1-\cos (5j/N))+ O(N^{-7/8}) \notag \\ &amp;= 2(1-\cos (5j/N))(1+ O(N^{-7/8})). \label {eq:j big}  \end {align}
+</p><!-- l. 612 --><p class='indent'>  Now \((1+ O(N^{-7/8}))^N\) grows subexponentially and can be ignored (by rounding up the exponential
+factor we finally obtain slightly). The remaining product \begin {equation} \label {eq:prod sum} \prod _{N/10 \leq j\leq N}(1-\cos (5j/N))^{-1/2} = \exp \left (-\frac 12 \sum _{N/10 \leq j\leq N} \log (1-\cos (5j/N)) \right )  \end {equation}<a id='x1-4004r13'></a> can be treated by Euler’s
+summation formula. We have, with \(\phi (x):=-\log (1-\cos (5x/N))\), \begin {equation} \label {eq:euler} \sum _{N/10 \leq j\leq N} \phi (j) = \int _{\lfloor N/10 \rfloor }^{N+1} \phi (x)dx -\frac 12(\phi (N+1)-\phi (\lfloor N/10 \rfloor )) + \int _{\lfloor N/10 \rfloor }^{N+1}(\{x\}-\frac 12)\phi '(x)dx.  \end {equation}<a id='x1-4005r14'></a> The term \(-\tfrac 12(\dots )\) is clearly \(O(1)\). Since \(\phi '(x) = -5/N \cot (5x/2N)\), the last integral can
+be estimated by \begin {align*}  \int _{\lfloor N/10 \rfloor }^{N+1} | \phi '(x) | dx &amp;= \int _{ N/10 }^{N+1} | \phi '(x) | dx + O(1) \\ &amp;= -\int _{ N/10 }^{\pi N/5}\phi '(x) dx + \int _{\pi N/5}^{N+1}\phi '(x)dx +O(1) \\ &amp;= -2\phi (\pi N/5)+\phi (N/10)+\phi (N+1)+O(1) = O(1).  \end {align*}
+</p><!-- l. 633 --><p class='indent'>  The main integral in \(\eqref {eq:euler}\) can be done in closed form (with Mathematica, e.g.): \[ \int \phi (x) dx = -\frac {5i x^2}{2N} + 2x \log (1-e^{5ix/N}) - x \log (1-\cos (5x/n)) - \frac 25 i N \mathrm {Li}_2(e^{5ix/N}). \] From this
+we easily deduce \[ \int _{\lfloor N/10 \rfloor }^{N+1} \phi (x)dx = -c N + O(1), \] where \begin {multline*}  c = \frac {1}{40}(99 i +8\log (1-e^{i/2}) -80 \log (1-e^{5i}) -4\log (1-\cos (1/2)) \\ + 40 \log (1-\cos 5) -16i \mathrm {Li}_2(e^{i/2}) +16i \mathrm {Li}_2(e^{5i})) \approx 0.11262.  \end {multline*} Inserting all this into \(\eqref {eq:prod sum}\) yields \[ \prod _{N/10 \leq j\leq N}(1-\cos (5j/N))^{-1/2} = \exp (-\tfrac 12 cN + O(1)), \] and therefore (without forgetting
+the factor \(2\) in \(\eqref {eq:j big}\)) \begin {equation} \label {eq:prod j big} \prod _{N/10 \leq j\leq N} \frac {1}{|1-e^{z j/N}|} = O(2^{-9N/20} e^{-cN/2} (1+\varepsilon )^N ) = O(0.7^N).  \end {equation}<a id='x1-4006r15'></a>
+</p><!-- l. 660 --><p class='indent'>  Now we treat the range \(j\leq N/10\). For this we prove an appropriate inequality. Noting that \(\cos (5j/N)\) is
+positive, and using truncated Taylor series three times, we obtain \begin {align*}  1+ e^{2j \Re (z)/N}&amp; - 2\cos (5j/N) e^{j \Re (z)/N} \geq 1+\left [1+x+\frac {x^2}{2}+\frac {x^3}{6} \right ]_{x=2j \Re (z)/N} \\ &amp;- 2\left [1-\frac {x^2}{2}+\frac {x^4}{24} \right ]_{x=5j/N} \cdot \left [1+x+\frac {x^2}{2} \right ]_{x=j \Re (z)/N}.  \end {align*}
+</p><!-- l. 669 --><p class='indent'>  This can be bounded from below by \begin {equation} \label {eq:lower bd} \geq \frac {11j^2}{12N^2}(\Re (z)^2+25).  \end {equation}<a id='x1-4007r16'></a> The latter fact is a polynomial inequality
+with polynomial constraints, and can be established by cylindrical algebraic
+decomposition <span class='cite'>[<a href='#XCo75'>2</a>]</span>, e.g., with Mathematica. Note that the form of \(\eqref {eq:lower bd}\) was guessed from a
+Taylor expansion of \(\eqref {eq:abs expl}\) for \(j\approx 0\). From \(\eqref {eq:abs expl}\) and \(\eqref {eq:lower bd}\) we have the estimate \begin {align}  \prod _{1\leq j\leq N/10} \frac {1}{|1-e^{z j/N}|} &amp;\leq \prod _{1\leq j\leq N/10} \sqrt {\frac {12}{11}} \frac {N}{j} ((\Re z)^2 +25)^{-1/2} \notag \\ &amp;\leq \left ( \frac {12}{275} \right )^{N/10} N^{N/10} \lfloor N/10 \rfloor !^{-1}(1+\varepsilon )^N \notag \\ &amp; \leq \left ( \left (\frac {12}{275}\right )^{1/20}(10e)^{1/10}(1+\varepsilon )\right )^N \leq 1.19^N, \label {eq:j small}  \end {align}
+</p><!-- l. 688 --><p class='indent'>  for \(N\) large. Now multiply \(\eqref {eq:prod j big}\) and \(\eqref {eq:j small}\) to get the result. <span class='qed'><span class='msam-10'>□</span></span>
+</p>
+  </div>
+
+<!-- l. 693 --><p class='indent'>  Finally, we estimate the integral over the right half-circle in \(\eqref {eq:F}\), which completes the
+proof of Theorem <a href='#x1-1005r1'>1<!-- tex4ht:ref: thm:main  --></a>. By the reflection formula \(\eqref {eq:refl}\), we can recycle part of the analysis from
+the left half-plane.
+</p>
+  <div class='newtheorem'>
+<!-- l. 698 --><p class='noindent'><span class='head'>
+<a id='x1-4008r6'></a>
+<span class='cmbx-10'>Lemma 6.</span>  </span>\[ \frac {(-1)^{l-1}}{N^l} \frac {1}{2i\pi } \int _{|z|=5} \mathbf {1}_{\{\Re z&gt;0\}} F(z,N) dz = O(0.95^N). \]
+</p>
+  </div>
+<!-- l. 703 --><p class='indent'>
+</p>
+  <div class='proof'>
+<!-- l. 705 --><p class='indent'>  <span class='head'>
+<span class='cmti-10'>Proof.</span> </span>First consider the range \(0&lt; \Re z \leq N^{-7/8}\). All factors in front of the products in \(\eqref {eq:F def}\) and \(\eqref {eq:refl}\) grow
+at must subexponentially, and so this part of the integral is \(O(0.85^N)\) by \(\eqref {eq:refl}\) and \(\eqref {eq:prod est}\).
+</p><!-- l. 710 --><p class='indent'>  On the other hand, for \(N^{-7/8}&lt; \Re z \leq 5\), the proof of Lemma <a href='#x1-2007r3'>3<!-- tex4ht:ref: le:mellin  --></a> shows that the product in \(\eqref {eq:refl}\)
+satisfies \[ \prod _{j=1}^N \frac {1}{1-e^{-zj/N}} = \exp \left ( -\frac {1}{z}\Big ( \mathrm {Li}_2(e^{-z}) - \frac {\pi ^2}{6}\Big )N +O(N^{33/112}) \right ). \] The function \[ z \mapsto \Re \left (-\frac {1}{z} \Big ( \mathrm {Li}_2(e^{-z}) - \frac {\pi ^2}{6}\Big ) \right ) \] increases as \(z\) moves on the arc from \(-5i\) to \(5\) and then decreases
+until \(5i\). Close to the imaginary axis, where \(|\arg z|\geq \tfrac {9}{20}\pi \), we thus have the bound \[ \left |\exp \left ( -\frac {1}{z}\Big ( \mathrm {Li}_2(e^{-z}) - \frac {\pi ^2}{6}\Big )N \right ) \right | \leq 0.97^N, \] obtained
+by inserting \(z=5\exp (\tfrac {9}{20}\pi i)\). Taking into account the subexponential factors, this portion of the
+integral is \(O(0.98^N)\). If \(|\arg z|\leq \tfrac {9}{20}\pi \), i.e., \(z\) is bounded away from the imaginary axis, we get help from
+the factor \(e^{-zN/2}\) in \(\eqref {eq:refl}\). It is bounded by its absolute value at \(z=5\exp (\tfrac {9}{20}\pi i)\), and thus not larger than \(0.68^N\).
+Since \[ \left |\exp \left ( -\frac {1}{z}\Big ( \mathrm {Li}_2(e^{-z}) - \frac {\pi ^2}{6}\Big )N \right ) \right | \leq 1.39^N, \] as found by plugging in \(z=5\), the integral for \(N^{-7/8}&lt; \Re z\) is \(O(0.68^N \cdot 1.39^N)=O(0.95^N)\). <span class='qed'><span class='msam-10'>□</span></span>
+</p>
+  </div>
+  <h3 class='sectionHead'><span class='titlemark'>5. </span> <a id='x1-50005'></a>conclusion</h3>
+<!-- l. 750 --><p class='noindent'>The error term that we obtained in \(\eqref {eq:C asympt}\) can be improved a bit by considering more terms
+of the local expansion \(\eqref {eq:loc expans}\) of \(f\) in the saddle point analysis. Getting the <span class='cmti-10'>correct</span>
+order of the error term, i.e., the next term in the asymptotic expansion of \(C_{0,1,l}(N)\),
+needs some work, though. As only the first term on the right-hand side of \(\eqref {eq:f asympt}\)
+was used to define the saddle point \(z_0\), the logarithmic terms in \(\eqref {eq:f asympt}\) contribute a
+non-vanishing first order term \(O(z-z_0)=O(N^{-39/112})\) to the expansion \(\eqref {eq:loc expans}\). To improve it, we need to
+replace \(z_0\) by a better approximation of the actual saddle point of the whole
+integrand \(F=e^f\). But then, the tail estimate in Lemma <a href='#x1-3003r4'>4<!-- tex4ht:ref: le:tail  --></a> becomes more involved, because
+not only the width, but also the location of the saddle point segment depends
+on \(N\).
+</p><!-- l. 766 --><p class='indent'>  Perhaps more importantly, we comment on possible future work. Recall that
+Rademacher’s conjecture essentially says that the operations of limit and partial fraction
+decomposition commute in the present setting. While our result refutes the conjecture, it
+does not clarify the relation between the partial fraction decompositions of \(\prod _{j\geq 1}(1-x^j)^{-1}\) and \(\prod _{j=1}^N(1-x^j)^{-1}\); it
+would be surprising if there was none at all. O’Sullivan <span class='cite'>[<a href='#XoS12'>10</a>]</span> suspects that some modified
+version of the conjecture might hold, and presents numerical evidence for convergence of \(C_{h,k,l}(N)\)
+in terms of Cesàro means.
+
+</p>
+  <h3 class='sectionHead'><a id='x1-6000'></a>References</h3>
+<!-- l. 781 --><p class='noindent'>
+   </p><div class='thebibliography'>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[1] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XAn07'></a><span class='cmcsc-10x-x-80'>G. E. A<span class='small-caps'>ndrews</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Partitions: at the interface of</span> \(q\)<span class='cmti-8'>-series and modular forms</span><span class='cmr-8'>, Ramanujan
+   J., 7 (2003), pp. 385–400. Rankin memorial issues.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[2] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XCo75'></a><span class='cmcsc-10x-x-80'>G. E. C<span class='small-caps'>ollins</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Quantifier elimination for the elementary theory of real closed fields
+   by  cylindrical  algebraic  decomposition</span><span class='cmr-8'>,  Lecture  Notes  in  Computer  Science,  33  (1975),
+   pp. 134–183.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[3] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XdeBr58'></a><span class='cmcsc-10x-x-80'>N. G. <span class='small-caps'>de</span> B<span class='small-caps'>ruijn</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Asymptotic methods in analysis</span><span class='cmr-8'>, Bibliotheca Mathematica. Vol. 4,
+   North-Holland Publishing Co., Amsterdam, 1958.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[4] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XEh93'></a><span class='cmcsc-10x-x-80'>L. E<span class='small-caps'>hrenpreis</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Function theory for Rogers-Ramanujan-like partition identities</span><span class='cmr-8'>, in A
+   tribute to Emil Grosswald: number theory and related analysis, vol. 143 of Contemp. Math.,
+   Amer. Math. Soc., Providence, RI, 1993, pp. 259–320.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[5] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XFlGoDu95'></a><span class='cmcsc-10x-x-80'>P. F<span class='small-caps'>lajolet</span>,  X. G<span class='small-caps'>ourdon</span>,  <span class='small-caps'>and</span>  P. D<span class='small-caps'>umas</span></span><span class='cmr-8'>,  </span><span class='cmti-8'>Mellin  transforms  and  asymptotics:
+   harmonic  sums</span><span class='cmr-8'>,  Theoret.  Comput.  Sci.,  144  (1995),  pp. 3–58.  Special  volume  on
+   mathematical analysis of algorithms.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[6] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XGe10a'></a><span class='cmcsc-10x-x-80'>S. G<span class='small-caps'>erhold</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Asymptotic estimates for some number-theoretic power series</span><span class='cmr-8'>, Acta Arith.,
+   142 (2010), pp. 187–196.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[7] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XHa93'></a><span class='cmcsc-10x-x-80'>M. H<span class='small-caps'>ata</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Rational approximations to the dilogarithm</span><span class='cmr-8'>, Trans. Amer. Math. Soc., 336
+   (1993), pp. 363–387.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[8] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XJo89'></a><span class='cmcsc-10x-x-80'>A. J<span class='small-caps'>onqui</span>è<span class='small-caps'>re</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Note sur la série</span> \(\sum _{n=1}^{\infty } \frac {x^n}{n^s}\)<span class='cmr-8'>, Bull. Soc. Math. France, 17 (1889), pp. 142–152.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+ <span class='cmr-8'>[9] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XMu08'></a><span class='cmcsc-10x-x-80'>A. O. M<span class='small-caps'>unagi</span></span><span class='cmr-8'>, </span><span class='cmti-8'>The Rademacher conjecture and</span> \(q\)<span class='cmti-8'>-partial fractions</span><span class='cmr-8'>, Ramanujan J., 15
+   (2008), pp. 339–347.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+<span class='cmr-8'>[10] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XoS12'></a><span class='cmcsc-10x-x-80'>C. O’S<span class='small-caps'>ullivan</span></span><span class='cmr-8'>,  </span><span class='cmti-8'>On  the  partial  fraction  decomposition  of  the  restricted  partition
+   generating function</span><span class='cmr-8'>. To appear in Forum Mathematicum, 2012.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+<span class='cmr-8'>[11] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XPi68'></a><span class='cmcsc-10x-x-80'>W. F. P<span class='small-caps'>ickard</span></span><span class='cmr-8'>, </span><span class='cmti-8'>On polylogarithms</span><span class='cmr-8'>, Publ. Math. Debrecen, 15 (1968), pp. 33–43.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+<span class='cmr-8'>[12] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XRa73'></a><span class='cmcsc-10x-x-80'>H. R<span class='small-caps'>ademacher</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Topics in analytic number theory</span><span class='cmr-8'>, Springer-Verlag, New York, 1973.
+   Edited by E. Grosswald, J. Lehner and M. Newman, Die Grundlehren der mathematischen
+   Wissenschaften, Band 169.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+<span class='cmr-8'>[13] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XRi59'></a><span class='cmcsc-10x-x-80'>B. R<span class='small-caps'>iemann</span></span><span class='cmr-8'>, </span><span class='cmti-8'>Über die Anzahl der Primzahlen unter einer gegebenen Größe</span><span class='cmr-8'>, Monatsber.
+   Berlin. Akad., (1859), pp. 671–680.</span>
+
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+<span class='cmr-8'>[14] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XSiZe13'></a><span class='cmcsc-10x-x-80'>A. V.  S<span class='small-caps'>ills  and</span>  D. Z<span class='small-caps'>eilberger</span></span><span class='cmr-8'>,  </span><span class='cmti-8'>Rademacher’s  infinite  partial  fraction  conjecture
+   is (almost certainly) false</span><span class='cmr-8'>,  Journal  of  Difference  Equations  and  Applications,  19  (2013),
+   pp. 680–689.</span>
+   </p>
+   <p class='bibitem'><span class='biblabel'>
+<span class='cmr-8'>[15] </span><span class='bibsp'><span class='cmr-8'>   </span></span></span><a id='XTi86'></a><span class='cmcsc-10x-x-80'>E. C. T<span class='small-caps'>itchmarsh</span></span><span class='cmr-8'>,  </span><span class='cmti-8'>The theory of the Riemann zeta-function</span><span class='cmr-8'>,  The  Clarendon  Press
+   Oxford University Press, New York, second ed., 1986. Edited and with a preface by D. R.
+   Heath-Brown.</span>
+</p>
+   </div>
+  <div class='addresses'>
+<!-- l. 855 --><p class='indent'>  <span class='address-title'></span><span class='address'><span class='cmcsc-10x-x-80'>V<span class='small-caps'>ienna</span> U<span class='small-caps'>niversity of</span> T<span class='small-caps'>echnology</span>, W<span class='small-caps'>iedner</span> H<span class='small-caps'>auptstrasse</span> 8–10/105-1, A-1040 V<span class='small-caps'>ienna</span>,</span>
+<span class='cmcsc-10x-x-80'>A<span class='small-caps'>ustria</span></span></span>
+</p><!-- l. 855 --><p class='indent'>  <span class='email-title'>    <span class='cmti-8'>Email address</span><span class='cmr-8'>: </span></span><span class='email'><span class='cmtt-8'>michael.drmota@tuwien.ac.at</span></span>
+</p><!-- l. 855 --><p class='indent'>  <span class='address-title'></span><span class='address'><span class='cmcsc-10x-x-80'>V<span class='small-caps'>ienna</span> U<span class='small-caps'>niversity of</span> T<span class='small-caps'>echnology</span>, W<span class='small-caps'>iedner</span> H<span class='small-caps'>auptstrasse</span> 8–10/105-1, A-1040 V<span class='small-caps'>ienna</span>,</span>
+<span class='cmcsc-10x-x-80'>A<span class='small-caps'>ustria</span></span></span>
+</p><!-- l. 855 --><p class='indent'>  <span class='email-title'>    <span class='cmti-8'>Email address</span><span class='cmr-8'>: </span></span><span class='email'><span class='cmtt-8'>sgerhold@fam.tuwien.ac.at</span></span>
+</p>
+  </div> 
+</body> 
+</html>
